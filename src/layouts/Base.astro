@@ -63,7 +63,7 @@ const here = Astro.url.pathname;
     <title>{title}</title>
     <meta name="description" content={description} />
     <link rel="canonical" href={canonical} />
-    {noindex && <meta name="robots" content="noindex" />}
+    {(noindex || !SITE.indexable) && <meta name="robots" content="noindex" />}
     <meta name="theme-color" content="#ffffff" />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content={SITE.name} />
@@ -87,7 +87,7 @@ const here = Astro.url.pathname;
       </div>
       <nav class="wrap sections" aria-label="Main">
         {hubs.map((h) => <a href={h.path} aria-current={here.startsWith(h.path) ? 'page' : undefined}>{h.name}</a>)}
-        <a href="/how-we-test/" aria-current={here === '/how-we-test/' ? 'page' : undefined}>How we test</a>
+        <a href="/how-we-research/" aria-current={here === '/how-we-research/' ? 'page' : undefined}>How we research</a>
         <a href="/about/" aria-current={here === '/about/' ? 'page' : undefined}>About</a>
       </nav>
     </header>
@@ -107,11 +107,11 @@ const here = Astro.url.pathname;
       <div class="wrap foot">
         <div>
           <p class="wordmark foot-mark">{SITE.name}</p>
-          <p class="foot-tag">Kitchen gear we test with thermometers, scales and meters. Prices we track every day.</p>
+          <p class="foot-tag">Kitchen gear research with every source named.</p>
         </div>
         <nav aria-label="Footer">
           <a href="/about/">About</a>
-          <a href="/how-we-test/">How we test</a>
+          <a href="/how-we-research/">How we research</a>
           <a href="/affiliate-disclosure/">Affiliate disclosure</a>
           <a href="/privacy/">Privacy</a>
           <a href="/contact/">Contact</a>
@@ -222,7 +222,7 @@ const here = Astro.url.pathname;
   tbody td { border-bottom: 1px solid var(--line); }
   td { font-variant-numeric: tabular-nums; color: var(--ink-2); }
   td:first-child { font-weight: 650; color: var(--ink); min-width: 10rem; }
-  td:empty::after { content: 'Testing'; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase; color: var(--muted); }
+  td:empty::after { content: 'Pending'; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase; color: var(--muted); }
 
   /* Buttons */
   .btn { display: inline-flex; align-items: center; justify-content: center; min-height: 44px; padding: 0.6rem 1.1rem; border-radius: var(--radius); font: 700 0.875rem/1 var(--sans); text-decoration: none; white-space: nowrap; transition: background-color 150ms, color 150ms; }

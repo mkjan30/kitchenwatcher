@@ -1,2 +1,4 @@
 # Cloudflare Pages redirects. One per line: /old-path/ /new-path/ 301
 # Published slugs never change. If one must, add its 301 here in the same commit.
+/how-we-test/ /how-we-research/ 301
+/authors/editor/ /authors/maksud/ 301

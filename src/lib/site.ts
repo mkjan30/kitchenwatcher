@@ -7,6 +7,9 @@ export const SITE = {
   logo: '/logo.png', // TODO(human): placeholder "KW" mark; replace public/logo.png (512×512) and public/favicon.svg
   sameAs: [] as string[], // TODO(human): Pinterest, YouTube, Instagram, Reddit profile URLs
   amazonTag: 'kitchenwatcher-20', // TODO(human): confirm Associates tracking ID
+  // Pre-launch switch: false puts <meta name="robots" content="noindex"> on every page.
+  // Flip to true once the placeholder copy is gone, then submit the sitemap and run ping:indexnow.
+  indexable: false,
 };
 
 export const DISCLOSURE =

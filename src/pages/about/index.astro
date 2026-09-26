@@ -5,9 +5,19 @@ import Base from '../../layouts/Base.astro';
 const authors = await getCollection('authors');
 ---
 
-<Base title="About Kitchen Watcher" description="TODO(human): ≤155-char description of who runs Kitchen Watcher and why." crumbs={[{ name: 'About Kitchen Watcher', path: '/about/' }]}>
-  <h1>About Kitchen Watcher</h1>
-  <p>TODO(human): who you are, why this site exists, how it makes money (link to <a href="/affiliate-disclosure/">affiliate disclosure</a>), and <a href="/how-we-test/">how we test</a>.</p>
-  <h2>Who tests the gear</h2>
-  <ul>{authors.map((a) => <li><a href={`/authors/${a.id}/`}>{a.data.name}</a>, {a.data.job_title}</li>)}</ul>
+<Base title="About Kitchen Watcher" description="Kitchen Watcher is an independent research site comparing air fryers and kitchen safety gear, with every source named and prices tracked over time." crumbs={[{ name: 'About', path: '/about/' }]}>
+  <article>
+    <h1>About Kitchen Watcher</h1>
+    <p class="dek">An independent research site for people who want to buy kitchen gear once, on the evidence.</p>
+
+    <p>Choosing an air fryer or a stove safety device usually means comparing spec sheets that don't match, lab tests spread across a dozen sites, and owner reviews that contradict each other. Kitchen Watcher does that comparison for you and shows its work: every measurement is credited to the lab or publication that took it, every spec is labeled as the manufacturer's claim, and every safety recall is linked to the official record.</p>
+    <p>We don't test products hands-on. Our job is to read everything that has been measured and reported about a product, weigh it fairly, and tell you plainly what it adds up to. The details are on <a href="/how-we-research/">how we research</a>.</p>
+
+    <h2>How the site is paid for</h2>
+    <p>When you buy through some of our links, we may earn a commission at no extra cost to you. That never changes which products we recommend or how we rank them. Read the full <a href="/affiliate-disclosure/">affiliate disclosure</a>.</p>
+
+    <h2>Who's behind it</h2>
+    <ul>{authors.map((a) => <li><a href={`/authors/${a.id}/`}>{a.data.name}</a>, {a.data.job_title}</li>)}</ul>
+    <p>Questions or corrections: <a href="/contact/">contact us</a>.</p>
+  </article>
 </Base>

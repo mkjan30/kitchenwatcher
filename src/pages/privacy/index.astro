@@ -2,7 +2,29 @@
 import Base from '../../layouts/Base.astro';
 ---
 
-<Base title="Privacy policy" description="TODO(human): ≤155-char privacy summary." crumbs={[{ name: 'Privacy policy', path: '/privacy/' }]}>
-  <h1>Privacy policy</h1>
-  <p>TODO(human): full policy. Facts to cover: no ad trackers or third-party scripts; affiliate link clicks are counted (product + page only) on our own server; price-alert and newsletter emails (Resend, Buttondown) only with opt-in; how to delete your data; contact.</p>
+<Base title="Privacy policy" description="What Kitchen Watcher collects (very little), why, who processes it, and how to ask us to delete anything we hold about you." crumbs={[{ name: 'Privacy', path: '/privacy/' }]}>
+  <article>
+    <h1>Privacy policy</h1>
+    <p class="dek">Short version: no ad trackers, no analytics scripts, no cookies set by us. Here is exactly what does happen.</p>
+    <p class="meta">Last updated <time datetime="2026-09-27">September 27, 2026</time></p>
+
+    <h2>When you read the site</h2>
+    <p>Kitchen Watcher is hosted on Cloudflare. Like any web host, Cloudflare processes the technical details of each request, such as your IP address, browser type and the page requested, to deliver the page and protect the site from attacks. We don't use that data to identify you, and we don't add analytics or advertising scripts on top of it. Cloudflare's own handling is described in the <a href="https://www.cloudflare.com/privacypolicy/">Cloudflare privacy policy</a>.</p>
+    <p>We don't set cookies. Site search runs entirely in your browser; what you type is not sent to us.</p>
+
+    <h2>When you click a shop link</h2>
+    <p>On pages with retailer links, a small script records which product link was clicked and on which page, so we know which pages people find useful. It doesn't record who you are. The retailer you land on has its own privacy policy and may use cookies to credit us for a purchase.</p>
+
+    <h2>Email</h2>
+    <p>We plan to offer price-drop alerts and a newsletter. They will only ever be sent to people who sign up for them, each email will have an unsubscribe link, and we will list the email providers we use on this page before either launches.</p>
+
+    <h2>Your requests</h2>
+    <p>You can ask what we hold about you, or ask us to delete it, through our <a href="/contact/">contact page</a>. For most readers the answer is nothing, because we don't collect personal data from simply reading the site.</p>
+
+    <h2>Children</h2>
+    <p>Kitchen Watcher is written for adults and doesn't knowingly collect information from children.</p>
+
+    <h2>Changes</h2>
+    <p>If this policy changes, we'll update the date at the top of this page.</p>
+  </article>
 </Base>

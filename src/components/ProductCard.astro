@@ -16,7 +16,7 @@ const label = rank === 1 ? 'Our pick' : rank ? `No. ${rank}` : p.brand;
   <h3>{review ? <a href={urlFor(review)}>{p.name}</a> : p.name}</h3>
   {review?.data.verdict && <p class="verdict">{review.data.verdict}</p>}
   <p class="facts">
-    {score !== undefined ? <span><strong>{score}</strong>/10 in our tests</span> : <span class="status">In testing</span>}
+    {score !== undefined ? <span><strong>{score}</strong>/10 Kitchen Watcher score</span> : <span class="status">Research in progress</span>}
     {p.last_price_cents !== null && <span>Last seen at <strong>{usd(p.last_price_cents)}</strong></span>}
   </p>
   {first && (

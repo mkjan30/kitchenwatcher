@@ -3,8 +3,22 @@ import Base from '../../layouts/Base.astro';
 import { DISCLOSURE } from '../../lib/site';
 ---
 
-<Base title="Affiliate disclosure" description="How Kitchen Watcher makes money: affiliate commissions that never change our scores or rankings." crumbs={[{ name: 'Affiliate disclosure', path: '/affiliate-disclosure/' }]}>
-  <h1>Affiliate disclosure</h1>
-  <p>{DISCLOSURE}</p>
-  <p>TODO(human): name the programs (Amazon Associates — required wording: “As an Amazon Associate I earn from qualifying purchases.”), explain that /best/ rankings follow test scores only, and how to report a problem.</p>
+<Base title="Affiliate disclosure" description="How Kitchen Watcher makes money: affiliate commissions that never change which products we recommend or how we rank them." crumbs={[{ name: 'Affiliate disclosure', path: '/affiliate-disclosure/' }]}>
+  <article>
+    <h1>Affiliate disclosure</h1>
+    <p class="dek">{DISCLOSURE}</p>
+
+    <p>Some links on Kitchen Watcher go to retailers such as Amazon, Target or a brand's own store. If you buy something after following one of those links, the retailer may pay us a small commission. The price you pay is the same.</p>
+    <p>Commissions are how we keep the site free to read and free of display ads. They have no influence on our coverage:</p>
+    <ul>
+      <li>We decide which products to cover before we know whether any program pays for them.</li>
+      <li>Rankings on our best-of pages follow the evidence described on <a href="/how-we-research/">how we research</a>, never the commission rate.</li>
+      <li>Links that can earn us money are marked as sponsored in the page code, and this notice appears above the first one on every page that has them.</li>
+    </ul>
+
+    <h2>Programs we belong to</h2>
+    <p>We're applying to retailer affiliate programs, including Amazon Associates. As each application is approved, it will be listed here along with any wording the program requires.</p>
+
+    <p>Questions about a specific link? <a href="/contact/">Contact us</a>.</p>
+  </article>
 </Base>
