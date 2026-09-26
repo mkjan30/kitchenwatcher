@@ -21,7 +21,7 @@ const { score, verdict, pros = [], cons = [] } = Astro.props;
   .head { display: flex; gap: 1.25rem; align-items: center; padding: 1.25rem 1.5rem; border-bottom: 1px solid var(--line); }
   .num { margin: 0; flex: none; width: 112px; height: 112px; border-radius: 50%; display: grid; place-content: center; text-align: center; font-family: var(--mono); line-height: 1;
     background: radial-gradient(closest-side, var(--surface-solid) 80%, transparent 82% 100%), conic-gradient(var(--accent) calc(var(--s) * 36deg), rgb(255 255 255 / 0.08) 0);
-    box-shadow: 0 0 40px -8px rgb(63 224 255 / 0.7); }
+    box-shadow: 0 0 40px -8px rgb(var(--accent-rgb) / 0.7); }
   .num strong { font-size: 2.2rem; font-weight: 500; }
   .num span { color: var(--muted); }
   .verdict { margin: 0; font-size: 1.0625rem; font-weight: 550; }
