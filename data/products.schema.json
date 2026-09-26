@@ -25,6 +25,9 @@
           }
         }
       },
+      "price_seen_cents": { "type": ["integer", "null"], "minimum": 0, "description": "Price seen during /research, for scoring only. Not a live price." },
+      "sources": { "type": "array", "items": { "type": "string", "format": "uri" }, "description": "Where /research found this model. Required: no source, no entry." },
+      "complaints": { "type": "array", "items": { "type": "string" }, "description": "Top owner complaints found during research." },
       "last_price_cents": { "type": ["integer", "null"], "minimum": 0, "description": "Owned by scripts/refresh-prices. Never edit by hand." },
       "tested_on": { "type": ["string", "null"], "format": "date", "description": "Date we physically tested it. null = untested." }
     }

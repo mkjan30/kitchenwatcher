@@ -47,6 +47,7 @@ for (const e of all) {
 for (const e of live) {
   const where = rel(e.file);
   const links = [...internalLinks(e.body)].filter((l) => l !== e.url);
+  if (/MEASURE:/.test(e.body)) fail(where, 'MEASURE placeholder left in a live page — replace with the measured number');
   if (links.length < 3) fail(where, `${links.length} internal links in body, need ≥3`);
   if (['reviews', 'guides'].includes(e.collection) && !/^\|[\s:|-]+\|\s*$/m.test(e.body) && !/<table/i.test(e.body)) {
     fail(where, 'no measurement table');

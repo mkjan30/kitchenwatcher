@@ -22,6 +22,15 @@ const base = ({ image }: SchemaContext) => ({
   draft: z.boolean(),
   hero: image().optional(),
   hero_alt: z.string().min(1).optional(),
+  // Brief for the human tester: what to measure, the comparison-table columns, anything else to check.
+  brief: z
+    .object({
+      measurements: z.array(z.string().min(1)).min(1),
+      table_columns: z.array(z.string().min(1)).min(1),
+      notes: z.array(z.string().min(1)).optional(),
+    })
+    .strict()
+    .optional(),
 });
 
 type Issue = { draft: boolean; hero?: unknown; hero_alt?: string };

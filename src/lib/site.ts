@@ -21,6 +21,9 @@ export type Product = {
   merchants: { id: string; url: string }[];
   last_price_cents: number | null;
   tested_on: string | null;
+  price_seen_cents?: number | null;
+  sources?: string[];
+  complaints?: string[];
 };
 
 export const getProduct = (id: string): Product => {
