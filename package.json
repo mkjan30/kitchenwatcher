@@ -9,7 +9,11 @@
     "dev": "astro dev",
     "build": "astro build && pagefind --site dist",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "new": "node scripts/new-post.mjs",
+    "lint:content": "node scripts/lint-content.mjs",
+    "check:schema": "node scripts/check-schema.mjs",
+    "ping:indexnow": "node scripts/ping-indexnow.mjs"
   },
   "dependencies": {
     "@astrojs/cloudflare": "^12.6.13",
