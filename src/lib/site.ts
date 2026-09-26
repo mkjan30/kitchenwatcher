@@ -4,7 +4,7 @@ import products from '../../data/products.json';
 export const SITE = {
   name: 'Kitchen Watcher',
   url: 'https://kitchenwatcher.com',
-  logo: '/logo.png', // TODO(human): 512×512 PNG logo in public/logo.png
+  logo: '/logo.png', // TODO(human): placeholder "KW" mark; replace public/logo.png (512×512) and public/favicon.svg
   sameAs: [] as string[], // TODO(human): Pinterest, YouTube, Instagram, Reddit profile URLs
   amazonTag: 'kitchenwatcher-20', // TODO(human): confirm Associates tracking ID
 };
