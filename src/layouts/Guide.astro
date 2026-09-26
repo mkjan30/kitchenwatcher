@@ -2,7 +2,7 @@
 // Guides, smart-kitchen, vs → Article (+ FAQPage only if frontmatter has faq).
 // /best/ hubs → ItemList of Product in the hub's editorial order (weight of evidence, never commission).
 import type { CollectionEntry } from 'astro:content';
-import { Picture } from 'astro:assets';
+import HeroFigure from '../components/HeroFigure.astro';
 import Base from './Base.astro';
 import AuthorBox from '../components/AuthorBox.astro';
 import ProductCard from '../components/ProductCard.astro';
@@ -56,9 +56,9 @@ const crumbs = [...(productRef && entry.collection !== 'best' ? [hubCrumb(produc
     <p class="dek">{d.description}</p>
     <PageMeta author={author} published={d.published} updated={d.updated} />
     <ResearchNote subject={entry.collection === 'best' ? 'the products on this list' : entry.collection === 'vs' ? 'either product' : productRef ? `the ${getProduct(productRef).name}` : 'the products discussed here'} />
-    {d.hero && d.hero_alt && <Picture src={d.hero} alt={d.hero_alt} widths={[400, 800, 1200]} sizes="(max-width: 700px) 100vw, 700px" formats={['avif', 'webp']} loading="eager" fetchpriority="high" />}
+    {d.hero && d.hero_alt && <HeroFigure src={d.hero} alt={d.hero_alt} credit={d.hero_credit} creditUrl={d.hero_credit_url} license={d.hero_license} licenseUrl={d.hero_license_url} caption={d.hero_caption} />}
     {ranked.length > 0 && (
-      <section>{ranked.map((x, i) => <ProductCard product_id={x.product.id} rank={i + 1} />)}</section>
+      <section>{ranked.map((x, i) => <ProductCard product_id={x.product.id} rank={i + 1} level={2} />)}</section>
     )}
     <Toc headings={headings} extra={tocExtra} />
     <slot />

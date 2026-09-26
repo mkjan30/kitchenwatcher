@@ -24,6 +24,12 @@ const base = ({ image }: SchemaContext) => ({
   hero_alt: z.string().min(1).optional(),
   // Required with a hero: who owns the image (e.g. "Instant Brands"). Press-kit terms usually require attribution.
   hero_credit: z.string().min(1).optional(),
+  // Open-licence images (CC BY / BY-SA): link the source page and the licence; hero_caption says what the photo shows
+  // (e.g. that it's illustrative, not the reviewed model). Never crop or alter licensed images.
+  hero_credit_url: z.string().url().optional(),
+  hero_license: z.string().min(1).optional(),
+  hero_license_url: z.string().url().optional(),
+  hero_caption: z.string().min(1).optional(),
   // Reader questions, answered only from facts sourced on the page. Rendered as an FAQ section + FAQPage JSON-LD.
   faq: z.array(z.object({ q: z.string().min(1), a: z.string().min(1) }).strict()).optional(),
   // Every URL actually read for this page. Required (≥2) before a page goes live.

@@ -2,8 +2,9 @@
 import AffiliateLink from './AffiliateLink.astro';
 import { getProduct, merchantName, reviewFor, urlFor, usd } from '../lib/site';
 
-interface Props { product_id: string; rank?: number }
-const { product_id, rank } = Astro.props;
+interface Props { product_id: string; rank?: number; level?: 2 | 3 }
+const { product_id, rank, level = 3 } = Astro.props;
+const H = level === 2 ? 'h2' : 'h3';
 const p = getProduct(product_id);
 const review = await reviewFor(product_id);
 const [first, ...rest] = p.merchants;
@@ -12,7 +13,7 @@ const label = rank === 1 ? 'Our pick' : rank ? `No. ${rank}` : p.brand;
 
 <section class:list={['pick', { top: rank === 1 }]}>
   <p class="label">{label}</p>
-  <h3>{review ? <a href={urlFor(review)}>{p.name}</a> : p.name}</h3>
+  <H class="pick-title">{review ? <a href={urlFor(review)}>{p.name}</a> : p.name}</H>
   {review?.data.verdict && <p class="verdict">{review.data.verdict}</p>}
   <p class="facts">
     {!review && <span class="status">Research in progress</span>}
@@ -30,9 +31,9 @@ const label = rank === 1 ? 'Our pick' : rank ? `No. ${rank}` : p.brand;
   .pick { border-top: 1px solid var(--ink); padding: 1rem 0 1.5rem; margin-block: 1.25rem; }
   .pick.top { border-top-width: 4px; }
   .label { margin: 0 0 0.35rem; font-size: 0.75rem; font-weight: 800; letter-spacing: 0.06em; text-transform: uppercase; color: var(--accent); }
-  h3 { margin: 0 0 0.4rem; font-size: 1.35rem; }
-  h3 a { color: var(--ink); text-decoration: none; }
-  h3 a:hover { text-decoration: underline; text-decoration-color: var(--accent); }
+  .pick-title { margin: 0 0 0.4rem; font-size: 1.35rem; }
+  .pick-title a { color: var(--ink); text-decoration: none; }
+  .pick-title a:hover { text-decoration: underline; text-decoration-color: var(--accent); }
   .verdict { margin: 0 0 0.6rem; font-family: var(--serif); font-size: 1.05rem; color: var(--ink-2); }
   .facts { display: flex; flex-wrap: wrap; gap: 0.35rem 1.25rem; margin: 0 0 0.9rem; font-size: 0.875rem; color: var(--muted); }
   .facts strong { color: var(--ink); }

@@ -2,7 +2,7 @@
 // Research review → Article about a Product, author as Person with sameAs. No Review/Rating markup:
 // we did not review the product first-hand (CLAUDE.md).
 import type { CollectionEntry } from 'astro:content';
-import { Picture } from 'astro:assets';
+import HeroFigure from '../components/HeroFigure.astro';
 import Base from './Base.astro';
 import VerdictBox from '../components/VerdictBox.astro';
 import PageMeta from '../components/PageMeta.astro';
@@ -35,10 +35,7 @@ const tocExtra = d.faq?.length ? [{ slug: 'faq', text: 'Frequently asked questio
     <p class="dek">{d.description}</p>
     <PageMeta author={author} published={d.published} updated={d.updated} />
     {d.hero && d.hero_alt ? (
-      <figure class="hero">
-        <Picture src={d.hero} alt={d.hero_alt} widths={[400, 800, 1200]} sizes="(max-width: 700px) 100vw, 700px" formats={['avif', 'webp']} loading="eager" fetchpriority="high" />
-        {d.hero_credit && <figcaption>Image: {d.hero_credit}</figcaption>}
-      </figure>
+      <HeroFigure src={d.hero} alt={d.hero_alt} credit={d.hero_credit} creditUrl={d.hero_credit_url} license={d.hero_license} licenseUrl={d.hero_license_url} caption={d.hero_caption} />
     ) : (
       <div class="hero-art" aria-hidden="true" set:html={iconSvg(ICON_FOR[product.category] ?? 'thermometer', 1.1)} />
     )}
@@ -54,9 +51,6 @@ const tocExtra = d.faq?.length ? [{ slug: 'faq', text: 'Frequently asked questio
 </Base>
 
 <style>
-  .hero { margin: 0 0 0.5rem; }
-  .hero :global(img) { background: #fff; }
-  figcaption { font-size: 0.75rem; color: var(--muted); margin-top: 0.35rem; }
   .hero-art { display: grid; place-items: center; aspect-ratio: 16 / 9; background: var(--tint); color: var(--accent); margin-bottom: 0.5rem; }
   .hero-art :global(svg) { width: 22%; height: auto; }
 </style>

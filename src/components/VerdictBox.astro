@@ -6,7 +6,7 @@ const { verdict, pros = [], cons = [] } = Astro.props;
 
 {verdict && (
   <section class="verdictbox" aria-label="Our verdict">
-    <p class="label">The short answer</p>
+    <h2 class="label">The short answer</h2>
     <p class="verdict">{verdict}</p>
     <div class="pc">
       <div><h3 class="pro">Strengths</h3><ul>{pros.map((p) => <li>{p}</li>)}</ul></div>
@@ -17,7 +17,7 @@ const { verdict, pros = [], cons = [] } = Astro.props;
 
 <style>
   .verdictbox { border-top: 4px solid var(--ink); border-bottom: 1px solid var(--line); padding: 1.1rem 0 1.4rem; margin-block: 1.75rem; }
-  .label { margin: 0; font-size: 0.75rem; font-weight: 800; letter-spacing: 0.06em; text-transform: uppercase; color: var(--accent); }
+  .label { margin: 0; font-family: var(--sans); line-height: 1.4; font-size: 0.75rem; font-weight: 800; letter-spacing: 0.06em; text-transform: uppercase; color: var(--accent); }
   .verdict { font-family: var(--serif); font-size: 1.25rem; font-weight: 600; margin: 0.4rem 0 1rem; }
   .pc { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
   .pc h3 { font-family: var(--sans); font-size: 0.8rem; letter-spacing: 0.05em; text-transform: uppercase; margin: 0 0 0.4rem; }
