@@ -150,12 +150,13 @@ const here = Astro.url.pathname;
     --muted: #978a80;
     --line: rgb(255 255 255 / 0.09);
     --line-strong: rgb(255 255 255 / 0.18);
-    --accent-rgb: 255 122 47;
-    --accent: #ff7a2f;
-    --accent-2: #ffb27d;
+    --accent-rgb: 214 138 94;
+    --accent: #d68a5e;
+    --accent-2: #e8c1a3;
+    --label: #b3a497;
     --accent-ink: #1c0b02;
     --accent-soft: rgb(var(--accent-rgb) / 0.1);
-    --glow: 0 0 0 1px rgb(var(--accent-rgb) / 0.35), 0 10px 40px -10px rgb(var(--accent-rgb) / 0.45);
+    --glow: 0 0 0 1px rgb(var(--accent-rgb) / 0.22), 0 14px 40px -20px rgb(var(--accent-rgb) / 0.35);
     --good: #6fe3a4;
     --good-soft: rgb(111 227 164 / 0.08);
     --bad: #ff5f7e;
@@ -186,15 +187,15 @@ const here = Astro.url.pathname;
   ::selection { background: var(--accent); color: var(--accent-ink); }
 
   /* Ambient scene: two light orbs + a perspective grid floor, fixed behind everything. */
-  .ambient { position: fixed; inset: 0; z-index: -1; overflow: hidden; pointer-events: none; background: radial-gradient(120% 80% at 50% -10%, #24130a 0%, var(--bg) 55%); }
-  .orb { position: absolute; border-radius: 50%; filter: blur(80px); opacity: 0.55; will-change: transform; }
+  .ambient { position: fixed; inset: 0; z-index: -1; overflow: hidden; pointer-events: none; background: radial-gradient(120% 80% at 50% -10%, #19110c 0%, var(--bg) 55%); }
+  .orb { position: absolute; border-radius: 50%; filter: blur(90px); opacity: 0.22; will-change: transform; }
   .o1 { width: 42vmax; height: 42vmax; left: -12vmax; top: -14vmax; background: radial-gradient(circle, rgb(var(--accent-rgb) / 0.55), transparent 65%); }
-  .o2 { width: 36vmax; height: 36vmax; right: -10vmax; top: 30vh; background: radial-gradient(circle, rgb(214 48 38 / 0.38), transparent 65%); }
+  .o2 { width: 36vmax; height: 36vmax; right: -10vmax; top: 30vh; background: radial-gradient(circle, rgb(150 80 50 / 0.35), transparent 65%); }
   .floor {
     position: absolute; left: -50%; right: -50%; bottom: -10vh; height: 70vh;
     background-image:
-      linear-gradient(rgb(var(--accent-rgb) / 0.16) 1px, transparent 1px),
-      linear-gradient(90deg, rgb(var(--accent-rgb) / 0.16) 1px, transparent 1px);
+      linear-gradient(rgb(var(--accent-rgb) / 0.06) 1px, transparent 1px),
+      linear-gradient(90deg, rgb(var(--accent-rgb) / 0.06) 1px, transparent 1px);
     background-size: 64px 64px;
     transform: perspective(600px) rotateX(62deg);
     transform-origin: 50% 100%;
@@ -216,8 +217,8 @@ const here = Astro.url.pathname;
   h2 { font-size: clamp(1.45rem, 1.2rem + 1vw, 1.9rem); margin: 3rem 0 0.85rem; letter-spacing: -0.025em; }
   h3 { font-size: 1.15rem; margin: 1.75rem 0 0.5rem; letter-spacing: -0.01em; }
   p, li { text-wrap: pretty; }
-  a { color: var(--accent); text-decoration-color: rgb(var(--accent-rgb) / 0.4); text-decoration-thickness: 1px; text-underline-offset: 0.2em; transition: color 150ms, text-decoration-color 150ms; }
-  a:hover { color: var(--accent-2); text-decoration-color: currentColor; }
+  a { color: var(--accent-2); text-decoration-color: rgb(var(--accent-rgb) / 0.45); text-decoration-thickness: 1px; text-underline-offset: 0.2em; transition: color 150ms, text-decoration-color 150ms; }
+  a:hover { color: var(--ink); text-decoration-color: currentColor; }
   strong { font-weight: 620; color: var(--ink); }
   code { font: 0.9em var(--mono); background: var(--surface-2); padding: 0.1em 0.35em; border-radius: 6px; }
   :focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 6px; }
@@ -225,7 +226,7 @@ const here = Astro.url.pathname;
   main { padding-bottom: 5rem; }
   article, .prose { max-width: 780px; }
   article > p, article > ul, article > ol, .prose > p { max-width: var(--measure); color: var(--ink-2); }
-  article > ul li::marker, article > ol li::marker { color: var(--accent); }
+  article > ul li::marker, article > ol li::marker { color: var(--muted); }
   .meta { color: var(--muted); font-size: 0.9rem; font-family: var(--mono); letter-spacing: -0.01em; }
 
   /* Glass panel shared by cards, tables, boxes. */
@@ -242,11 +243,11 @@ const here = Astro.url.pathname;
   header.site { position: sticky; top: 0; z-index: 10; background: rgb(11 8 6 / 0.6); backdrop-filter: blur(16px) saturate(160%); -webkit-backdrop-filter: blur(16px) saturate(160%); border-bottom: 1px solid var(--line); }
   .bar { display: flex; align-items: center; justify-content: space-between; gap: 1rem; min-height: 64px; }
   .brand { display: inline-flex; align-items: center; gap: 0.6rem; color: var(--ink); text-decoration: none; font-weight: 650; font-size: 1.05rem; letter-spacing: -0.02em; white-space: nowrap; }
-  .brand img { border-radius: 8px; box-shadow: 0 0 20px rgb(var(--accent-rgb) / 0.45); }
+  .brand img { border-radius: 8px; }
   header.site nav { display: flex; gap: 0.25rem; overflow-x: auto; scrollbar-width: none; }
   header.site nav a { color: var(--ink-2); text-decoration: none; font-size: 0.925rem; font-weight: 500; padding: 0.5rem 0.8rem; border-radius: 999px; white-space: nowrap; min-height: 44px; display: inline-flex; align-items: center; border: 1px solid transparent; }
   header.site nav a:hover { color: var(--ink); background: var(--surface-2); }
-  header.site nav a[aria-current='page'] { color: var(--accent); border-color: rgb(var(--accent-rgb) / 0.35); background: var(--accent-soft); }
+  header.site nav a[aria-current='page'] { color: var(--ink); border-color: var(--line-strong); background: var(--surface-2); }
   @media (max-width: 720px) {
     .bar { flex-wrap: wrap; padding-block: 0.5rem; gap: 0.25rem; }
     header.site nav { width: calc(100% + 40px); margin-inline: -20px; padding-inline: 12px; }
@@ -262,22 +263,22 @@ const here = Astro.url.pathname;
   .disclosure a { color: inherit; }
 
   /* Tables as HUD readouts */
-  table { border-collapse: separate; border-spacing: 0; width: 100%; font-size: 0.925rem; display: block; overflow-x: auto; margin: 1.5rem 0 2rem; scrollbar-width: thin; scrollbar-color: rgb(var(--accent-rgb) / 0.35) transparent; }
-  thead th { font: 500 0.72rem var(--mono); letter-spacing: 0.04em; text-transform: uppercase; color: var(--accent); text-align: left; vertical-align: bottom; border-bottom: 1px solid rgb(var(--accent-rgb) / 0.25); }
+  table { border-collapse: separate; border-spacing: 0; width: 100%; font-size: 0.925rem; display: block; overflow-x: auto; margin: 1.5rem 0 2rem; scrollbar-width: thin; scrollbar-color: rgb(255 255 255 / 0.18) transparent; }
+  thead th { font: 500 0.72rem var(--mono); letter-spacing: 0.04em; text-transform: uppercase; color: var(--label); text-align: left; vertical-align: bottom; border-bottom: 1px solid var(--line-strong); }
   th, td { padding: 0.75rem 1rem; text-align: left; vertical-align: top; min-width: 7rem; }
   tbody tr + tr td, tbody tr + tr th { border-top: 1px solid var(--line); }
   tbody tr { transition: background-color 150ms; }
-  tbody tr:hover { background: rgb(var(--accent-rgb) / 0.04); }
+  tbody tr:hover { background: rgb(255 255 255 / 0.025); }
   td { font-variant-numeric: tabular-nums; color: var(--ink-2); }
   td:first-child { font-weight: 560; color: var(--ink); min-width: 10rem; }
-  td:empty::after { content: 'Pending'; font: 500 0.7rem var(--mono); letter-spacing: 0.04em; text-transform: uppercase; color: var(--accent); border: 1px solid rgb(var(--accent-rgb) / 0.3); background: var(--accent-soft); padding: 0.2rem 0.55rem; border-radius: 999px; }
+  td:empty::after { content: 'Pending'; font: 500 0.7rem var(--mono); letter-spacing: 0.04em; text-transform: uppercase; color: var(--label); border: 1px solid var(--line-strong); background: var(--surface-2); padding: 0.2rem 0.55rem; border-radius: 999px; }
 
   /* Buttons */
   .btn { position: relative; display: inline-flex; align-items: center; justify-content: center; gap: 0.4rem; min-height: 44px; padding: 0.65rem 1.2rem; border-radius: 999px; font: 600 0.925rem/1 var(--sans); text-decoration: none; white-space: nowrap; transition: transform 200ms var(--ease), box-shadow 200ms var(--ease), background-color 200ms; }
-  .btn-primary { background: var(--accent); color: var(--accent-ink); box-shadow: 0 0 0 1px rgb(var(--accent-rgb) / 0.6), 0 8px 30px -8px rgb(var(--accent-rgb) / 0.7); }
-  .btn-primary:hover { color: var(--accent-ink); background: var(--accent-2); box-shadow: 0 0 0 1px var(--accent-2), 0 12px 40px -8px rgb(var(--accent-rgb) / 0.9); transform: translateY(-1px); }
+  .btn-primary { background: var(--accent); color: var(--accent-ink); box-shadow: 0 8px 24px -12px rgb(var(--accent-rgb) / 0.5); }
+  .btn-primary:hover { color: var(--accent-ink); background: var(--accent-2); box-shadow: 0 10px 28px -12px rgb(var(--accent-rgb) / 0.6); transform: translateY(-1px); }
   .btn-ghost { color: var(--ink); border: 1px solid var(--line-strong); background: rgb(255 255 255 / 0.03); }
-  .btn-ghost:hover { color: var(--ink); border-color: rgb(var(--accent-rgb) / 0.5); background: var(--accent-soft); }
+  .btn-ghost:hover { color: var(--ink); border-color: rgb(255 255 255 / 0.28); background: var(--surface-2); }
   .btn:active { transform: translateY(1px) scale(0.99); }
 
   /* Footer */
