@@ -1,14 +1,13 @@
 ---
 import Base from '../layouts/Base.astro';
 import ProductCard from '../components/ProductCard.astro';
+import KitchenStage from '../components/KitchenStage.astro';
 import { getProduct, humanize, published, urlFor } from '../lib/site';
 
 const hubs = await published('best');
 const reviews = await published('reviews');
 const latest = [...reviews].sort((a, b) => +b.data.updated - +a.data.updated).slice(0, 6);
 const count = (category: string) => reviews.filter((r) => getProduct(r.data.product_id).category === category).length;
-// The units every test reports in. Labels only: no invented readings.
-const rings = [['°F', 's', 'dB'], ['W', 'g', 'min'], ['in', 'lb', '%']];
 ---
 
 <Base title="Kitchen Watcher: tested kitchen gear and price drops" description="TODO(human): ≤155-char homepage description.">
@@ -21,16 +20,7 @@ const rings = [['°F', 's', 'dB'], ['W', 'g', 'min'], ['in', 'lb', '%']];
         <a class="btn btn-ghost" href="/how-we-test/">How we test</a>
       </p>
     </div>
-    <div class="core" aria-hidden="true">
-      <div class="gyro">
-        {rings.map((units, i) => (
-          <div class={`ring r${i}`}>
-            {units.map((u, j) => <span class="unit" style={`--a:${j * 120}deg`}>{u}</span>)}
-          </div>
-        ))}
-        <div class="nucleus"></div>
-      </div>
-    </div>
+    <KitchenStage />
   </section>
 
   {hubs.length > 0 && (
@@ -63,29 +53,6 @@ const rings = [['°F', 's', 'dB'], ['W', 'g', 'min'], ['in', 'lb', '%']];
   .lede { font-size: 1.15rem; color: var(--ink-2); max-width: 52ch; margin: 0 0 1.75rem; }
   .ctas { display: flex; flex-wrap: wrap; gap: 0.75rem; margin: 0; }
 
-  /* Measurement core: three gimbal rings in true 3D carrying the units we measure in. */
-  .core { aspect-ratio: 1; width: min(100%, 460px); justify-self: center; perspective: 1100px; }
-  .gyro { position: relative; width: 100%; height: 100%; transform-style: preserve-3d; transform: rotateX(62deg) rotateZ(-18deg); }
-  .ring { position: absolute; inset: 0; border-radius: 50%; transform-style: preserve-3d; border: 1px solid rgb(63 224 255 / 0.5); box-shadow: 0 0 30px -6px rgb(63 224 255 / 0.5), inset 0 0 30px -10px rgb(63 224 255 / 0.4); }
-  .r0 { transform: rotateY(0deg); }
-  .r1 { inset: 9%; transform: rotateY(64deg); border-color: rgb(120 150 255 / 0.55); }
-  .r2 { inset: 18%; transform: rotateX(70deg); border-style: dashed; }
-  .unit { position: absolute; left: 50%; top: 50%; font: 500 0.9rem var(--mono); color: var(--accent-2); padding: 0.2rem 0.45rem; border-radius: 6px; background: rgb(6 8 12 / 0.7); border: 1px solid rgb(63 224 255 / 0.4);
-    transform: translate(-50%, -50%) rotateZ(var(--a)) translateX(calc(min(46vw, 230px) * var(--k, 1))) rotateZ(calc(var(--a) * -1)) rotateX(-62deg); }
-  .r1 .unit { --k: 0.82; }
-  .r2 .unit { --k: 0.64; }
-  .nucleus { position: absolute; inset: 38%; border-radius: 50%; background: radial-gradient(circle at 35% 30%, #e9fdff, var(--accent) 40%, #0a3a4a 75%); box-shadow: 0 0 60px 10px rgb(63 224 255 / 0.45), 0 0 140px 30px rgb(63 120 255 / 0.25); transform: rotateX(-62deg); }
-  @media (prefers-reduced-motion: no-preference) {
-    .r0 { animation: spinZ 26s linear infinite; }
-    .r1 { animation: spinY 18s linear infinite; }
-    .r2 { animation: spinX 14s linear infinite; }
-    .nucleus { animation: pulse 4s ease-in-out infinite; }
-  }
-  @keyframes spinZ { to { transform: rotateZ(360deg); } }
-  @keyframes spinY { from { transform: rotateY(64deg) rotateZ(0); } to { transform: rotateY(64deg) rotateZ(-360deg); } }
-  @keyframes spinX { from { transform: rotateX(70deg) rotateZ(0); } to { transform: rotateX(70deg) rotateZ(360deg); } }
-  @keyframes pulse { 50% { box-shadow: 0 0 90px 18px rgb(63 224 255 / 0.55), 0 0 180px 40px rgb(63 120 255 / 0.3); } }
-
   .hub-grid { display: grid; grid-template-columns: 1.4fr 1fr; gap: 1rem; perspective: 1200px; }
   .hub { position: relative; display: grid; gap: 0.4rem; align-content: end; min-height: 13rem; padding: 1.6rem; color: var(--ink); text-decoration: none; overflow: hidden; transition: transform 400ms var(--ease), border-color 200ms, box-shadow 300ms; }
   .hub::before { content: ''; position: absolute; inset: -40% -10% auto auto; width: 70%; aspect-ratio: 1; border-radius: 50%; background: radial-gradient(circle, rgb(63 224 255 / 0.28), transparent 65%); pointer-events: none; }
@@ -97,9 +64,7 @@ const rings = [['°F', 's', 'dB'], ['W', 'g', 'min'], ['in', 'lb', '%']];
   .cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 30rem), 1fr)); gap: 0 1rem; }
 
   @media (max-width: 860px) {
-    .hero { grid-template-columns: 1fr; min-height: auto; padding-top: 2.5rem; }
-    .core { width: min(78vw, 340px); order: -1; margin-bottom: -1rem; }
-    .unit { transform: translate(-50%, -50%) rotateZ(var(--a)) translateX(calc(min(36vw, 160px) * var(--k, 1))) rotateZ(calc(var(--a) * -1)) rotateX(-62deg); }
+    .hero { grid-template-columns: 1fr; min-height: auto; padding-top: 1rem; }
     .hub-grid { grid-template-columns: 1fr; }
   }
 </style>
