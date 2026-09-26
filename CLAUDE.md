@@ -58,6 +58,11 @@ workers/price-watch/         # scraper, D1 schema, alert sender
 - robots.txt allows Googlebot, Bingbot, GPTBot, ClaudeBot, PerplexityBot. Sitemap auto-generated.
 - After every publish: `npm run ping:indexnow`.
 
+## Research pipeline (automated)
+- `/research <cluster> [n]` finds products and topics on the web, scores them, appends to `data/products.json`, writes `content/queue.md` and a research log. Every model needs a source URL; no source, no entry.
+- `/produce [n]` drafts the next queued pages with web research per page. Spec numbers are labeled "manufacturer spec"; every hands-on number is a `<!-- MEASURE: -->` comment.
+- Human step is only: test, photograph, replace MEASURE comments with numbers, set `draft: false`.
+
 ## Workflow for a new page
 1. `npm run new -- --type review --keyword "ninja af101 review"` scaffolds MDX with frontmatter from products.json.
 2. Draft body from the brief in PLAN.md rules. Leave `draft: true`.
