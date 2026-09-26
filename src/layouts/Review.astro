@@ -3,7 +3,11 @@
 import type { CollectionEntry } from 'astro:content';
 import { Picture } from 'astro:assets';
 import Base from './Base.astro';
-import { abs, authorOf, getProduct, hubCrumb, iso, personLd, productLd, urlFor, usd } from '../lib/site';
+import ScoreBox from '../components/ScoreBox.astro';
+import PriceWatch from '../components/PriceWatch.astro';
+import AuthorBox from '../components/AuthorBox.astro';
+import RecipeCard from '../components/RecipeCard.astro';
+import { abs, authorOf, getProduct, hubCrumb, iso, personLd, productLd, published, urlFor, usd } from '../lib/site';
 
 interface Props { entry: CollectionEntry<'reviews'> }
 const { entry } = Astro.props;
@@ -11,6 +15,7 @@ const d = entry.data;
 const product = getProduct(d.product_id);
 const author = await authorOf(d.author);
 const path = urlFor(entry);
+const recipes = (await published('recipes')).filter((r) => r.data.product_id === d.product_id);
 
 const ld = d.score === undefined ? [] : [
   {
@@ -39,8 +44,10 @@ const ld = d.score === undefined ? [] : [
       {d.price_at_review_cents && <> · {usd(d.price_at_review_cents)} at review</>}
     </p>
     {d.hero && d.hero_alt && <Picture src={d.hero} alt={d.hero_alt} widths={[400, 800, 1200]} sizes="(max-width: 700px) 100vw, 700px" formats={['avif', 'webp']} loading="eager" fetchpriority="high" />}
-    {/* ScoreBox: step 5 */}
+    <ScoreBox score={d.score} verdict={d.verdict} pros={d.pros} cons={d.cons} />
     <slot />
-    {/* PriceWatch + AuthorBox: step 5 */}
+    <PriceWatch product_id={d.product_id} />
+    {recipes.length > 0 && <section><h2>Made in the {product.name}</h2>{recipes.map((r) => <RecipeCard recipe={r} />)}</section>}
+    <AuthorBox author={author} />
   </article>
 </Base>

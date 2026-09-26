@@ -1,0 +1,19 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import { Picture } from 'astro:assets';
+import { urlFor } from '../lib/site';
+
+interface Props { recipe: CollectionEntry<'recipes'> }
+const { recipe } = Astro.props;
+const d = recipe.data;
+---
+
+<a class="rcard" href={urlFor(recipe)}>
+  {d.hero && d.hero_alt && <Picture src={d.hero} alt={d.hero_alt} width={320} height={200} fit="cover" formats={['avif', 'webp']} />}
+  <strong>{d.title}</strong>
+  {d.prep_min !== undefined && d.cook_min !== undefined && <span class="meta">{d.prep_min + d.cook_min} min</span>}
+</a>
+
+<style>
+  .rcard { display: inline-flex; flex-direction: column; gap: 0.25rem; max-width: 320px; color: var(--ink); text-decoration: none; }
+</style>

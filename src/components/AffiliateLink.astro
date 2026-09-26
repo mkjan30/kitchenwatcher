@@ -1,0 +1,14 @@
+---
+// The only way to link to a merchant. Adds rel="sponsored nofollow", the Amazon tag, and data-aff for the click beacon.
+// Disclosure: every content layout renders it above <main> content, so it always sits above the first AffiliateLink.
+import { SITE, getProduct } from '../lib/site';
+
+interface Props { product_id: string; merchant: string; class?: string }
+const { product_id, merchant, class: cls } = Astro.props;
+const m = getProduct(product_id).merchants.find((x) => x.id === merchant);
+if (!m) throw new Error(`AffiliateLink: ${product_id} has no merchant "${merchant}" in data/products.json`);
+const url = new URL(m.url);
+if (merchant === 'amazon') url.searchParams.set('tag', SITE.amazonTag);
+---
+
+<a href={url.href} rel="sponsored nofollow noopener" target="_blank" data-aff={`${product_id}:${merchant}`} class={cls}><slot /></a>

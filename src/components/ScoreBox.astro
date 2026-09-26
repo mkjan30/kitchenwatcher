@@ -1,0 +1,26 @@
+---
+interface Props { score?: number; verdict?: string; pros?: string[]; cons?: string[] }
+const { score, verdict, pros = [], cons = [] } = Astro.props;
+---
+
+{score !== undefined && (
+  <section class="score" aria-label="Score">
+    <p class="num"><strong>{score}</strong>/10</p>
+    {verdict && <p class="verdict">{verdict}</p>}
+    <div class="pc">
+      <div><h3>Pros</h3><ul>{pros.map((p) => <li>{p}</li>)}</ul></div>
+      <div><h3>Cons</h3><ul>{cons.map((c) => <li>{c}</li>)}</ul></div>
+    </div>
+  </section>
+)}
+
+<style>
+  .score { border: 2px solid var(--ink); padding: 1rem; margin-block: 1.5rem; }
+  .num { font-size: 1.25rem; margin: 0; }
+  .num strong { font-size: 2.5rem; }
+  .verdict { font-weight: 600; }
+  .pc { display: grid; grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr)); gap: 1rem; }
+  .pc h3 { margin: 0; font-size: 1rem; }
+  .pc div:first-child h3 { color: var(--good); }
+  .pc div:last-child h3 { color: var(--bad); }
+</style>

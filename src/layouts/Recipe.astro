@@ -3,6 +3,7 @@
 import type { CollectionEntry } from 'astro:content';
 import { Picture } from 'astro:assets';
 import Base from './Base.astro';
+import AuthorBox from '../components/AuthorBox.astro';
 import { abs, authorOf, getProduct, iso, personLd, reviewFor, urlFor } from '../lib/site';
 
 interface Props { entry: CollectionEntry<'recipes'> }
@@ -58,6 +59,7 @@ const ld = [{
     <h2>Steps</h2>
     <ol>{d.steps?.map((s) => <li>{s}</li>)}</ol>
     <slot />
+    <AuthorBox author={author} />
   </article>
 </Base>
 

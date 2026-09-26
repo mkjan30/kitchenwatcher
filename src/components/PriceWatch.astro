@@ -1,0 +1,20 @@
+---
+// ponytail: static placeholder. Swap for the D1 JSON export (90-day line, all-time low, verdict) when workers/price-watch ships.
+import { getProduct, usd } from '../lib/site';
+
+interface Props { product_id: string }
+const p = getProduct(Astro.props.product_id);
+---
+
+<section class="pw" aria-label="Price watch">
+  <h2>Price watch</h2>
+  <p>
+    {p.last_price_cents !== null ? <>Last price we saw: <strong>{usd(p.last_price_cents)}</strong>. </> : null}
+    Daily price history and drop alerts for the {p.name} are coming soon.
+  </p>
+</section>
+
+<style>
+  .pw { background: #f4f0e8; padding: 1rem; margin-block: 2rem; }
+  .pw h2 { margin-top: 0; font-size: 1.1rem; }
+</style>

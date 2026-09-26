@@ -1,0 +1,22 @@
+---
+import { render, type CollectionEntry } from 'astro:content';
+import { Picture } from 'astro:assets';
+
+interface Props { author: CollectionEntry<'authors'> }
+const { author } = Astro.props;
+const { Content } = await render(author);
+---
+
+<aside class="author">
+  {author.data.photo && author.data.photo_alt && <Picture src={author.data.photo} alt={author.data.photo_alt} width={96} height={96} formats={['avif', 'webp']} />}
+  <div>
+    <p><a href={`/authors/${author.id}/`}><strong>{author.data.name}</strong></a> · {author.data.job_title}</p>
+    <Content />
+  </div>
+</aside>
+
+<style>
+  .author { display: flex; gap: 1rem; align-items: flex-start; border-top: 1px solid var(--line); margin-top: 2rem; padding-top: 1rem; font-size: 0.95rem; }
+  .author :global(img) { border-radius: 50%; flex: none; }
+  .author p { margin: 0 0 0.5rem; }
+</style>

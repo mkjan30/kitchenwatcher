@@ -1,0 +1,26 @@
+---
+import AffiliateLink from './AffiliateLink.astro';
+import { getProduct, reviewFor, urlFor, usd } from '../lib/site';
+
+interface Props { product_id: string; rank?: number }
+const { product_id, rank } = Astro.props;
+const p = getProduct(product_id);
+const review = await reviewFor(product_id);
+---
+
+<section class="card">
+  <h3>{rank && <span>{rank}. </span>}{review ? <a href={urlFor(review)}>{p.name}</a> : p.name}</h3>
+  <p class="meta">
+    {p.brand}
+    {review?.data.score !== undefined && <> · <strong>{review.data.score}/10</strong></>}
+    {p.last_price_cents !== null && <> · {usd(p.last_price_cents)} last checked</>}
+  </p>
+  {review?.data.verdict && <p>{review.data.verdict}</p>}
+  <p class="buy">{p.merchants.map((m) => <AffiliateLink product_id={p.id} merchant={m.id}>Check price at {m.id}</AffiliateLink>)}</p>
+</section>
+
+<style>
+  .card { border: 1px solid var(--line); padding: 1rem; margin-block: 1rem; }
+  .card h3 { margin: 0; }
+  .buy { display: flex; flex-wrap: wrap; gap: 0.75rem; }
+</style>

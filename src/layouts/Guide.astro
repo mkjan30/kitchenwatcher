@@ -4,6 +4,8 @@
 import type { CollectionEntry } from 'astro:content';
 import { Picture } from 'astro:assets';
 import Base from './Base.astro';
+import AuthorBox from '../components/AuthorBox.astro';
+import ProductCard from '../components/ProductCard.astro';
 import { abs, articleLd, authorOf, getProduct, hubCrumb, iso, productLd, reviewFor, urlFor } from '../lib/site';
 
 type Entry = CollectionEntry<'guides' | 'smart-kitchen' | 'vs' | 'best'>;
@@ -47,15 +49,13 @@ const productRef = 'product_id' in d ? d.product_id : entry.collection === 'vs' 
 const crumbs = [...(productRef && entry.collection !== 'best' ? [hubCrumb(productRef)] : []), { name: d.title, path }];
 ---
 
-<Base title={d.title} description={d.description} crumbs={crumbs} ld={ld} disclose={entry.collection !== 'guides' || !!productRef} ogImage={d.hero?.src}>
+<Base title={d.title} description={d.description} crumbs={crumbs} ld={ld} disclose ogImage={d.hero?.src}>
   <article>
     <h1>{d.title}</h1>
     <p class="meta">By <a href={`/authors/${author.id}/`}>{author.data.name}</a> · Updated <time datetime={iso(d.updated)}>{iso(d.updated)}</time></p>
     {d.hero && d.hero_alt && <Picture src={d.hero} alt={d.hero_alt} widths={[400, 800, 1200]} sizes="(max-width: 700px) 100vw, 700px" formats={['avif', 'webp']} loading="eager" fetchpriority="high" />}
     {ranked.length > 0 && (
-      <ol class="ranked">
-        {ranked.map((x) => <li><a href={urlFor(x.review!)}>{x.product.name}</a> — {x.review!.data.score}/10</li>)}
-      </ol>
+      <section>{ranked.map((x, i) => <ProductCard product_id={x.product.id} rank={i + 1} />)}</section>
     )}
     <slot />
     {faq?.length && (
@@ -64,5 +64,6 @@ const crumbs = [...(productRef && entry.collection !== 'best' ? [hubCrumb(produc
         {faq.map((f) => <><h3>{f.q}</h3><p>{f.a}</p></>)}
       </section>
     )}
+    <AuthorBox author={author} />
   </article>
 </Base>
