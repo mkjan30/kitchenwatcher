@@ -1,0 +1,24 @@
+{
+  "name": "kitchenwatcher",
+  "type": "module",
+  "version": "0.0.1",
+  "engines": {
+    "node": ">=22.12.0"
+  },
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build && pagefind --site dist",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@astrojs/cloudflare": "^12.6.13",
+    "@astrojs/mdx": "^4.3.14",
+    "@astrojs/sitemap": "^3.7.4",
+    "astro": "^5.18.2",
+    "pagefind": "^1.5.2"
+  },
+  "allowScripts": {
+    "esbuild": true
+  }
+}
