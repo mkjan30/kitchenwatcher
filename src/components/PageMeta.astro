@@ -1,0 +1,13 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import { human, iso } from '../lib/site';
+
+interface Props { author: CollectionEntry<'authors'>; published: Date; updated: Date }
+const { author, published, updated } = Astro.props;
+const changed = iso(updated) !== iso(published);
+---
+
+<p class="meta">
+  By <a href={`/authors/${author.id}/`}>{author.data.name}</a> · Published <time datetime={iso(published)}>{human(published)}</time>
+  {changed && <> · Updated <time datetime={iso(updated)}>{human(updated)}</time></>}
+</p>

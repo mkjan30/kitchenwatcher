@@ -24,6 +24,8 @@ const base = ({ image }: SchemaContext) => ({
   hero_alt: z.string().min(1).optional(),
   // Required with a hero: who owns the image (e.g. "Instant Brands"). Press-kit terms usually require attribution.
   hero_credit: z.string().min(1).optional(),
+  // Reader questions, answered only from facts sourced on the page. Rendered as an FAQ section + FAQPage JSON-LD.
+  faq: z.array(z.object({ q: z.string().min(1), a: z.string().min(1) }).strict()).optional(),
   // Every URL actually read for this page. Required (≥2) before a page goes live.
   sources: z.array(z.string().url()).min(2).optional(),
   // Editor's brief: comparison-table columns, notes, and claims still to verify against sources.
@@ -89,7 +91,6 @@ const vs = defineCollection({
 // Explainers use the Guide layout; a smart-kitchen page about one device may name it.
 const guideFields = {
   product_id: productId.optional(),
-  faq: z.array(z.object({ q: z.string().min(1), a: z.string().min(1) }).strict()).optional(),
 };
 
 const guides = defineCollection({

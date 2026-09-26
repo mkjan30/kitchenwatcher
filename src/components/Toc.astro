@@ -1,0 +1,24 @@
+---
+// "On this page" jump list from the page's H2s. Only shown when there are enough sections to need it.
+import type { MarkdownHeading } from 'astro';
+
+interface Props { headings?: MarkdownHeading[]; extra?: { slug: string; text: string }[] }
+const { headings = [], extra = [] } = Astro.props;
+const items = [...headings.filter((h) => h.depth === 2), ...extra];
+---
+
+{items.length >= 4 && (
+  <nav class="toc" aria-label="On this page">
+    <p class="toc-h">On this page</p>
+    <ol>{items.map((h) => <li><a href={`#${h.slug}`}>{h.text}</a></li>)}</ol>
+  </nav>
+)}
+
+<style>
+  .toc { border-block: 1px solid var(--line); padding: 0.75rem 0; margin-block: 1.5rem; font-size: 0.9rem; }
+  .toc-h { margin: 0 0 0.4rem; font-size: 0.75rem; font-weight: 800; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); }
+  ol { margin: 0; padding-left: 1.2rem; columns: 2 16rem; column-gap: 2rem; }
+  li { margin-block: 0.2rem; break-inside: avoid; }
+  a { color: var(--ink); text-decoration: none; }
+  a:hover { text-decoration: underline; text-decoration-color: var(--accent); }
+</style>

@@ -44,6 +44,9 @@ export const published = async <C extends CollectionKey>(c: C) =>
 export const abs = (path: string) => new URL(path, SITE.url).href;
 export const humanize = (slug: string) => slug.charAt(0).toUpperCase() + slug.slice(1).replace(/-/g, ' ');
 export const iso = (d: Date) => d.toISOString().slice(0, 10);
+export const human = (d: Date) => d.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric', timeZone: 'UTC' });
+export const faqLd = (faq?: { q: string; a: string }[]) =>
+  faq?.length ? [{ '@type': 'FAQPage', mainEntity: faq.map((f) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })) }] : [];
 export const usd = (cents: number) => `$${(cents / 100).toFixed(2)}`;
 
 export const personLd = (a: CollectionEntry<'authors'>) => ({

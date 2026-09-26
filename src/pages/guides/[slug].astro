@@ -8,7 +8,7 @@ export async function getStaticPaths() {
   return (await published('guides')).map((entry) => ({ params: { slug: urlFor(entry).split('/').at(-2) }, props: { entry } }));
 }
 const { entry } = Astro.props;
-const { Content } = await render(entry);
+const { Content, headings } = await render(entry);
 ---
 
-<Layout entry={entry}><Content components={{ AffiliateLink }} /></Layout>
+<Layout entry={entry} headings={headings}><Content components={{ AffiliateLink }} /></Layout>

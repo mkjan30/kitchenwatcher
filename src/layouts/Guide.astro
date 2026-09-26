@@ -7,12 +7,16 @@ import Base from './Base.astro';
 import AuthorBox from '../components/AuthorBox.astro';
 import ProductCard from '../components/ProductCard.astro';
 import ResearchNote from '../components/ResearchNote.astro';
+import PageMeta from '../components/PageMeta.astro';
+import Toc from '../components/Toc.astro';
+import Faq from '../components/Faq.astro';
+import type { MarkdownHeading } from 'astro';
 import Sources from '../components/Sources.astro';
-import { abs, articleLd, authorOf, getProduct, hubCrumb, iso, productLd, reviewFor, urlFor } from '../lib/site';
+import { abs, articleLd, authorOf, faqLd, getProduct, hubCrumb, iso, productLd, reviewFor, urlFor } from '../lib/site';
 
 type Entry = CollectionEntry<'guides' | 'smart-kitchen' | 'vs' | 'best'>;
-interface Props { entry: Entry }
-const { entry } = Astro.props;
+interface Props { entry: Entry; headings?: MarkdownHeading[] }
+const { entry, headings } = Astro.props;
 const d = entry.data;
 const author = await authorOf(d.author);
 const path = urlFor(entry);
@@ -24,7 +28,7 @@ const ranked =
         .filter((x) => x.review !== undefined)
     : [];
 
-const faq = 'faq' in d ? d.faq : undefined;
+const faq = d.faq;
 const ld: object[] =
   entry.collection === 'best'
     ? [{
@@ -39,12 +43,8 @@ const ld: object[] =
         })),
       }]
     : [articleLd(entry, author, path)];
-if (faq?.length) {
-  ld.push({
-    '@type': 'FAQPage',
-    mainEntity: faq.map((f) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })),
-  });
-}
+ld.push(...faqLd(faq));
+const tocExtra = faq?.length ? [{ slug: 'faq', text: 'Frequently asked questions' }] : [];
 
 const productRef = 'product_id' in d ? d.product_id : entry.collection === 'vs' ? entry.data.products[0] : undefined;
 const crumbs = [...(productRef && entry.collection !== 'best' ? [hubCrumb(productRef)] : []), { name: d.title, path }];
@@ -54,19 +54,15 @@ const crumbs = [...(productRef && entry.collection !== 'best' ? [hubCrumb(produc
   <article>
     <h1>{d.title}</h1>
     <p class="dek">{d.description}</p>
-    <p class="meta">By <a href={`/authors/${author.id}/`}>{author.data.name}</a> · Updated <time datetime={iso(d.updated)}>{iso(d.updated)}</time></p>
+    <PageMeta author={author} published={d.published} updated={d.updated} />
     <ResearchNote subject={entry.collection === 'best' ? 'the products on this list' : entry.collection === 'vs' ? 'either product' : productRef ? `the ${getProduct(productRef).name}` : 'the products discussed here'} />
     {d.hero && d.hero_alt && <Picture src={d.hero} alt={d.hero_alt} widths={[400, 800, 1200]} sizes="(max-width: 700px) 100vw, 700px" formats={['avif', 'webp']} loading="eager" fetchpriority="high" />}
     {ranked.length > 0 && (
       <section>{ranked.map((x, i) => <ProductCard product_id={x.product.id} rank={i + 1} />)}</section>
     )}
+    <Toc headings={headings} extra={tocExtra} />
     <slot />
-    {faq?.length && (
-      <section>
-        <h2>FAQ</h2>
-        {faq.map((f) => <><h3>{f.q}</h3><p>{f.a}</p></>)}
-      </section>
-    )}
+    <Faq faq={faq} />
     <Sources urls={d.sources} />
     <AuthorBox author={author} />
   </article>
