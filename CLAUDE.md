@@ -67,7 +67,7 @@ workers/price-watch/         # scraper, D1 schema, alert sender
 
 ## Workflow for a new page
 1. `npm run new -- --type review --keyword "ninja af101 review"` scaffolds MDX with frontmatter from products.json.
-2. Draft body from the brief in PLAN.md rules. Leave `draft: true`.
+2. Build the brief with the `seo-content-brief` skill, draft the body under PLAN.md brief rules, then review it with the `seo-content` skill and fix what it finds. Leave `draft: true`. (CLAUDE.md research rules win over any skill advice.)
 3. Human verifies sources, clears VERIFY comments, adds images. Only then set `draft: false`.
 4. `npm run build && npm run lint:content && npm run check:schema` (lint and schema read `dist/`).
 5. Commit with message `content: {type} {slug}`. Push.
