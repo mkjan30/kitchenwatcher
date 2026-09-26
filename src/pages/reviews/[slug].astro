@@ -1,0 +1,13 @@
+---
+import { render } from 'astro:content';
+import Layout from '../../layouts/Review.astro';
+import { published, urlFor } from '../../lib/site';
+
+export async function getStaticPaths() {
+  return (await published('reviews')).map((entry) => ({ params: { slug: urlFor(entry).split('/').at(-2) }, props: { entry } }));
+}
+const { entry } = Astro.props;
+const { Content } = await render(entry);
+---
+
+<Layout entry={entry}><Content /></Layout>

@@ -1,0 +1,66 @@
+---
+// Recipe → Recipe (instructions, nutrition if known, video if present). Carries a "Made in" box.
+import type { CollectionEntry } from 'astro:content';
+import { Picture } from 'astro:assets';
+import Base from './Base.astro';
+import { abs, authorOf, getProduct, iso, personLd, reviewFor, urlFor } from '../lib/site';
+
+interface Props { entry: CollectionEntry<'recipes'> }
+const { entry } = Astro.props;
+const d = entry.data;
+const author = await authorOf(d.author);
+const product = getProduct(d.product_id);
+const review = await reviewFor(d.product_id);
+const path = urlFor(entry);
+const mins = (m?: number) => (m === undefined ? undefined : `PT${m}M`);
+
+const ld = [{
+  '@type': 'Recipe',
+  name: d.title,
+  description: d.description,
+  ...(d.hero && { image: [abs(d.hero.src)] }),
+  author: personLd(author),
+  datePublished: iso(d.published),
+  prepTime: mins(d.prep_min),
+  cookTime: mins(d.cook_min),
+  totalTime: d.prep_min !== undefined && d.cook_min !== undefined ? mins(d.prep_min + d.cook_min) : undefined,
+  recipeYield: d.servings && `${d.servings} servings`,
+  recipeCategory: 'Main course', // TODO(human): set per recipe once there are non-mains
+  tool: product.name,
+  keywords: [d.primary_keyword, ...d.secondary_keywords].join(', '),
+  recipeIngredient: d.ingredients,
+  recipeInstructions: d.steps?.map((text, i) => ({ '@type': 'HowToStep', position: i + 1, text })),
+  ...(d.calories_kcal && { nutrition: { '@type': 'NutritionInformation', calories: `${d.calories_kcal} calories` } }),
+  ...(d.video_url && {
+    video: {
+      '@type': 'VideoObject',
+      name: d.title,
+      description: d.description,
+      contentUrl: d.video_url,
+      uploadDate: iso(d.published),
+      ...(d.hero && { thumbnailUrl: abs(d.hero.src) }),
+    },
+  }),
+}];
+---
+
+<Base title={d.title} description={d.description} crumbs={[{ name: d.title, path }]} ld={ld} disclose ogImage={d.hero?.src}>
+  <article>
+    <h1>{d.title}</h1>
+    <p class="meta">By <a href={`/authors/${author.id}/`}>{author.data.name}</a> · Updated <time datetime={iso(d.updated)}>{iso(d.updated)}</time></p>
+    {d.hero && d.hero_alt && <Picture src={d.hero} alt={d.hero_alt} widths={[400, 800, 1200]} sizes="(max-width: 700px) 100vw, 700px" formats={['avif', 'webp']} loading="eager" fetchpriority="high" />}
+    <aside class="made-in">
+      Made in: {review ? <a href={urlFor(review)}>{product.name}</a> : product.name}
+    </aside>
+    <p class="meta">Prep {d.prep_min} min · Cook {d.cook_min} min · Serves {d.servings}</p>
+    <h2>Ingredients</h2>
+    <ul>{d.ingredients?.map((i) => <li>{i}</li>)}</ul>
+    <h2>Steps</h2>
+    <ol>{d.steps?.map((s) => <li>{s}</li>)}</ol>
+    <slot />
+  </article>
+</Base>
+
+<style>
+  .made-in { border: 1px solid var(--line); padding: 0.75rem 1rem; margin-block: 1rem; font-weight: 600; }
+</style>

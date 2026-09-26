@@ -1,0 +1,13 @@
+---
+import { render } from 'astro:content';
+import Layout from '../../../layouts/Recipe.astro';
+import { published } from '../../../lib/site';
+
+export async function getStaticPaths() {
+  return (await published('recipes')).map((entry) => ({ params: { appliance: entry.data.appliance, slug: entry.id }, props: { entry } }));
+}
+const { entry } = Astro.props;
+const { Content } = await render(entry);
+---
+
+<Layout entry={entry}><Content /></Layout>

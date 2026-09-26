@@ -1,0 +1,48 @@
+---
+// /deals/ → ItemList + Offer with priceValidUntil.
+import type { CollectionEntry } from 'astro:content';
+import Base from './Base.astro';
+import { abs, getProduct, iso, productLd, urlFor, usd } from '../lib/site';
+
+interface Props { entry: CollectionEntry<'deals'> }
+const { entry } = Astro.props;
+const d = entry.data;
+const path = urlFor(entry);
+const items = d.items.map((i) => ({ ...i, product: getProduct(i.product_id) }));
+
+const ld = [{
+  '@type': 'ItemList',
+  name: d.title,
+  itemListElement: items.map((i, n) => ({
+    '@type': 'ListItem',
+    position: n + 1,
+    item: {
+      ...productLd(i.product),
+      offers: {
+        '@type': 'Offer',
+        price: (i.price_cents / 100).toFixed(2),
+        priceCurrency: 'USD',
+        priceValidUntil: iso(i.valid_until),
+        availability: 'https://schema.org/InStock',
+        url: abs(path),
+        seller: { '@type': 'Organization', name: i.merchant },
+      },
+    },
+  })),
+}];
+---
+
+<Base title={d.title} description={d.description} crumbs={[{ name: `Deals ${d.week}`, path }]} ld={ld} disclose>
+  <article>
+    <h1>{d.title}</h1>
+    <table>
+      <thead><tr><th>Product</th><th>Merchant</th><th>Price</th><th>Was</th><th>Until</th></tr></thead>
+      <tbody>
+        {items.map((i) => (
+          <tr><td>{i.product.name}</td><td>{i.merchant}</td><td>{usd(i.price_cents)}</td><td>{i.was_cents ? usd(i.was_cents) : '—'}</td><td>{iso(i.valid_until)}</td></tr>
+        ))}
+      </tbody>
+    </table>
+    <slot />
+  </article>
+</Base>
