@@ -38,6 +38,7 @@ const ld = d.score === undefined ? [] : [
 <Base title={d.title} description={d.description} crumbs={[hubCrumb(d.product_id), { name: d.title, path }]} ld={ld} disclose ogImage={d.hero?.src}>
   <article>
     <h1>{d.title}</h1>
+    <p class="dek">{d.description}</p>
     <p class="meta">
       By <a href={`/authors/${author.id}/`}>{author.data.name}</a> · Updated <time datetime={iso(d.updated)}>{iso(d.updated)}</time>
       {d.tested_on && <> · Tested {d.test_duration_days} days from <time datetime={iso(d.tested_on)}>{iso(d.tested_on)}</time></>}

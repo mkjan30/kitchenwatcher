@@ -1,70 +1,106 @@
 ---
 import Base from '../layouts/Base.astro';
-import ProductCard from '../components/ProductCard.astro';
-import KitchenStage from '../components/KitchenStage.astro';
+import { iconSvg } from '../components/kitchen-icons';
 import { getProduct, humanize, published, urlFor } from '../lib/site';
 
 const hubs = await published('best');
-const reviews = await published('reviews');
-const latest = [...reviews].sort((a, b) => +b.data.updated - +a.data.updated).slice(0, 6);
-const count = (category: string) => reviews.filter((r) => getProduct(r.data.product_id).category === category).length;
+const reviews = [...(await published('reviews'))].sort((a, b) => +b.data.updated - +a.data.updated);
+const [lead, ...otherHubs] = hubs;
+// Line-art stand-ins until real test photos exist; swap for <Picture> of the hero when there is one.
+const ICON_FOR: Record<string, string> = { 'air-fryers': 'airFryer', 'kitchen-safety-devices': 'fireExtinguisher' };
+const iconFor = (category: string) => iconSvg(ICON_FOR[category] ?? 'thermometer', 1.1);
 ---
 
 <Base title="Kitchen Watcher: tested kitchen gear and price drops" description="TODO(human): ≤155-char homepage description.">
-  <section class="hero">
-    <div class="hero-copy">
-      <h1>Kitchen gear, <span class="hl">measured.</span><br />Prices, watched.</h1>
-      <p class="lede">TODO(human): 2–3 sentences. Who runs this, what gets measured, how prices are watched.</p>
-      <p class="ctas">
-        {hubs[0] && <a class="btn btn-primary" href={urlFor(hubs[0])}>{hubs[0].data.title.split(':')[0]}</a>}
-        <a class="btn btn-ghost" href="/how-we-test/">How we test</a>
-      </p>
-    </div>
-    <KitchenStage />
-  </section>
-
-  {hubs.length > 0 && (
-    <section class="hubs" aria-labelledby="hubs-h">
-      <h2 id="hubs-h">Best-of guides</h2>
-      <div class="hub-grid">
-        {hubs.map((h, i) => (
-          <a class:list={['hub', { lead: i === 0 }]} href={urlFor(h)}>
-            <span class="hub-name">{humanize(h.data.category)}</span>
-            <span class="hub-title">{h.data.title}</span>
-            <span class="hub-meta">{h.data.products.length} models · {count(h.data.category)} reviewed</span>
-          </a>
-        ))}
+  {lead && (
+    <section class="lead">
+      <a class="lead-art" href={urlFor(lead)} aria-hidden="true" tabindex="-1" set:html={iconFor(lead.data.category)} />
+      <div class="lead-copy">
+        <p class="eyebrow">{humanize(lead.data.category)}</p>
+        <h1><a href={urlFor(lead)}>{lead.data.title}</a></h1>
+        <p class="dek">{lead.data.description}</p>
+        <p class="lead-meta">{lead.data.products.length} models under test</p>
       </div>
     </section>
   )}
 
-  {latest.length > 0 && (
-    <section aria-labelledby="latest-h">
-      <h2 id="latest-h">Latest reviews</h2>
-      <div class="cards">{latest.map((r) => <ProductCard product_id={r.data.product_id} />)}</div>
+  {otherHubs.length > 0 && (
+    <section class="more-guides" aria-labelledby="guides-h">
+      <h2 id="guides-h" class="section-h">More best-of guides</h2>
+      <ul>
+        {otherHubs.map((h) => (
+          <li>
+            <a href={urlFor(h)}>
+              <span class="eyebrow">{humanize(h.data.category)}</span>
+              <span class="g-title">{h.data.title}</span>
+            </a>
+          </li>
+        ))}
+      </ul>
     </section>
   )}
+
+  {reviews.length > 0 && (
+    <section aria-labelledby="latest-h">
+      <h2 id="latest-h" class="section-h">Latest reviews</h2>
+      <div class="grid">
+        {reviews.slice(0, 6).map((r) => {
+          const category = getProduct(r.data.product_id).category;
+          return (
+            <a class="teaser" href={urlFor(r)}>
+              <span class="thumb" aria-hidden="true" set:html={iconFor(category)} />
+              <span class="eyebrow">{humanize(category)}</span>
+              <span class="t-title">{r.data.title}</span>
+              {r.data.score !== undefined ? <span class="t-meta">{r.data.score}/10 in our tests</span> : <span class="t-meta">In testing</span>}
+            </a>
+          );
+        })}
+      </div>
+    </section>
+  )}
+
+  <section class="trust" aria-labelledby="trust-h">
+    <h2 id="trust-h">Why you can trust us</h2>
+    <p>Every product we recommend is physically tested with a probe thermometer, a scale, a sound meter and a watt meter. Scores come from those measurements. Commissions never change a ranking.</p>
+    <p>TODO(human): 2–3 sentences. Who runs this, what gets measured, how prices are watched.</p>
+    <p><a href="/how-we-test/">How we test</a></p>
+  </section>
 </Base>
 
 <style>
-  .hero { display: grid; grid-template-columns: 1.15fr 1fr; align-items: center; gap: 2rem; min-height: min(78dvh, 720px); padding-block: 2rem; }
-  .hero h1 { font-size: clamp(2.6rem, 1.4rem + 4.6vw, 4.6rem); line-height: 1.02; letter-spacing: -0.045em; margin: 0 0 1.25rem; }
-  .hl { color: var(--accent); }
-  .lede { font-size: 1.15rem; color: var(--ink-2); max-width: 52ch; margin: 0 0 1.75rem; }
-  .ctas { display: flex; flex-wrap: wrap; gap: 0.75rem; margin: 0; }
+  .eyebrow { display: block; font-size: 0.75rem; font-weight: 800; letter-spacing: 0.06em; text-transform: uppercase; color: var(--accent); margin: 0 0 0.35rem; }
+  .section-h { font-family: var(--sans); font-size: 0.85rem; font-weight: 800; letter-spacing: 0.06em; text-transform: uppercase; border-top: 4px solid var(--ink); padding-top: 0.75rem; margin: 3rem 0 1.25rem; }
 
-  .hub-grid { display: grid; grid-template-columns: 1.4fr 1fr; gap: 1rem; perspective: 1200px; }
-  .hub { position: relative; display: grid; gap: 0.4rem; align-content: end; min-height: 13rem; padding: 1.6rem; color: var(--ink); text-decoration: none; overflow: hidden; transition: transform 400ms var(--ease), border-color 200ms, box-shadow 300ms; }
-  .hub::before { content: ''; position: absolute; inset: -40% -10% auto auto; width: 70%; aspect-ratio: 1; border-radius: 50%; background: radial-gradient(circle, rgb(var(--accent-rgb) / 0.1), transparent 65%); pointer-events: none; }
-  .hub.lead { border-color: rgb(var(--accent-rgb) / 0.3); box-shadow: var(--glow); }
-  .hub:hover { color: var(--ink); transform: rotateX(4deg) rotateY(-4deg) translateY(-4px); border-color: rgb(var(--accent-rgb) / 0.4); box-shadow: var(--glow); }
-  .hub-name { font-size: 1.9rem; font-weight: 650; letter-spacing: -0.035em; }
-  .hub-title { font-size: 0.95rem; color: var(--ink-2); }
-  .hub-meta { font: 0.78rem var(--mono); color: var(--label); letter-spacing: 0.02em; }
-  .cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 30rem), 1fr)); gap: 0 1rem; }
+  .lead { display: grid; grid-template-columns: 1.2fr 1fr; gap: 2rem; align-items: center; padding-block: 2rem 1rem; }
+  .lead-art { display: grid; place-items: center; aspect-ratio: 4 / 3; background: var(--tint); color: var(--accent); }
+  .lead-art :global(svg) { width: 42%; height: auto; }
+  .lead h1 { font-size: clamp(2rem, 1.4rem + 2.4vw, 3.1rem); margin: 0 0 0.75rem; }
+  .lead h1 a { color: var(--ink); text-decoration: none; }
+  .lead h1 a:hover { text-decoration: underline; text-decoration-color: var(--accent); }
+  .lead-meta { margin: 0; font-size: 0.85rem; color: var(--muted); }
 
-  @media (max-width: 860px) {
-    .hero { grid-template-columns: 1fr; min-height: auto; padding-top: 1rem; }
-    .hub-grid { grid-template-columns: 1fr; }
+  .more-guides ul { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(18rem, 1fr)); gap: 0 2rem; }
+  .more-guides li { border-bottom: 1px solid var(--line); }
+  .more-guides a { display: block; padding-block: 0.9rem; text-decoration: none; color: var(--ink); }
+  .g-title { font: 700 1.2rem/1.3 var(--serif); }
+  .more-guides a:hover .g-title { text-decoration: underline; text-decoration-color: var(--accent); }
+
+  .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem 1.75rem; }
+  .teaser { display: grid; align-content: start; gap: 0.1rem; text-decoration: none; color: var(--ink); }
+  .thumb { display: grid; place-items: center; aspect-ratio: 3 / 2; background: var(--tint); color: var(--ink-2); margin-bottom: 0.6rem; }
+  .thumb :global(svg) { width: 34%; height: auto; }
+  .t-title { font: 700 1.2rem/1.3 var(--serif); }
+  .teaser:hover .t-title { text-decoration: underline; text-decoration-color: var(--accent); }
+  .t-meta { font-size: 0.8rem; color: var(--muted); margin-top: 0.3rem; }
+
+  .trust { margin-top: 3.5rem; padding: 2rem; background: var(--tint); }
+  .trust h2 { margin-top: 0; }
+  .trust p { max-width: 62ch; font-family: var(--serif); font-size: 1.1rem; }
+  .trust p:last-child { margin-bottom: 0; font-family: var(--sans); font-weight: 700; font-size: 0.95rem; }
+
+  @media (max-width: 900px) { .grid { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 640px) {
+    .lead { grid-template-columns: 1fr; gap: 1.25rem; }
+    .grid { grid-template-columns: 1fr; }
   }
 </style>
