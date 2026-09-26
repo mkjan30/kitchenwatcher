@@ -9,6 +9,7 @@ import ResearchNote from '../components/ResearchNote.astro';
 import Sources from '../components/Sources.astro';
 import PriceWatch from '../components/PriceWatch.astro';
 import AuthorBox from '../components/AuthorBox.astro';
+import { iconSvg } from '../components/kitchen-icons';
 import { abs, articleLd, authorOf, getProduct, hubCrumb, iso, productLd, urlFor } from '../lib/site';
 
 interface Props { entry: CollectionEntry<'reviews'> }
@@ -17,6 +18,8 @@ const d = entry.data;
 const product = getProduct(d.product_id);
 const author = await authorOf(d.author);
 const path = urlFor(entry);
+// Line-art stand-in until a licensed product image exists.
+const ICON_FOR: Record<string, string> = { 'air-fryers': 'airFryer', 'kitchen-safety-devices': 'fireExtinguisher' };
 
 const ld = [{ ...articleLd(entry, author, path), about: { ...productLd(product), ...(d.hero && { image: abs(d.hero.src) }) } }];
 ---
@@ -26,7 +29,14 @@ const ld = [{ ...articleLd(entry, author, path), about: { ...productLd(product),
     <h1>{d.title}</h1>
     <p class="dek">{d.description}</p>
     <p class="meta">By <a href={`/authors/${author.id}/`}>{author.data.name}</a> · Updated <time datetime={iso(d.updated)}>{iso(d.updated)}</time></p>
-    {d.hero && d.hero_alt && <Picture src={d.hero} alt={d.hero_alt} widths={[400, 800, 1200]} sizes="(max-width: 700px) 100vw, 700px" formats={['avif', 'webp']} loading="eager" fetchpriority="high" />}
+    {d.hero && d.hero_alt ? (
+      <figure class="hero">
+        <Picture src={d.hero} alt={d.hero_alt} widths={[400, 800, 1200]} sizes="(max-width: 700px) 100vw, 700px" formats={['avif', 'webp']} loading="eager" fetchpriority="high" />
+        {d.hero_credit && <figcaption>Image: {d.hero_credit}</figcaption>}
+      </figure>
+    ) : (
+      <div class="hero-art" aria-hidden="true" set:html={iconSvg(ICON_FOR[product.category] ?? 'thermometer', 1.1)} />
+    )}
     <ResearchNote subject={`the ${product.name}`} />
     <VerdictBox verdict={d.verdict} pros={d.pros} cons={d.cons} />
     <slot />
@@ -35,3 +45,11 @@ const ld = [{ ...articleLd(entry, author, path), about: { ...productLd(product),
     <AuthorBox author={author} />
   </article>
 </Base>
+
+<style>
+  .hero { margin: 0 0 0.5rem; }
+  .hero :global(img) { background: #fff; }
+  figcaption { font-size: 0.75rem; color: var(--muted); margin-top: 0.35rem; }
+  .hero-art { display: grid; place-items: center; aspect-ratio: 16 / 9; background: var(--tint); color: var(--accent); margin-bottom: 0.5rem; }
+  .hero-art :global(svg) { width: 22%; height: auto; }
+</style>

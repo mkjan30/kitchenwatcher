@@ -8,7 +8,7 @@ const { product_id, merchant, class: cls } = Astro.props;
 const m = getProduct(product_id).merchants.find((x) => x.id === merchant);
 if (!m) throw new Error(`AffiliateLink: ${product_id} has no merchant "${merchant}" in data/products.json`);
 const url = new URL(m.url);
-if (merchant === 'amazon') url.searchParams.set('tag', SITE.amazonTag);
+if (merchant === 'amazon' && SITE.amazonTag) url.searchParams.set('tag', SITE.amazonTag);
 ---
 
 <a href={url.href} rel="sponsored nofollow noopener" target="_blank" data-aff={`${product_id}:${merchant}`} class={cls}><slot /></a>

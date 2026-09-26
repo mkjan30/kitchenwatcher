@@ -22,6 +22,8 @@ const base = ({ image }: SchemaContext) => ({
   draft: z.boolean(),
   hero: image().optional(),
   hero_alt: z.string().min(1).optional(),
+  // Required with a hero: who owns the image (e.g. "Instant Brands"). Press-kit terms usually require attribution.
+  hero_credit: z.string().min(1).optional(),
   // Every URL actually read for this page. Required (≥2) before a page goes live.
   sources: z.array(z.string().url()).min(2).optional(),
   // Editor's brief: comparison-table columns, notes, and claims still to verify against sources.
@@ -41,6 +43,7 @@ const gate =
   (requiredLive: string[]) =>
   (d: Issue & Record<string, unknown>, ctx: z.RefinementCtx) => {
     if (d.hero && !d.hero_alt) ctx.addIssue({ code: 'custom', path: ['hero_alt'], message: 'hero needs hero_alt' });
+    if (d.hero && !(d as { hero_credit?: string }).hero_credit) ctx.addIssue({ code: 'custom', path: ['hero_credit'], message: 'hero needs hero_credit (image owner)' });
     if (d.draft) return;
     for (const k of requiredLive) {
       if (d[k] === undefined) ctx.addIssue({ code: 'custom', path: [k], message: `${k} required before draft: false` });
@@ -57,7 +60,8 @@ const reviewFields = {
   cons: z.array(z.string().min(1)).optional(),
   verdict: z.string().min(1).optional(),
 };
-const reviewLive = ['pros', 'cons', 'verdict', 'hero', 'sources'];
+// hero is optional: until a licensed image exists, the layout shows a line-art illustration (owner decision 2026-09-27).
+const reviewLive = ['pros', 'cons', 'verdict', 'sources'];
 
 const reviews = defineCollection({
   loader: mdx('reviews'),

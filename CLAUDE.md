@@ -56,7 +56,7 @@ workers/price-watch/         # scraper, D1 schema, alert sender
 ## SEO/technical guardrails
 - CWV budget in CI: LCP < 2.0 s, CLS < 0.05, INP < 200 ms (Lighthouse mobile). Fail the build if exceeded.
 - Self-hosted fonts. No third-party scripts except the affiliate click handler.
-- Images: `<Image>` with width/height set, AVIF/WebP, alt text required (lint).
+- Images: `<Image>`/`<Picture>` with width/height set, AVIF/WebP, alt text required (lint). Only images we have rights to (manufacturer press kits whose terms allow editorial use, PA-API after Associates approval, our own). Every hero needs `hero_credit` (the owner) and must not be cropped or altered when press terms forbid it. Reviews may go live without a hero; the layout shows a line-art illustration until a licensed image exists.
 - robots.txt allows Googlebot, Bingbot, GPTBot, ClaudeBot, PerplexityBot. Sitemap auto-generated.
 - After every publish: `npm run ping:indexnow`.
 
