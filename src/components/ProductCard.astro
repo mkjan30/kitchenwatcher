@@ -1,26 +1,57 @@
 ---
 import AffiliateLink from './AffiliateLink.astro';
-import { getProduct, reviewFor, urlFor, usd } from '../lib/site';
+import { getProduct, merchantName, reviewFor, urlFor, usd } from '../lib/site';
 
 interface Props { product_id: string; rank?: number }
 const { product_id, rank } = Astro.props;
 const p = getProduct(product_id);
 const review = await reviewFor(product_id);
+const score = review?.data.score;
+const [first, ...rest] = p.merchants;
 ---
 
-<section class="card">
-  <h3>{rank && <span>{rank}. </span>}{review ? <a href={urlFor(review)}>{p.name}</a> : p.name}</h3>
-  <p class="meta">
-    {p.brand}
-    {review?.data.score !== undefined && <> · <strong>{review.data.score}/10</strong></>}
-    {p.last_price_cents !== null && <> · {usd(p.last_price_cents)} last checked</>}
-  </p>
-  {review?.data.verdict && <p>{review.data.verdict}</p>}
-  <p class="buy">{p.merchants.map((m) => <AffiliateLink product_id={p.id} merchant={m.id}>Check price at {m.id}</AffiliateLink>)}</p>
+<section class="pcard">
+  {rank && <span class="rank" aria-label={`Rank ${rank}`}>{rank}</span>}
+  <div class="body">
+    <p class="brand-line">{p.brand}</p>
+    <h3>{review ? <a href={urlFor(review)}>{p.name}</a> : p.name}</h3>
+    {review?.data.verdict && <p class="verdict">{review.data.verdict}</p>}
+    <p class="facts">
+      {p.last_price_cents !== null && <span><span class="k">Last price</span> <span class="v">{usd(p.last_price_cents)}</span></span>}
+      {!review && <span class="status">In testing</span>}
+    </p>
+    {first && (
+      <p class="buy">
+        <AffiliateLink product_id={p.id} merchant={first.id} class="btn btn-primary">Check price at {merchantName(first.id)}</AffiliateLink>
+        {rest.map((m) => <AffiliateLink product_id={p.id} merchant={m.id} class="btn btn-ghost">{merchantName(m.id)}</AffiliateLink>)}
+      </p>
+    )}
+  </div>
+  {score !== undefined && (
+    <p class="score" aria-label={`Score ${score} out of 10`}><strong>{score}</strong><span>/10</span></p>
+  )}
 </section>
 
 <style>
-  .card { border: 1px solid var(--line); padding: 1rem; margin-block: 1rem; }
-  .card h3 { margin: 0; }
-  .buy { display: flex; flex-wrap: wrap; gap: 0.75rem; }
+  .pcard { display: grid; grid-template-columns: auto 1fr auto; gap: 1rem 1.25rem; align-items: start; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 1.25rem; margin-block: 1rem; box-shadow: var(--shadow); }
+  .pcard:not(:has(.rank)) { grid-template-columns: 1fr auto; }
+  .rank { display: grid; place-items: center; width: 2.25rem; height: 2.25rem; border-radius: 50%; background: var(--ink); color: var(--bg); font: 600 1rem/1 var(--mono); }
+  .brand-line { margin: 0; font-size: 0.8125rem; font-weight: 600; color: var(--muted); }
+  h3 { margin: 0.1rem 0 0.4rem; font-size: 1.1875rem; }
+  h3 a { color: var(--ink); text-decoration: none; }
+  h3 a:hover { color: var(--accent); text-decoration: underline; }
+  .verdict { margin: 0 0 0.5rem; color: var(--ink-2); }
+  .facts { display: flex; flex-wrap: wrap; gap: 0.5rem 1rem; margin: 0 0 0.9rem; font-size: 0.875rem; }
+  .k { color: var(--muted); }
+  .v { font-family: var(--mono); font-weight: 500; }
+  .status { font-size: 0.75rem; font-weight: 600; color: var(--ink-2); background: var(--surface-2); border: 1px solid var(--line); padding: 0.2rem 0.6rem; border-radius: 999px; }
+  .buy { display: flex; flex-wrap: wrap; gap: 0.5rem; margin: 0; }
+  .score { margin: 0; text-align: right; line-height: 1; font-family: var(--mono); }
+  .score strong { font-size: 2rem; font-weight: 500; color: var(--ink); }
+  .score span { color: var(--muted); font-size: 0.875rem; }
+  @media (max-width: 560px) {
+    .pcard, .pcard:not(:has(.rank)) { grid-template-columns: 1fr; }
+    .rank { order: -1; }
+    .score { text-align: left; order: -1; }
+  }
 </style>

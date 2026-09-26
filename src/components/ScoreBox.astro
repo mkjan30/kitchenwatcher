@@ -4,23 +4,35 @@ const { score, verdict, pros = [], cons = [] } = Astro.props;
 ---
 
 {score !== undefined && (
-  <section class="score" aria-label="Score">
-    <p class="num"><strong>{score}</strong>/10</p>
-    {verdict && <p class="verdict">{verdict}</p>}
+  <section class="scorebox" aria-label="Our score">
+    <div class="head">
+      <p class="num"><strong>{score}</strong><span>/10</span></p>
+      {verdict && <p class="verdict">{verdict}</p>}
+    </div>
     <div class="pc">
-      <div><h3>Pros</h3><ul>{pros.map((p) => <li>{p}</li>)}</ul></div>
-      <div><h3>Cons</h3><ul>{cons.map((c) => <li>{c}</li>)}</ul></div>
+      <div class="pros"><h3>What's good</h3><ul>{pros.map((p) => <li>{p}</li>)}</ul></div>
+      <div class="cons"><h3>What's not</h3><ul>{cons.map((c) => <li>{c}</li>)}</ul></div>
     </div>
   </section>
 )}
 
 <style>
-  .score { border: 2px solid var(--ink); padding: 1rem; margin-block: 1.5rem; }
-  .num { font-size: 1.25rem; margin: 0; }
-  .num strong { font-size: 2.5rem; }
-  .verdict { font-weight: 600; }
-  .pc { display: grid; grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr)); gap: 1rem; }
-  .pc h3 { margin: 0; font-size: 1rem; }
-  .pc div:first-child h3 { color: var(--good); }
-  .pc div:last-child h3 { color: var(--bad); }
+  .scorebox { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); margin-block: 1.75rem; box-shadow: var(--shadow); overflow: hidden; }
+  .head { display: flex; gap: 1.25rem; align-items: center; padding: 1.25rem 1.5rem; border-bottom: 1px solid var(--line); }
+  .num { margin: 0; font-family: var(--mono); line-height: 1; white-space: nowrap; }
+  .num strong { font-size: 3rem; font-weight: 500; }
+  .num span { color: var(--muted); }
+  .verdict { margin: 0; font-size: 1.0625rem; font-weight: 550; }
+  .pc { display: grid; grid-template-columns: 1fr 1fr; }
+  .pc > div { padding: 1rem 1.5rem 1.25rem; }
+  .pc h3 { margin: 0 0 0.5rem; font-size: 0.9375rem; }
+  .pros { background: var(--good-soft); }
+  .cons { background: var(--bad-soft); }
+  .pros h3 { color: var(--good); }
+  .cons h3 { color: var(--bad); }
+  ul { margin: 0; padding-left: 1.1rem; }
+  li { margin-block: 0.25rem; }
+  .pros li::marker { content: '+  '; color: var(--good); font-weight: 700; }
+  .cons li::marker { content: '-  '; color: var(--bad); font-weight: 700; }
+  @media (max-width: 560px) { .pc { grid-template-columns: 1fr; } .head { flex-direction: column; align-items: flex-start; } }
 </style>

@@ -5,18 +5,26 @@ import { Picture } from 'astro:assets';
 interface Props { author: CollectionEntry<'authors'> }
 const { author } = Astro.props;
 const { Content } = await render(author);
+const initials = author.data.name.split(/\s+/).map((w) => w[0]).slice(0, 2).join('');
 ---
 
-<aside class="author">
-  {author.data.photo && author.data.photo_alt && <Picture src={author.data.photo} alt={author.data.photo_alt} width={96} height={96} formats={['avif', 'webp']} />}
+<aside class="author" aria-label="About the author">
+  {author.data.photo && author.data.photo_alt
+    ? <Picture src={author.data.photo} alt={author.data.photo_alt} width={72} height={72} formats={['avif', 'webp']} />
+    : <span class="initials" aria-hidden="true">{initials}</span>}
   <div>
-    <p><a href={`/authors/${author.id}/`}><strong>{author.data.name}</strong></a> · {author.data.job_title}</p>
-    <Content />
+    <p class="who"><a href={`/authors/${author.id}/`}>{author.data.name}</a><span>{author.data.job_title}</span></p>
+    <div class="bio"><Content /></div>
   </div>
 </aside>
 
 <style>
-  .author { display: flex; gap: 1rem; align-items: flex-start; border-top: 1px solid var(--line); margin-top: 2rem; padding-top: 1rem; font-size: 0.95rem; }
-  .author :global(img) { border-radius: 50%; flex: none; }
-  .author p { margin: 0 0 0.5rem; }
+  .author { display: flex; gap: 1rem; align-items: flex-start; border-top: 1px solid var(--line); margin-top: 3rem; padding-top: 1.5rem; font-size: 0.9375rem; }
+  .author :global(img), .initials { border-radius: 50%; flex: none; width: 72px; height: 72px; }
+  .initials { display: grid; place-items: center; background: var(--surface-2); color: var(--ink-2); font-weight: 600; }
+  .who { margin: 0 0 0.35rem; display: grid; }
+  .who a { font-weight: 620; color: var(--ink); text-decoration: none; }
+  .who a:hover { color: var(--accent); text-decoration: underline; }
+  .who span { color: var(--muted); font-size: 0.875rem; }
+  .bio :global(p) { margin: 0; color: var(--ink-2); }
 </style>

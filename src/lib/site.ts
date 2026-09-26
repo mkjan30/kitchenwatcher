@@ -94,3 +94,17 @@ export const articleLd = (e: { data: { title: string; description: string; publi
   author: personLd(author),
   publisher: { '@id': abs('/#org') },
 });
+
+// Display names for merchant ids in data/products.json. Unknown ids fall back to the humanized id.
+const MERCHANTS: Record<string, string> = {
+  amazon: 'Amazon',
+  target: 'Target',
+  bestbuy: 'Best Buy',
+  walmart: 'Walmart',
+  instant: 'Instant',
+  cosori: 'COSORI',
+  sharkninja: 'SharkNinja',
+  stovetopfirestop: 'StoveTop FireStop',
+  iguard: 'iGuard',
+};
+export const merchantName = (id: string) => MERCHANTS[id] ?? humanize(id);

@@ -6,15 +6,17 @@ interface Props { product_id: string }
 const p = getProduct(Astro.props.product_id);
 ---
 
-<section class="pw" aria-label="Price watch">
-  <h2>Price watch</h2>
+<section class="pw" aria-labelledby={`pw-${p.id}`}>
+  <h2 id={`pw-${p.id}`}>Price watch</h2>
   <p>
-    {p.last_price_cents !== null ? <>Last price we saw: <strong>{usd(p.last_price_cents)}</strong>. </> : null}
-    Daily price history and drop alerts for the {p.name} are coming soon.
+    {p.last_price_cents !== null ? <>Last price we saw: <strong class="v">{usd(p.last_price_cents)}</strong>. </> : null}
+    Daily price history and drop alerts for the {p.name} start once our tracker is live.
   </p>
 </section>
 
 <style>
-  .pw { background: #f4f0e8; padding: 1rem; margin-block: 2rem; }
-  .pw h2 { margin-top: 0; font-size: 1.1rem; }
+  .pw { border: 1px dashed var(--line-strong); border-radius: var(--radius); padding: 1.1rem 1.35rem; margin-block: 2.5rem; background: var(--surface); }
+  .pw h2 { margin: 0 0 0.35rem; font-size: 1.0625rem; }
+  .pw p { margin: 0; color: var(--ink-2); }
+  .v { font-family: var(--mono); font-weight: 500; }
 </style>

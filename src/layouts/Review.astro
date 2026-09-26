@@ -47,7 +47,11 @@ const ld = d.score === undefined ? [] : [
     <ScoreBox score={d.score} verdict={d.verdict} pros={d.pros} cons={d.cons} />
     <slot />
     <PriceWatch product_id={d.product_id} />
-    {recipes.length > 0 && <section><h2>Made in the {product.name}</h2>{recipes.map((r) => <RecipeCard recipe={r} />)}</section>}
+    {recipes.length > 0 && <section><h2>Recipes made in the {product.name}</h2><div class="recipes">{recipes.map((r) => <RecipeCard recipe={r} />)}</div></section>}
     <AuthorBox author={author} />
   </article>
 </Base>
+
+<style>
+  .recipes { display: grid; grid-template-columns: repeat(auto-fill, minmax(14rem, 1fr)); gap: 1.25rem; }
+</style>
