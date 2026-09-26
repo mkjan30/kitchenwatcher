@@ -33,8 +33,8 @@ export const getProduct = (id: string): Product => {
 };
 
 // Drafts render in `astro dev` only.
-export const published = <C extends CollectionKey>(c: C) =>
-  getCollection(c, ({ data }) => import.meta.env.DEV || !(data as { draft: boolean }).draft);
+export const published = async <C extends CollectionKey>(c: C) =>
+  (await getCollection(c, ({ data }) => import.meta.env.DEV || !(data as { draft: boolean }).draft)).sort((a, b) => a.id.localeCompare(b.id));
 
 export const abs = (path: string) => new URL(path, SITE.url).href;
 export const humanize = (slug: string) => slug.charAt(0).toUpperCase() + slug.slice(1).replace(/-/g, ' ');
