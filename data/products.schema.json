@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://kitchenwatcher.com/products.schema.json",
+  "title": "Kitchen Watcher product registry",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": ["id", "name", "brand", "category", "asin", "merchants", "last_price_cents", "tested_on"],
+    "properties": {
+      "id": { "type": "string", "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$", "description": "Also the /watch/{id}/ slug. Never change once published." },
+      "name": { "type": "string", "minLength": 1 },
+      "brand": { "type": "string", "minLength": 1 },
+      "category": { "type": "string", "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$", "description": "Hub slug: /best/{category}/" },
+      "asin": { "type": ["string", "null"], "pattern": "^[A-Z0-9]{10}$" },
+      "merchants": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["id", "url"],
+          "properties": {
+            "id": { "type": "string", "pattern": "^[a-z0-9-]+$", "description": "e.g. amazon, walmart, brand-direct" },
+            "url": { "type": "string", "format": "uri", "pattern": "^https://", "description": "Full tagged affiliate URL. Only AffiliateLink reads this." }
+          }
+        }
+      },
+      "last_price_cents": { "type": ["integer", "null"], "minimum": 0, "description": "Owned by scripts/refresh-prices. Never edit by hand." },
+      "tested_on": { "type": ["string", "null"], "format": "date", "description": "Date we physically tested it. null = untested." }
+    }
+  }
+}

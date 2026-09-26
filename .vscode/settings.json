@@ -1,0 +1,3 @@
+{
+  "json.schemas": [{ "fileMatch": ["data/products.json"], "url": "./data/products.schema.json" }]
+}
