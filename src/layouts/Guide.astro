@@ -1,11 +1,13 @@
 ---
 // Guides, smart-kitchen, vs → Article (+ FAQPage only if frontmatter has faq).
-// /best/ hubs → ItemList of Product, ranked by review score (never commission). No aggregateRating.
+// /best/ hubs → ItemList of Product in the hub's editorial order (weight of evidence, never commission).
 import type { CollectionEntry } from 'astro:content';
 import { Picture } from 'astro:assets';
 import Base from './Base.astro';
 import AuthorBox from '../components/AuthorBox.astro';
 import ProductCard from '../components/ProductCard.astro';
+import ResearchNote from '../components/ResearchNote.astro';
+import Sources from '../components/Sources.astro';
 import { abs, articleLd, authorOf, getProduct, hubCrumb, iso, productLd, reviewFor, urlFor } from '../lib/site';
 
 type Entry = CollectionEntry<'guides' | 'smart-kitchen' | 'vs' | 'best'>;
@@ -15,12 +17,11 @@ const d = entry.data;
 const author = await authorOf(d.author);
 const path = urlFor(entry);
 
-// Only products with a published review make the list; untested gear is never ranked.
+// Only products with a published review make the list, in the order of the hub's products[].
 const ranked =
   entry.collection === 'best'
     ? (await Promise.all(entry.data.products.map(async (id) => ({ product: getProduct(id), review: await reviewFor(id) }))))
-        .filter((x) => x.review?.data.score !== undefined)
-        .sort((a, b) => b.review!.data.score! - a.review!.data.score!)
+        .filter((x) => x.review !== undefined)
     : [];
 
 const faq = 'faq' in d ? d.faq : undefined;
@@ -54,6 +55,7 @@ const crumbs = [...(productRef && entry.collection !== 'best' ? [hubCrumb(produc
     <h1>{d.title}</h1>
     <p class="dek">{d.description}</p>
     <p class="meta">By <a href={`/authors/${author.id}/`}>{author.data.name}</a> · Updated <time datetime={iso(d.updated)}>{iso(d.updated)}</time></p>
+    <ResearchNote subject={entry.collection === 'best' ? 'the products on this list' : entry.collection === 'vs' ? 'either product' : productRef ? `the ${getProduct(productRef).name}` : 'the products discussed here'} />
     {d.hero && d.hero_alt && <Picture src={d.hero} alt={d.hero_alt} widths={[400, 800, 1200]} sizes="(max-width: 700px) 100vw, 700px" formats={['avif', 'webp']} loading="eager" fetchpriority="high" />}
     {ranked.length > 0 && (
       <section>{ranked.map((x, i) => <ProductCard product_id={x.product.id} rank={i + 1} />)}</section>
@@ -65,6 +67,7 @@ const crumbs = [...(productRef && entry.collection !== 'best' ? [hubCrumb(produc
         {faq.map((f) => <><h3>{f.q}</h3><p>{f.a}</p></>)}
       </section>
     )}
+    <Sources urls={d.sources} />
     <AuthorBox author={author} />
   </article>
 </Base>

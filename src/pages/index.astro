@@ -51,7 +51,7 @@ const iconFor = (category: string) => iconSvg(ICON_FOR[category] ?? 'thermometer
               <span class="thumb" aria-hidden="true" set:html={iconFor(category)} />
               <span class="eyebrow">{humanize(category)}</span>
               <span class="t-title">{r.data.title}</span>
-              {r.data.score !== undefined ? <span class="t-meta">{r.data.score}/10 Kitchen Watcher score</span> : <span class="t-meta">Research in progress</span>}
+              <span class="t-meta">Updated {r.data.updated.toISOString().slice(0, 10)}</span>
             </a>
           );
         })}

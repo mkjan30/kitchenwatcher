@@ -22,12 +22,14 @@ const base = ({ image }: SchemaContext) => ({
   draft: z.boolean(),
   hero: image().optional(),
   hero_alt: z.string().min(1).optional(),
-  // Brief for the human tester: what to measure, the comparison-table columns, anything else to check.
+  // Every URL actually read for this page. Required (≥2) before a page goes live.
+  sources: z.array(z.string().url()).min(2).optional(),
+  // Editor's brief: comparison-table columns, notes, and claims still to verify against sources.
   brief: z
     .object({
-      measurements: z.array(z.string().min(1)).min(1),
       table_columns: z.array(z.string().min(1)).min(1),
       notes: z.array(z.string().min(1)).optional(),
+      verify: z.array(z.string().min(1)).optional(),
     })
     .strict()
     .optional(),
@@ -47,19 +49,15 @@ const gate =
 
 const mdx = (dir: string) => glob({ pattern: '**/*.mdx', base: `./src/content/${dir}` });
 
-// Review fields are optional while drafting; `gate` makes them mandatory to publish.
-// No tested_on → stays draft (CLAUDE.md: never publish an untested product).
+// Research-based reviews (CLAUDE.md): no self-assigned score, no test dates. Fields are optional while
+// drafting; `gate` makes them mandatory to publish, together with sources[].
 const reviewFields = {
   product_id: productId,
-  score: z.number().min(1).max(10).optional(),
   pros: z.array(z.string().min(1)).optional(),
   cons: z.array(z.string().min(1)).optional(),
-  tested_on: z.coerce.date().optional(),
-  test_duration_days: z.number().int().positive().optional(),
-  price_at_review_cents: z.number().int().positive().optional(),
   verdict: z.string().min(1).optional(),
 };
-const reviewLive = ['score', 'pros', 'cons', 'tested_on', 'test_duration_days', 'price_at_review_cents', 'verdict', 'hero'];
+const reviewLive = ['pros', 'cons', 'verdict', 'hero', 'sources'];
 
 const reviews = defineCollection({
   loader: mdx('reviews'),
@@ -72,7 +70,7 @@ const best = defineCollection({
     z
       .object({ ...base(c), category: slug, products: z.array(productId).min(1) })
       .strict()
-      .superRefine(gate([])),
+      .superRefine(gate(['sources'])),
 });
 
 const vs = defineCollection({
@@ -81,7 +79,7 @@ const vs = defineCollection({
     z
       .object({ ...base(c), products: z.tuple([productId, productId]) })
       .strict()
-      .superRefine(gate([])),
+      .superRefine(gate(['sources'])),
 });
 
 // Explainers use the Guide layout; a smart-kitchen page about one device may name it.
@@ -92,12 +90,12 @@ const guideFields = {
 
 const guides = defineCollection({
   loader: mdx('guides'),
-  schema: (c) => z.object({ ...base(c), ...guideFields }).strict().superRefine(gate([])),
+  schema: (c) => z.object({ ...base(c), ...guideFields }).strict().superRefine(gate(['sources'])),
 });
 
 const smartKitchen = defineCollection({
   loader: mdx('smart-kitchen'),
-  schema: (c) => z.object({ ...base(c), ...guideFields }).strict().superRefine(gate([])),
+  schema: (c) => z.object({ ...base(c), ...guideFields }).strict().superRefine(gate(['sources'])),
 });
 
 const recipes = defineCollection({
@@ -117,7 +115,7 @@ const recipes = defineCollection({
         video_url: z.string().url().optional(),
       })
       .strict()
-      .superRefine(gate(['prep_min', 'cook_min', 'servings', 'ingredients', 'steps', 'hero'])),
+      .superRefine(gate(['prep_min', 'cook_min', 'servings', 'ingredients', 'steps', 'hero', 'sources'])),
 });
 
 const deals = defineCollection({

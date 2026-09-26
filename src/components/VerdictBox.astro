@@ -1,0 +1,29 @@
+---
+// The short answer at the top of a review: one-sentence verdict + evidence-based strengths and weaknesses.
+interface Props { verdict?: string; pros?: string[]; cons?: string[] }
+const { verdict, pros = [], cons = [] } = Astro.props;
+---
+
+{verdict && (
+  <section class="verdictbox" aria-label="Our verdict">
+    <p class="label">The short answer</p>
+    <p class="verdict">{verdict}</p>
+    <div class="pc">
+      <div><h3 class="pro">Strengths</h3><ul>{pros.map((p) => <li>{p}</li>)}</ul></div>
+      <div><h3 class="con">Weaknesses</h3><ul>{cons.map((c) => <li>{c}</li>)}</ul></div>
+    </div>
+  </section>
+)}
+
+<style>
+  .verdictbox { border-top: 4px solid var(--ink); border-bottom: 1px solid var(--line); padding: 1.1rem 0 1.4rem; margin-block: 1.75rem; }
+  .label { margin: 0; font-size: 0.75rem; font-weight: 800; letter-spacing: 0.06em; text-transform: uppercase; color: var(--accent); }
+  .verdict { font-family: var(--serif); font-size: 1.25rem; font-weight: 600; margin: 0.4rem 0 1rem; }
+  .pc { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+  .pc h3 { font-family: var(--sans); font-size: 0.8rem; letter-spacing: 0.05em; text-transform: uppercase; margin: 0 0 0.4rem; }
+  .pro { color: var(--good); }
+  .con { color: var(--bad); }
+  ul { margin: 0; padding-left: 1.1rem; }
+  li { margin-block: 0.3rem; }
+  @media (max-width: 560px) { .pc { grid-template-columns: 1fr; } }
+</style>

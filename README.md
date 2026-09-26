@@ -16,12 +16,12 @@ npm run dev        # http://localhost:4321, drafts visible
    ```bash
    npm run new -- --type review --keyword "ninja af101 review"
    ```
-   Types: `review`, `best`, `vs`, `smart-kitchen`, `recipe`, `guide`, `deals`.
+   Types: `review`, `best`, `vs`, `smart-kitchen`, `guide`, `deals` (`recipe` is paused).
    Options: `--product <id>`, `--appliance <slug>` (recipes), `--author <slug>`, `--slug <slug>`.
    The product has to be in `data/products.json` first.
 2. **Draft** the body from the PLAN.md brief rules. Leave `draft: true`.
-3. **A person** adds photos (`hero` + `hero_alt`), measured numbers, and the score. Only then set `draft: false`.
-   The schema won't let a review go live without `tested_on`, the score fields and a hero photo.
+3. **A person** opens every source, confirms the page still matches it, clears each `{/* VERIFY: … */}` comment, and adds an image we have rights to (`hero` + `hero_alt`). Only then set `draft: false`.
+   Kitchen Watcher doesn't test hands-on (see CLAUDE.md): the schema won't let a review go live without `sources[]` (≥2), verdict, pros, cons and a hero image, and lint rejects hands-on phrasing.
 4. **Link it from its hub** (`/best/{category}/`) and give it ≥3 internal links in the body.
 5. **Check:**
    ```bash
@@ -39,9 +39,9 @@ npm run dev        # http://localhost:4321, drafts visible
 
 | Check | Fails on |
 |---|---|
-| `astro build` (zod, `src/content/config.ts`) | unknown frontmatter keys, title >60 / description >155, unknown author or product_id, live review missing test data |
-| `lint:content` | raw affiliate/merchant URLs, images without alt, <3 internal links, review/guide with no table, recipe whose model has no live review, orphan pages, pages not linked from their hub, `TODO` left in any built page |
-| `check:schema` | missing or invalid JSON-LD per page type (see CLAUDE.md "Schema") |
+| `astro build` (zod, `src/content/config.ts`) | unknown frontmatter keys, title >60 / description >155, unknown author or product_id, live page missing `sources[]`, live review missing verdict/pros/cons/hero |
+| `lint:content` | raw affiliate/merchant URLs, images without alt, <3 internal links, review/guide with no table, leftover MEASURE/VERIFY markers, hands-on phrasing ("I tested…"), recipe whose model has no live review, orphan pages, pages not linked from their hub, `TODO` left in any built page |
+| `check:schema` | missing or invalid JSON-LD per page type (see CLAUDE.md "Schema"), any Review/Rating markup |
 | Lighthouse CI (GitHub Actions) | mobile LCP ≥ 2.0 s, CLS ≥ 0.05, TBT ≥ 200 ms (the lab stand-in for INP) |
 
 ## Layout

@@ -1,0 +1,24 @@
+---
+// "Sources" list at the end of research pages, from frontmatter sources[].
+interface Props { urls?: string[] }
+const { urls = [] } = Astro.props;
+const label = (u: string) => {
+  const { hostname, pathname } = new URL(u);
+  return `${hostname.replace(/^www\./, '')}${pathname.length > 1 ? pathname.replace(/\/$/, '') : ''}`;
+};
+---
+
+{urls.length > 0 && (
+  <section class="sources" aria-labelledby="sources-h">
+    <h2 id="sources-h">Sources</h2>
+    <ol>{urls.map((u) => <li><a href={u} rel="noopener">{label(u)}</a></li>)}</ol>
+  </section>
+)}
+
+<style>
+  .sources { margin-top: 2.5rem; border-top: 1px solid var(--line); padding-top: 0.5rem; }
+  .sources h2 { font-family: var(--sans); font-size: 0.85rem; font-weight: 800; letter-spacing: 0.06em; text-transform: uppercase; }
+  ol { padding-left: 1.2rem; font-size: 0.85rem; color: var(--muted); }
+  li { margin-block: 0.25rem; overflow-wrap: anywhere; }
+  a { color: var(--ink-2); }
+</style>

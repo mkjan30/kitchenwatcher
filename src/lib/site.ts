@@ -13,7 +13,7 @@ export const SITE = {
 };
 
 export const DISCLOSURE =
-  'Kitchen Watcher earns a commission when you buy through links on this page. It never changes our scores or rankings.';
+  'Kitchen Watcher earns a commission when you buy through links on this page. It never changes what we recommend or how we rank it.';
 
 export type Product = {
   id: string;

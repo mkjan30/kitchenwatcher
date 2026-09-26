@@ -14,6 +14,7 @@ const die = (m) => { console.error(`new-post: ${m}`); process.exit(1); };
 const collection = TYPES[a.type];
 if (!collection) die(`--type must be one of ${Object.keys(TYPES).join(', ')}`);
 if (!a.keyword) die('--keyword is required');
+if (collection === 'recipes') die('recipes are paused: they need someone to cook them (CLAUDE.md)');
 
 const kw = a.keyword.trim().toLowerCase();
 const catalog = products();
@@ -34,14 +35,15 @@ if (!authors.includes(author)) die(`author "${author}" not in src/content/author
 const fm = {};
 let id = a.slug ?? slugify(kw);
 let body = '';
-const TODO_TABLE = '| Test | Result | Unit |\n|---|---|---|\n| TODO | TODO | s / °F / dB / g / W |\n';
+// Research model (CLAUDE.md): specs are labeled, third-party numbers are credited; nothing implies hands-on use.
+const TODO_TABLE = '| Spec or measurement | Value | Source |\n|---|---|---|\n| TODO | TODO | manufacturer spec / [lab name](url) |\n';
 
 switch (collection) {
   case 'reviews': {
     const p = needProduct(kw);
     id = a.slug ?? p.id;
     fm.product_id = p.id;
-    body = `{/* TODO: first 60 words answer "${kw}" directly: verdict, who it's for, the number that matters. */}\n\n## How it did in testing\n\n${TODO_TABLE}\n## What broke\n\nTODO\n`;
+    body = `{/* TODO: first 60 words answer "${kw}" directly: verdict, who it's for, the evidence that decides it. */}\n\n## What the tests show\n\n${TODO_TABLE}\n## What owners report\n\nTODO (attribute every report, link the source)\n`;
     break;
   }
   case 'best': {
@@ -50,7 +52,7 @@ switch (collection) {
     fm.category = category;
     fm.products = catalog.filter((p) => p.category === category).map((p) => p.id);
     if (!fm.products.length) die(`no products with category "${category}" in products.json`);
-    body = `{/* TODO: first 60 words name the top pick and why. Ranking is by score only. */}\n\n## Comparison\n\n${TODO_TABLE}`;
+    body = `{/* TODO: first 60 words name the top pick and why. Ranking follows the weight of evidence, never commission. */}\n\n## Comparison\n\n${TODO_TABLE}`;
     break;
   }
   case 'vs': {
@@ -66,7 +68,7 @@ switch (collection) {
     const p = needProduct(a.product ?? kw);
     fm.appliance = a.appliance ?? slugify(p.category.replace(/s$/, ''));
     fm.product_id = p.id;
-    body = `{/* TODO: first 60 words give time, temp and the result. Real photos only. */}\n`;
+    body = `{/* Recipes are paused (CLAUDE.md): they need real cooking. */}\n`;
     break;
   }
   case 'deals': {
@@ -81,7 +83,7 @@ switch (collection) {
   default: {
     const p = findProduct(kw);
     if (p) fm.product_id = p.id;
-    body = `{/* TODO: first 60 words answer "${kw}" directly. */}\n\n## Measurements\n\n${TODO_TABLE}`;
+    body = `{/* TODO: first 60 words answer "${kw}" directly. */}\n\n## The evidence\n\n${TODO_TABLE}`;
   }
 }
 

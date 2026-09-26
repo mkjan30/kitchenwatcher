@@ -6,7 +6,6 @@ interface Props { product_id: string; rank?: number }
 const { product_id, rank } = Astro.props;
 const p = getProduct(product_id);
 const review = await reviewFor(product_id);
-const score = review?.data.score;
 const [first, ...rest] = p.merchants;
 const label = rank === 1 ? 'Our pick' : rank ? `No. ${rank}` : p.brand;
 ---
@@ -16,7 +15,7 @@ const label = rank === 1 ? 'Our pick' : rank ? `No. ${rank}` : p.brand;
   <h3>{review ? <a href={urlFor(review)}>{p.name}</a> : p.name}</h3>
   {review?.data.verdict && <p class="verdict">{review.data.verdict}</p>}
   <p class="facts">
-    {score !== undefined ? <span><strong>{score}</strong>/10 Kitchen Watcher score</span> : <span class="status">Research in progress</span>}
+    {!review && <span class="status">Research in progress</span>}
     {p.last_price_cents !== null && <span>Last seen at <strong>{usd(p.last_price_cents)}</strong></span>}
   </p>
   {first && (

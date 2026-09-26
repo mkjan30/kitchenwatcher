@@ -1,21 +1,23 @@
 # Kitchen Watcher — Launch Plan (source of truth)
 
 Full plan with diagrams and chart: https://claude.ai/code/artifact/44660dde-2542-48f1-896e-e1d36110631c
-Launch: 2026-10-01 (soft, ~25 pages). Organic only. Built and run with Claude Code.
+Launch: 2026-10-01 (soft, ~22 pages). Organic only. Built and run with Claude Code.
+
+**Model change (2026-09-27):** no hands-on testing. Kitchen Watcher is research-based: independent lab data, manufacturer specs, owner reports and recalls, every source named. Recipes are paused (they need real cooking). Rules in CLAUDE.md.
 
 ## Positioning
-Gear reviews + price watch (core) · smart kitchen & kitchen safety (differentiator) · price-alert tool + weekly newsletter (moat) · appliance-specific recipes (narrow top-of-funnel wedge).
+Gear reviews + price watch (core) · smart kitchen & kitchen safety (differentiator) · price-alert tool + weekly newsletter (moat) · appliance-specific recipes (paused: needs hands-on cooking).
 
 | Pillar | Role | Revenue | Share yr 1 |
 |---|---|---|---|
 | Reviews / best / vs | Money pages | Affiliate | 40% |
 | Smart kitchen + safety | Differentiator, high AOV | Affiliate, later ads | 20% |
 | Deals + /watch/ tool | Retention, email | Affiliate, subs | 15% |
-| Recipes | Top of funnel → gear pages | Ads later, internal links | 20% |
+| Recipes (paused) | Top of funnel → gear pages | Ads later, internal links | 0% until resumed |
 | Guides | Topical authority | Ads later | 5% |
 
 ## Launch clusters
-1. **Air fryers** — /best/air-fryers/, 6 reviews, 2 vs, 4 recipes, 2 guides at launch.
+1. **Air fryers** — /best/air-fryers/, 6 reviews, 2 vs, 1 guide at launch.
 2. **Kitchen safety devices** — /best/kitchen-safety-devices/, 3 reviews, 2 guides at launch.
 3. Smart kitchen appliances — /best/smart-kitchen-appliances/ + 2 smart-oven reviews in October.
 4. Espresso — Q1 2027. 5. Induction/cooktops — Q3 2027.
@@ -25,18 +27,18 @@ Keyword volumes are approximate (Ahrefs Keywords Explorer not available on this 
 ## Brief rules
 1. One primary keyword, 3–5 secondary, in frontmatter. Title ≤60 chars; year only on /best/ pages.
 2. Answer in the first 60 words.
-3. Comparison table with measured numbers on every review/guide.
+3. Comparison table on every review/guide: manufacturer specs (labeled) and credited third-party measurements only.
 4. ≥3 internal links out; linked from hub before publish.
-5. Recipes: one appliance, one named model, "Made in" link, Recipe schema, real photos.
+5. Recipes (when resumed): one appliance, one named model, "Made in" link, Recipe schema, real photos of real cooking.
 
 ## Content schedule
 | When | Pages | Ships |
 |---|---|---|
-| Sep 27–30 | 25 | Home, About, Authors, How-we-test, Disclosure, Privacy, Contact; air-fryer hub + 6 reviews + 2 vs + 4 recipes; safety hub + 3 reviews; 2 guides |
-| Oct | 15 | 4 reviews, 2 vs, 3 recipes, 2 guides, smart-kitchen hub + 2 smart-oven reviews, first /deals/ |
+| Sep 27–30 | 22 | Home, About, Authors, How-we-research, Disclosure, Privacy, Contact; air-fryer hub + 6 reviews + 2 vs; safety hub + 3 reviews; 2 guides |
+| Oct | 12 | 4 reviews, 2 vs, 2 guides, smart-kitchen hub + 2 smart-oven reviews, first /deals/ |
 | Nov | 12 | Deals hub + tool V1 by Nov 10; 6 /watch/ pages; 3 smart-kitchen reviews; 2 sub-guides (under $100, for two) |
-| Dec | 8 | Gift guide, 3 recipes, 2 induction explainers, energy-use data study |
-| After day 90 | 4–5/wk | 2 reviews, 1 guide/vs, 1 recipe, 1 deals refresh; refresh every money page at 6 months |
+| Dec | 5 | Gift guide, 2 induction explainers, energy-use data study (compiled from published measurements) |
+| After day 90 | 4–5/wk | 2 reviews, 1–2 guide/vs, 1 deals refresh; refresh every money page at 6 months |
 
 ## Monetization order (gates, not dates)
 1. Amazon Associates — day 1. Needs 3 qualifying sales in 180 days.
@@ -52,15 +54,15 @@ Keyword volumes are approximate (Ahrefs Keywords Explorer not available on this 
 - Every review embeds `<PriceWatch>`; drops auto-feed /deals/ and the newsletter.
 
 ## Newsletter — "The Watch List", Thursdays
-5 price drops, 1 review, 1 recipe, 1 "don't buy". <400 words. `scripts/send-newsletter` drafts from D1 events + new content; human approves; Buttondown API sends. Targets: 500 subs by Dec, 2,000 by Jun 2027.
+5 price drops, 1 review, 1 guide, 1 "don't buy". <400 words. `scripts/send-newsletter` drafts from D1 events + new content; human approves; Buttondown API sends. Targets: 500 subs by Dec, 2,000 by Jun 2027.
 
 ## SEO foundation (before first content page)
-Cloudflare DNS/HTTPS, single canonical host, sitemap, robots allowing AI crawlers, GSC + Bing verified, IndexNow, CWV budgets in CI, self-hosted fonts, no third-party scripts, JSON-LD per layout, /how-we-test/, named author with photo + sameAs, disclosure above first affiliate link, orphan-page build check. Off-site: Pinterest/YouTube/Reddit/Instagram profiles; one data study per quarter for links.
+Cloudflare DNS/HTTPS, single canonical host, sitemap, robots allowing AI crawlers, GSC + Bing verified, IndexNow, CWV budgets in CI, self-hosted fonts, no third-party scripts, JSON-LD per layout, /how-we-research/, named author with photo + sameAs, disclosure above first affiliate link, orphan-page build check. Off-site: Pinterest/YouTube/Reddit/Instagram profiles; one data study per quarter for links.
 
 ## Gates
 | Gate | Criteria | Target |
 |---|---|---|
-| Go live | 25 pages, CWV green, GSC verified | Oct 1 |
+| Go live | 22 pages, CWV green, GSC verified, sources verified on every live page | Oct 1 |
 | Indexed | 50+ pages indexed, 10 in top 20 | end Mar 2027 |
 | Traction | 3k sessions/mo, 500 tool users | ~Jun 2027 |
 | Threshold | 10k sessions/mo, 2k subscribers | ~Sep 2027 |
@@ -77,10 +79,10 @@ Miss a gate → extend the phase. Never skip a gate for a date.
 | Tool users free/Pro | 200/0 | 500/0 | 1,200/60 | 2,500/150 |
 
 ## Weekly cadence (~15 h human)
-Mon GSC review + pick pages · Tue test + photograph · Wed publish 2 · Thu newsletter + deals · Fri recipe + vs + 5 outreach touches · Sat price refresh review · Monthly: refresh 5 oldest money pages, KPI table, decision memo.
+Mon GSC review + pick pages · Tue research + verify sources · Wed publish 2 · Thu newsletter + deals · Fri vs/guide + 5 outreach touches · Sat price refresh review · Monthly: refresh 5 oldest money pages, KPI table, decision memo.
 
 ## Risks
-Sandbox 4–6 months (budget zero revenue to March) · reviews-system update (real testing only) · Associates 180-day rule (Black Friday timing, alt networks by month 2) · AI Overviews eat recipes (wedge only) · testing cost (buy 1–2/mo, brand loans after 15 reviews) · scraping ToS (PA-API only) · burnout (cut to 3 pages/wk before cutting testing).
+Sandbox 4–6 months (budget zero revenue to March) · reviews-system update (favors first-hand testing; we don't test, so lean on long-tail problems/recalls/vs where research wins) · Associates 180-day rule (Black Friday timing, alt networks by month 2) · AI Overviews summarize research pages (differentiate with price history + recall tracking) · scraping ToS (PA-API only) · burnout (cut to 3 pages/wk before cutting source verification).
 
 ## Open decisions
 - Second cluster: kitchen safety (recommended) vs smart ovens.

@@ -1,13 +1,15 @@
 ---
-// Review → Product + Review + Rating, author as Person with sameAs.
+// Research review → Article about a Product, author as Person with sameAs. No Review/Rating markup:
+// we did not review the product first-hand (CLAUDE.md).
 import type { CollectionEntry } from 'astro:content';
 import { Picture } from 'astro:assets';
 import Base from './Base.astro';
-import ScoreBox from '../components/ScoreBox.astro';
+import VerdictBox from '../components/VerdictBox.astro';
+import ResearchNote from '../components/ResearchNote.astro';
+import Sources from '../components/Sources.astro';
 import PriceWatch from '../components/PriceWatch.astro';
 import AuthorBox from '../components/AuthorBox.astro';
-import RecipeCard from '../components/RecipeCard.astro';
-import { abs, authorOf, getProduct, hubCrumb, iso, personLd, productLd, published, urlFor, usd } from '../lib/site';
+import { abs, articleLd, authorOf, getProduct, hubCrumb, iso, productLd, urlFor } from '../lib/site';
 
 interface Props { entry: CollectionEntry<'reviews'> }
 const { entry } = Astro.props;
@@ -15,44 +17,21 @@ const d = entry.data;
 const product = getProduct(d.product_id);
 const author = await authorOf(d.author);
 const path = urlFor(entry);
-const recipes = (await published('recipes')).filter((r) => r.data.product_id === d.product_id);
 
-const ld = d.score === undefined ? [] : [
-  {
-    ...productLd(product),
-    ...(d.hero && { image: abs(d.hero.src) }),
-    review: {
-      '@type': 'Review',
-      name: d.title,
-      reviewBody: d.verdict,
-      datePublished: iso(d.published),
-      dateModified: iso(d.updated),
-      author: personLd(author),
-      publisher: { '@id': abs('/#org') },
-      reviewRating: { '@type': 'Rating', ratingValue: d.score, bestRating: 10, worstRating: 1 },
-    },
-  },
-];
+const ld = [{ ...articleLd(entry, author, path), about: { ...productLd(product), ...(d.hero && { image: abs(d.hero.src) }) } }];
 ---
 
 <Base title={d.title} description={d.description} crumbs={[hubCrumb(d.product_id), { name: d.title, path }]} ld={ld} disclose ogImage={d.hero?.src}>
   <article>
     <h1>{d.title}</h1>
     <p class="dek">{d.description}</p>
-    <p class="meta">
-      By <a href={`/authors/${author.id}/`}>{author.data.name}</a> · Updated <time datetime={iso(d.updated)}>{iso(d.updated)}</time>
-      {d.tested_on && <> · Tested {d.test_duration_days} days from <time datetime={iso(d.tested_on)}>{iso(d.tested_on)}</time></>}
-      {d.price_at_review_cents && <> · {usd(d.price_at_review_cents)} at review</>}
-    </p>
+    <p class="meta">By <a href={`/authors/${author.id}/`}>{author.data.name}</a> · Updated <time datetime={iso(d.updated)}>{iso(d.updated)}</time></p>
     {d.hero && d.hero_alt && <Picture src={d.hero} alt={d.hero_alt} widths={[400, 800, 1200]} sizes="(max-width: 700px) 100vw, 700px" formats={['avif', 'webp']} loading="eager" fetchpriority="high" />}
-    <ScoreBox score={d.score} verdict={d.verdict} pros={d.pros} cons={d.cons} />
+    <ResearchNote subject={`the ${product.name}`} />
+    <VerdictBox verdict={d.verdict} pros={d.pros} cons={d.cons} />
     <slot />
     <PriceWatch product_id={d.product_id} />
-    {recipes.length > 0 && <section><h2>Recipes made in the {product.name}</h2><div class="recipes">{recipes.map((r) => <RecipeCard recipe={r} />)}</div></section>}
+    <Sources urls={d.sources} />
     <AuthorBox author={author} />
   </article>
 </Base>
-
-<style>
-  .recipes { display: grid; grid-template-columns: repeat(auto-fill, minmax(14rem, 1fr)); gap: 1.25rem; }
-</style>

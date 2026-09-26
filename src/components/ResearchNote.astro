@@ -1,0 +1,13 @@
+---
+// Disclosure at the top of every research page: we did not use the product ourselves.
+interface Props { subject: string }
+const { subject } = Astro.props;
+---
+
+<aside class="research-note">
+  <strong>How this was made:</strong> we haven't used {subject} ourselves. This page brings together independent lab measurements, manufacturer specs, owner reports and recall records, and names the source of every number. <a href="/how-we-research/">How we research</a>.
+</aside>
+
+<style>
+  .research-note { background: var(--tint); border-left: 4px solid var(--accent); padding: 0.8rem 1rem; margin-block: 1rem 1.5rem; font-size: 0.9rem; color: var(--ink-2); }
+</style>

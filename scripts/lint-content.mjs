@@ -30,6 +30,8 @@ const affiliateRe = new RegExp(
   'i',
 );
 
+const HANDS_ON = /\b(I|we) (tested|measured|timed|cooked|baked|fried|used it|tried it|unboxed|owned)\b|\bin (my|our) (kitchen|testing|tests|lab)\b|\bafter (\d+|a few|two|three|several) (days|weeks|months) of (use|using|testing)\b|\bour (test results|testing showed|tests showed)\b/i;
+
 const internalLinks = (body) =>
   new Set([...body.matchAll(/\]\((\/[^)\s#]*)|href=["'{`]+(\/[^"'}`\s#]*)/g)].map((m) => m[1] ?? m[2]));
 
@@ -47,7 +49,12 @@ for (const e of all) {
 for (const e of live) {
   const where = rel(e.file);
   const links = [...internalLinks(e.body)].filter((l) => l !== e.url);
-  if (/MEASURE:/.test(readFileSync(e.file, 'utf8'))) fail(where, 'MEASURE placeholder left in a live page — replace with the measured number');
+  const raw = readFileSync(e.file, 'utf8');
+  if (/MEASURE:/.test(raw)) fail(where, 'MEASURE placeholder left in a live page (we do not test hands-on; cite a source or cut it)');
+  if (/VERIFY:/.test(raw)) fail(where, 'VERIFY comment left in a live page: confirm the claim against its source, then remove it');
+  // We don't test hands-on (CLAUDE.md). Catch first-hand phrasing; owner reports must be attributed.
+  const handsOn = e.body.match(HANDS_ON);
+  if (handsOn) fail(where, `implies hands-on use: "${handsOn[0]}"`);
   if (links.length < 3) fail(where, `${links.length} internal links in body, need ≥3`);
   if (['reviews', 'guides'].includes(e.collection) && !/^\|[\s:|-]+\|\s*$/m.test(e.body) && !/<table/i.test(e.body)) {
     fail(where, 'no measurement table');
