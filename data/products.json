@@ -1,1 +1,175 @@
-[]
+[
+  {
+    "id": "instant-vortex-plus-6qt",
+    "name": "Instant Vortex Plus 6-Quart Air Fryer (Stainless)",
+    "brand": "Instant",
+    "category": "air-fryers",
+    "asin": "B07VHFMZHJ",
+    "merchants": [
+      { "id": "amazon", "url": "https://www.amazon.com/dp/B07VHFMZHJ" },
+      { "id": "instant", "url": "https://instantpot.com/products/instant-vortex-plus-6qt-air-fryer" }
+    ],
+    "price_seen_cents": 9000,
+    "sources": [
+      "https://www.foodnetwork.com/how-to/packages/shopping/product-reviews/best-air-fryer",
+      "https://www.techgearlab.com/topics/kitchen/best-air-fryer"
+    ],
+    "complaints": ["E1/E2 temperature-sensor error codes", "Strong plastic smell for the first few uses"],
+    "last_price_cents": null,
+    "tested_on": null
+  },
+  {
+    "id": "ninja-dz201",
+    "name": "Ninja Foodi 8-Quart 2-Basket DualZone Air Fryer (DZ201)",
+    "brand": "Ninja",
+    "category": "air-fryers",
+    "asin": "B089TQWJKK",
+    "merchants": [
+      { "id": "amazon", "url": "https://www.amazon.com/dp/B089TQWJKK" },
+      { "id": "target", "url": "https://www.target.com/p/ninja-foodi-8qt-original-dualzone-2-basket-air-fryer-with-6-functions-dz201/-/A-79991380" },
+      { "id": "bestbuy", "url": "https://www.bestbuy.com/product/ninja-foodi-6-in-1-8-qt-2-basket-air-fryer-with-dualzone-technology-air-fry-roast-broil-bake-reheat-dehydrate-dark-gray/JXJVXGZ273" }
+    ],
+    "price_seen_cents": 19999,
+    "sources": [
+      "https://www.foodnetwork.com/how-to/packages/shopping/product-reviews/best-air-fryer",
+      "https://www.techgearlab.com/topics/kitchen/best-air-fryer"
+    ],
+    "complaints": ["Uneven cooking between the two baskets on identical settings", "E error on display; basket coating peeling"],
+    "last_price_cents": null,
+    "tested_on": null
+  },
+  {
+    "id": "ninja-af101",
+    "name": "Ninja AF101 4-Quart Air Fryer",
+    "brand": "Ninja",
+    "category": "air-fryers",
+    "asin": "B07FDJMC9Q",
+    "merchants": [{ "id": "amazon", "url": "https://www.amazon.com/dp/B07FDJMC9Q" }],
+    "price_seen_cents": 12000,
+    "sources": [
+      "https://www.techgearlab.com/topics/kitchen/best-air-fryer",
+      "https://www.foodnetwork.com/how-to/packages/shopping/product-reviews/best-air-fryer"
+    ],
+    "complaints": ["Basket coating peels at the edges, especially after dishwasher use", "Grease buildup on the heating element that is hard to clean"],
+    "last_price_cents": null,
+    "tested_on": null
+  },
+  {
+    "id": "cosori-turboblaze",
+    "name": "COSORI TurboBlaze 6-Quart Air Fryer (CAF-DC601)",
+    "brand": "COSORI",
+    "category": "air-fryers",
+    "asin": "B0C33CHG99",
+    "merchants": [
+      { "id": "amazon", "url": "https://www.amazon.com/dp/B0C33CHG99" },
+      { "id": "cosori", "url": "https://cosori.com/products/turboblaze-air-fryer" },
+      { "id": "walmart", "url": "https://www.walmart.com/ip/5814409329" }
+    ],
+    "price_seen_cents": 8999,
+    "sources": [
+      "https://www.rtings.com/air-fryer/reviews/best/air-fryers",
+      "https://www.techgearlab.com/topics/kitchen/best-air-fryer",
+      "https://www.tomsguide.com/home/home-appliances/cosori-turboblaze-air-fryer-review",
+      "https://www.prnewswire.com/news-releases/cosori-unveils-the-next-generation-6-quart-turboblaze-air-fryer-301961219.html"
+    ],
+    "complaints": ["Inconsistent results on fries and veg; manual timings sometimes off", "E1/E2/E3 sensor and overheat error codes"],
+    "last_price_cents": null,
+    "tested_on": null
+  },
+  {
+    "id": "ninja-af141",
+    "name": "Ninja Air Fryer Pro 4-in-1 5-Quart (AF141)",
+    "brand": "Ninja",
+    "category": "air-fryers",
+    "asin": "B0CSZ7WBYW",
+    "merchants": [
+      { "id": "amazon", "url": "https://www.amazon.com/dp/B0CSZ7WBYW" },
+      { "id": "sharkninja", "url": "https://www.sharkninja.com/ninja-air-fryer-pro-4-in-1/AF141.html" }
+    ],
+    "price_seen_cents": 12999,
+    "sources": [
+      "https://www.tomsguide.com/best-picks/best-air-fryers",
+      "https://www.rtings.com/air-fryer/reviews/best/air-fryers"
+    ],
+    "complaints": ["Timer malfunctions; heating stays on with the basket removed", "Crisper plate hard to separate from a hot basket"],
+    "last_price_cents": null,
+    "tested_on": null
+  },
+  {
+    "id": "ninja-crispi-fn101",
+    "name": "Ninja Crispi 4-in-1 Portable Glass Air Fryer (FN101)",
+    "brand": "Ninja",
+    "category": "air-fryers",
+    "asin": "B0DDDD8WD6",
+    "merchants": [
+      { "id": "amazon", "url": "https://www.amazon.com/dp/B0DDDD8WD6" },
+      { "id": "sharkninja", "url": "https://www.sharkninja.com/ninja-crispi-4-in-1-portable-glass-air-fryer-cooking-system/FN101GY.html" },
+      { "id": "target", "url": "https://www.target.com/p/ninja-4qt-crispi-portable-cooking-system-air-fryer-gray-fn101gy/-/A-91722296" }
+    ],
+    "price_seen_cents": 17999,
+    "sources": [
+      "https://x.com/CNETNews/status/2009214942352749055",
+      "https://www.foodnetwork.com/how-to/packages/shopping/product-reviews/ninja-crispi-glass-air-fryer-review",
+      "https://www.techgearlab.com/reviews/kitchen/air-fryer/ninja-crispi",
+      "https://newsroom.sharkninja.com/new-ninja-crispi-revolutionizes-air-fryer-cooking/"
+    ],
+    "complaints": ["Glass exterior measured at 280°F by TechGearLab; runs about 18°F low", "Glass cracking from thermal shock"],
+    "last_price_cents": null,
+    "tested_on": null
+  },
+  {
+    "id": "kidde-fa110g",
+    "name": "Kidde Basic 110 Fire Extinguisher 1-A:10-B:C (FA110G)",
+    "brand": "Kidde",
+    "category": "kitchen-safety-devices",
+    "asin": "B00002ND64",
+    "merchants": [{ "id": "amazon", "url": "https://www.amazon.com/dp/B00002ND64" }],
+    "price_seen_cents": null,
+    "sources": [
+      "https://www.thekitchn.com/best-fire-extinguisher-23756317",
+      "https://www.amazon.com/Kidde-FA110-Purpose-Extinguisher-1A10BC/dp/B00002ND64",
+      "https://www.cpsc.gov/Recalls/2018/Kidde-Recalls-Fire-Extinguishers-with-Plastic-Handles-Due-to-Failure-to-Discharge-and-Nozzle-Detachment-One-Death-Reported"
+    ],
+    "complaints": ["FA110G is on the 2017 Kidde plastic-handle recall (units made 2012 to Aug 2017)", "Mounting-bracket complaints in Amazon reviews"],
+    "last_price_cents": null,
+    "tested_on": null
+  },
+  {
+    "id": "stovetop-firestop-rangehood",
+    "name": "StoveTop FireStop Rangehood Fire Suppressor, 1 Pair (675-3D)",
+    "brand": "StoveTop FireStop",
+    "category": "kitchen-safety-devices",
+    "asin": "B0863BFNWB",
+    "merchants": [
+      { "id": "amazon", "url": "https://www.amazon.com/dp/B0863BFNWB" },
+      { "id": "stovetopfirestop", "url": "https://stovetopfirestop.com/product/rangehood/" },
+      { "id": "walmart", "url": "https://www.walmart.com/ip/Stovetop-Firestop-Rangehood-Cooktop-Fire-Extinguisher/242274587" }
+    ],
+    "price_seen_cents": 5695,
+    "sources": [
+      "https://www.reviewed.com/home-outdoors/best-right-now/the-best-fire-extinguishers-for-homeowners",
+      "https://www.wfmynews2.com/article/news/local/2-wants-to-know/whoa-family-escapes-cooking-fire-thanks-to-stovetop-firestop-canister-puts-out-cooking-fires-winston-salem-fire-department-family-escapes-unharmed/83-24f24619-f8fb-460c-a24c-a0f91c3b382e",
+      "https://www.cpsc.gov/Recalls/2020/WilliamsRDM-Recalls-Cooktop-Fire-Suppressors-Due-to-Risk-of-Failure-to-Activate-and-Suppress-Fires"
+    ],
+    "complaints": ["Dec 2019 recall: units made Nov 7-13, 2016 could fail to release powder", "Not UL-listed; magnets won't hold on stainless hoods without the adhesive kit"],
+    "last_price_cents": null,
+    "tested_on": null
+  },
+  {
+    "id": "iguard-electric-stove",
+    "name": "iGuard for Electric Stoves (Plug-in Radar Model)",
+    "brand": "iGuard",
+    "category": "kitchen-safety-devices",
+    "asin": null,
+    "merchants": [{ "id": "iguard", "url": "https://iguardfire.com/product/new-iguard-for-electric-stoves-plugin-model/" }],
+    "price_seen_cents": 54900,
+    "sources": [
+      "https://www.popsci.com/gear/home-of-the-future-awards-2026/",
+      "https://www.smithsonianmag.com/innovation/seven-fascinating-inventions-unveiled-at-the-2026-consumer-electronics-show-180987980/",
+      "https://iguardfire.com/product/new-iguard-for-electric-stoves-plugin-model/"
+    ],
+    "complaints": ["$549 plus shipping", "Electric stoves only; 3-prong version pre-order only"],
+    "last_price_cents": null,
+    "tested_on": null
+  }
+]
