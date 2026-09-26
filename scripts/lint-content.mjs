@@ -39,8 +39,9 @@ for (const e of all) {
   const where = rel(e.file);
   if (affiliateRe.test(e.body)) fail(where, 'raw affiliate/merchant URL — use <AffiliateLink product_id merchant />');
   if (/!\[\s*\]\(/.test(e.body)) fail(where, 'markdown image without alt text');
-  for (const tag of e.body.match(/<(img|Image|Picture)\b[^>]*>/g) ?? []) {
+  for (const tag of e.body.match(/<(img|Image|Picture|Figure)\b[^>]*>/g) ?? []) {
     if (!/\balt=("[^"]+"|\{[^}]+\})/.test(tag)) fail(where, `image without alt: ${tag.slice(0, 60)}`);
+    if (tag.startsWith('<Figure') && !/\bcredit="[^"]+"/.test(tag)) fail(where, `Figure without credit: ${tag.slice(0, 60)}`);
   }
   if (/in this article,? we will/i.test(e.body)) fail(where, 'banned opener "In this article we will…"');
   if (e.data.author && !existsSync(join(CONTENT, 'authors', `${e.data.author}.md`))) fail(where, `author "${e.data.author}" not in src/content/authors`);

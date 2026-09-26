@@ -1,6 +1,7 @@
 ---
 import { render } from 'astro:content';
 import AffiliateLink from '../../components/AffiliateLink.astro';
+import Figure from '../../components/Figure.astro';
 import Layout from '../../layouts/Guide.astro';
 import { published, urlFor } from '../../lib/site';
 
@@ -11,4 +12,4 @@ const { entry } = Astro.props;
 const { Content, headings } = await render(entry);
 ---
 
-<Layout entry={entry} headings={headings}><Content components={{ AffiliateLink }} /></Layout>
+<Layout entry={entry} headings={headings}><Content components={{ AffiliateLink, Figure }} /></Layout>
