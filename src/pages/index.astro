@@ -10,6 +10,8 @@ const [lead, ...otherHubs] = hubs;
 // Line-art stand-ins until real test photos exist; swap for <Picture> of the hero when there is one.
 const ICON_FOR: Record<string, string> = { 'air-fryers': 'airFryer', 'kitchen-safety-devices': 'fireExtinguisher' };
 const iconFor = (category: string) => iconSvg(ICON_FOR[category] ?? 'thermometer', 1.1);
+// CC licences require attribution wherever a photo appears, including here.
+const credits = [...hubs, ...reviews.slice(0, 6)].filter((e) => e.data.hero && e.data.hero_credit).map((e) => e.data);
 ---
 
 <Base title="Kitchen Watcher: kitchen gear research and prices" description="Air fryers and kitchen safety gear compared on the evidence: independent lab data, specs, owner reports and recalls, with every source named.">
@@ -65,6 +67,19 @@ const iconFor = (category: string) => iconSvg(ICON_FOR[category] ?? 'thermometer
     </section>
   )}
 
+  {credits.length > 0 && (
+    <p class="credits">
+      Photos:{' '}
+      {credits.map((c, i) => (
+        <>
+          {i > 0 && '; '}
+          {c.hero_credit_url ? <a href={c.hero_credit_url} rel="noopener">{c.hero_credit}</a> : c.hero_credit}
+          {c.hero_license && <>, {c.hero_license_url ? <a href={c.hero_license_url} rel="license noopener">{c.hero_license}</a> : c.hero_license}</>}
+        </>
+      ))}. Illustrative photos don't show the reviewed models unless the caption on that page says so.
+    </p>
+  )}
+
   <section class="trust" aria-labelledby="trust-h">
     <h2 id="trust-h">Why you can trust us</h2>
     <p>Every recommendation shows its evidence: measurements from independent testing labs, manufacturer specs, what owners report after months of use, and official recall records. When a number comes from someone else, we name them and link to it.</p>
@@ -103,7 +118,9 @@ const iconFor = (category: string) => iconSvg(ICON_FOR[category] ?? 'thermometer
   .teaser:hover .t-title { text-decoration: underline; text-decoration-color: var(--accent); }
   .t-meta { font-size: 0.8rem; color: var(--muted); margin-top: 0.3rem; }
 
-  .trust { margin-top: 3.5rem; padding: 2rem; background: var(--tint); }
+  .credits { margin: 2rem 0 0; font-size: 0.75rem; color: var(--muted); }
+  .credits a { color: inherit; }
+  .trust { margin-top: 2rem; padding: 2rem; background: var(--tint); }
   .trust h2 { margin-top: 0; }
   .trust p { max-width: 62ch; font-family: var(--serif); font-size: 1.1rem; }
   .trust p:last-child { margin-bottom: 0; font-family: var(--sans); font-weight: 700; font-size: 0.95rem; }
