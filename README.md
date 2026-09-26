@@ -28,7 +28,7 @@ npm run dev        # http://localhost:4321, drafts visible
    npm run build && npm run lint:content && npm run check:schema
    ```
    Lint and the schema check read `dist/`, so build first.
-6. **Commit** as `content: {type} {slug}` and push to `main`. Cloudflare Pages deploys it.
+6. **Commit** as `content: {type} {slug}` and push to `main`. Cloudflare Workers Builds runs `npm run build` then `npx wrangler deploy` (static assets from `dist/`, see `wrangler.jsonc`).
 7. **Once the deploy is live:**
    ```bash
    npm run ping:indexnow

@@ -1,0 +1,11 @@
+{
+  // Static site on Cloudflare Workers static assets. No Worker script: every request is a file in dist/.
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "kitchenwatcher",
+  "compatibility_date": "2026-09-01",
+  "assets": {
+    "directory": "./dist",
+    "html_handling": "force-trailing-slash",
+    "not_found_handling": "404-page"
+  }
+}
