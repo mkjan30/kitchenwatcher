@@ -19,7 +19,7 @@ pros:
   - "Turns the stove back on when it sees you've returned, per iGuard's FAQ"
   - "Plug-in install with no electrician, per iGuard"
 cons:
-  - "Price is unclear: $549 on iGuard's buy buttons, a '$699 total' line on the same page, and $399 in Smithsonian's January coverage"
+  - "Price has moved: $549 (U.S.) plus shipping on iGuard's page in September, versus $399 in Smithsonian's January coverage"
   - "No independent measurements of shut-off delay or false shut-offs have been published"
   - "Electric ranges only; the 3-prong version was a priority list, not on sale, on Sep 27, 2026"
   - "No owner reviews of the new model yet"
@@ -29,6 +29,9 @@ sources:
   - "https://iguardfire.com/electric-stoves/"
   - "https://iguardfire.com/"
   - "https://iguardfire.com/faqs/"
+  - "https://iguardfire.com/which-is-your-favorite-feature/"
+  - "https://iguardfire.com/control-panel-menu-settings/"
+  - "https://iguardfire.com/warranty/"
   - "https://www.popsci.com/gear/home-of-the-future-awards-2026/"
   - "https://www.smithsonianmag.com/innovation/seven-fascinating-inventions-unveiled-at-the-2026-consumer-electronics-show-180987980/"
   - "https://odditymall.com/radar-automatic-stove-shutoff/"
@@ -41,11 +44,9 @@ brief:
     - "Top pages: PopSci award blurb, Smithsonian CES roundup, CNET CES coverage (quoted on iGuard's homepage; not read), OddityMall, senior-care listicles (Graying with Grace, ElderGuard) and iGuard's own pages. None publish a measured shut-off delay, false shut-off rate or alert latency. This page's angle is laying out where the sources disagree (price, timing, gas support, certification)."
     - "Best Buy reviews are for the older IGSE-4, a different product. Amazon listing B0H384NHGQ not confirmed as this model. No Reddit threads found."
     - "Images: iGuard press images (need permission from iGuard Home Inc.); no PA-API option since asin is null."
-  verify:
-    - "Certification: iGuard FAQ says iGuardStoves are certified to CSA C22.2 No. 205 and UL 2017; unclear whether that covers the new radar plug-in model"
-    - "Default shut-off delay: Smithsonian says five minutes without movement; Graying with Grace says typically 5 to 45 minutes adjustable; iGuard gives no number"
-    - "Price: $549 buy button vs '$699 total, shipping extra' line on iGuard's page (Sep 27, 2026); $399 per Smithsonian (Jan 2026)"
-    - "Install time 'about 15 minutes' is from iGuard's general FAQ and may describe older models"
+    - "Default shut-off delay: iGuard's Features In-Depth page says 5 minutes; the product page's JSON-LD description says 10 minutes; old iGuardStove control panel was 1-15 min, default 5; Graying with Grace's 5-45 is unsupported by iGuard"
+    - "Price: page checkout config (IGuardCheckout.fullPrices) lists US 549 / CA 699 for variations 18084/18085; JSON-LD offer USD 549.00 (Sep 27, 2026); $399 per Smithsonian (Jan 2026)"
+    - "Install time 'about 15 minutes' is from iGuard's FAQ and describes the older iGuardStove (two-screw control panel); product page says 'installs in minutes'"
 ---
 
 iGuard for Electric Stoves is a plug-in box that sits between an electric range and its outlet, senses by radar when nobody is in the kitchen, warns, then cuts power to the burners. It's aimed at forgotten cooking, the leading factor in home cooking fires. It has award attention but no independent measurements or owner track record yet, and sources disagree on its price and ship date.
@@ -64,7 +65,7 @@ Per iGuard's product and FAQ pages (manufacturer claims):
 - Forgotten-cooking protection works without Wi-Fi; the app adds monitoring, remote shut-off where supported, and lock and schedule controls.
 - An extended cooking timer for long simmers, after which it returns to automatic protection.
 - If it has shut the stove off while you were out, it turns the stove back on when it sees you've returned.
-- Plug-in, no electrician required. iGuard's general FAQ says the electric model takes a handyman about 15 minutes. {/* VERIFY: 15-minute install claim is from iGuard's general FAQ and may describe older iGuardStove models */}
+- Plug-in, no electrician required; the product page says it installs in minutes. (The "about 15 minutes" in iGuard's FAQ describes the older iGuardStove, whose control panel mounts with two screws.) iGuard's warranty page recommends professional installation for all iGuard products, and strongly for gas and hardwired electric models.
 
 [Popular Science](https://www.popsci.com/gear/home-of-the-future-awards-2026/) named it the best stove safety device in its 2026 Home of the Future Awards (July 2026), writing that its radar is precise enough to tell a person sitting still from an empty room. That's a description of the design, not a published measurement.
 
@@ -72,7 +73,7 @@ Per iGuard's product and FAQ pages (manufacturer claims):
 
 | Spec or measurement | Value | Source |
 |---|---|---|
-| Price, 4-prong electric | $549 on the buy buttons; a separate line reads "$699 total, Shipping Extra" (Sep 27, 2026) | iGuard product page |
+| Price, 4-prong electric | $549 in the U.S., shipping extra; the page's checkout settings list $699 for Canada (Sep 27, 2026) | iGuard product page |
 | Price at CES | $399 | Smithsonian, Jan 9, 2026 |
 | Price and payment | $199 refundable deposit plus $350 at shipment, $549 total | OddityMall, Jul 28, 2026 |
 | Shipping | "Will ship later this year" | Smithsonian, Jan 9, 2026 |
@@ -80,20 +81,21 @@ Per iGuard's product and FAQ pages (manufacturer claims):
 | Availability | 4-prong: buy now, "new inventory arriving monthly"; 3-prong: priority list only | iGuard product page, Sep 27, 2026 |
 | Shut-off delay | Five minutes without movement | Smithsonian, Jan 9, 2026 |
 | Shut-off delay | Adjustable timer, typically 5 to 45 minutes | Graying with Grace, Sep 4, 2026 |
-| Shut-off delay | Not stated | iGuard product page and FAQ |
+| Shut-off delay | Five minutes without motion | iGuard "Features In-Depth" page |
+| Shut-off delay | Ten minutes without motion | iGuard product page's structured-data description |
 | Stove types | Gas and electric | Smithsonian, Jan 9, 2026 |
 | Stove types | This model electric only; gas is a separate product | iGuard product page |
 | Certification | CSA C22.2 No. 205 and UL 2017 for "iGuardStoves" | iGuard FAQ |
 
-Three things stand out. First, price: iGuard's page shows $549 on its buy buttons but also a "$699 total, Shipping Extra" line, and [Smithsonian](https://www.smithsonianmag.com/innovation/seven-fascinating-inventions-unveiled-at-the-2026-consumer-electronics-show-180987980/) reported $399 at CES in January. [OddityMall](https://odditymall.com/radar-automatic-stove-shutoff/) describes the $549 as a $199 deposit plus $350 at shipment. I'd confirm the checkout total, including shipping, before you commit. {/* VERIFY: $549 vs "$699 total" on iGuard's product page, Sep 27, 2026 */}
+Three things stand out. First, price. On Sep 27, 2026, iGuard's product page listed the 4-prong model at $549 in U.S. dollars, with shipping extra. The "$699 total" line that also appears on that page is the Canadian price: the page's checkout settings list $549 for the U.S. and $699 for Canada. [Smithsonian](https://www.smithsonianmag.com/innovation/seven-fascinating-inventions-unveiled-at-the-2026-consumer-electronics-show-180987980/) reported $399 at CES in January, and [OddityMall](https://odditymall.com/radar-automatic-stove-shutoff/) describes the $549 as a $199 deposit plus $350 at shipment. Check the checkout total, including shipping, before you commit.
 
 Second, timing. Smithsonian said it would ship later in 2026; OddityMall said new orders were shipping in August; iGuard's product page now says new inventory arrives monthly, while its homepage still offers a notify-me sign-up for 2026 pre-sales. The 3-prong version for older outlets is a priority list only.
 
-Third, the shut-off delay, the number that matters most. Smithsonian reported five minutes without movement; [Graying with Grace](https://www.grayingwithgrace.com/stove-safety-devices-aging-in-place/) says an adjustable timer, typically 5 to 45 minutes; iGuard's own pages don't give a figure. {/* VERIFY: default shut-off delay — five minutes (Smithsonian) vs 5-45 minutes adjustable (Graying with Grace); iGuard gives none */}
+Third, the shut-off delay, the number that matters most. iGuard's own pages disagree. Its "iGuard Features In-Depth" page describes a five-minute auto shut-off timer that resets every time it sees you move, which matches Smithsonian's report. The product page's structured-data description says the stove turns off after 10 minutes without motion. For the older iGuardStove, iGuard's control-panel settings page says the timer can be set from 1 to 15 minutes, with five as the default, but no iGuard page I read says whether the new model is adjustable. [Graying with Grace](https://www.grayingwithgrace.com/stove-safety-devices-aging-in-place/) says an adjustable timer, typically 5 to 45 minutes; I found nothing from iGuard to support that range. Ask iGuard which default the model you're buying ships with.
 
 ## Certification
 
-A device that sits in series with a 240-volt range circuit should carry a safety listing. iGuard's FAQ says "iGuardStoves" are certified to CSA C22.2 No. 205 in Canada and UL 2017 in the U.S., but it doesn't say whether that covers the new radar plug-in model, and the product page shows no listing mark. I couldn't find a certification record for this model. {/* VERIFY: whether CSA C22.2 No. 205 / UL 2017 certification applies to the new radar plug-in model */}
+A device that sits in series with a 240-volt range circuit should carry a safety listing. iGuard's FAQ lists CSA C22.2 No. 205 and UL 2017 for its iGuardStove products; it doesn't say whether that covers the radar plug-in model, and the product page doesn't mention a safety listing.
 
 ## What owners report
 
