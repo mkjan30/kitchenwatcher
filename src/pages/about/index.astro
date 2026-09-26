@@ -1,0 +1,13 @@
+---
+import { getCollection } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+
+const authors = await getCollection('authors');
+---
+
+<Base title="About Kitchen Watcher" description="TODO(human): ≤155-char description of who runs Kitchen Watcher and why." crumbs={[{ name: 'About Kitchen Watcher', path: '/about/' }]}>
+  <h1>About Kitchen Watcher</h1>
+  <p>TODO(human): who you are, why this site exists, how it makes money (link to <a href="/affiliate-disclosure/">affiliate disclosure</a>), and <a href="/how-we-test/">how we test</a>.</p>
+  <h2>Who tests the gear</h2>
+  <ul>{authors.map((a) => <li><a href={`/authors/${a.id}/`}>{a.data.name}</a>, {a.data.job_title}</li>)}</ul>
+</Base>

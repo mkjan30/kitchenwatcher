@@ -1,0 +1,15 @@
+---
+import Base from '../../layouts/Base.astro';
+---
+
+<Base title="Search" description="Search Kitchen Watcher reviews, guides and recipes." crumbs={[{ name: "Search", path: "/search/" }]} noindex>
+  <h1>Search</h1>
+  <link href="/pagefind/pagefind-ui.css" rel="stylesheet" />
+  <div id="search"></div>
+  <script is:inline src="/pagefind/pagefind-ui.js"></script>
+  <script is:inline>
+    const ui = new PagefindUI({ element: "#search", showImages: false });
+    const q = new URLSearchParams(location.search).get("q");
+    if (q) ui.triggerSearch(q);
+  </script>
+</Base>

@@ -1,0 +1,31 @@
+---
+import { getCollection, render } from 'astro:content';
+import { Picture } from 'astro:assets';
+import Base from '../../layouts/Base.astro';
+import { abs, personLd, published, urlFor } from '../../lib/site';
+
+export async function getStaticPaths() {
+  return (await getCollection('authors')).map((author) => ({ params: { slug: author.id }, props: { author } }));
+}
+const { author } = Astro.props;
+const { Content } = await render(author);
+const path = `/authors/${author.id}/`;
+const byAuthor = (
+  await Promise.all((['reviews', 'best', 'vs', 'guides', 'smart-kitchen', 'recipes'] as const).map((c) => published(c)))
+).flat().filter((e) => e.data.author.id === author.id);
+const ld = [{ '@type': 'ProfilePage', url: abs(path), mainEntity: personLd(author) }];
+---
+
+<Base title={`${author.data.name}, ${author.data.job_title}`.slice(0, 60)} description={`${author.data.name} tests kitchen gear for Kitchen Watcher.`} crumbs={[{ name: author.data.name, path }]} ld={ld}>
+  <h1>{author.data.name}</h1>
+  <p class="meta">{author.data.job_title}</p>
+  {author.data.photo && author.data.photo_alt && <Picture src={author.data.photo} alt={author.data.photo_alt} width={240} height={240} formats={['avif', 'webp']} />}
+  <Content />
+  {author.data.same_as.length > 0 && <p>Elsewhere: {author.data.same_as.map((u) => <a href={u} rel="me">{new URL(u).hostname}</a>)}</p>}
+  {byAuthor.length > 0 && (
+    <section>
+      <h2>Written by {author.data.name}</h2>
+      <ul>{byAuthor.map((e) => <li><a href={urlFor(e)}>{e.data.title}</a></li>)}</ul>
+    </section>
+  )}
+</Base>

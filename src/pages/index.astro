@@ -1,17 +1,26 @@
 ---
+import Base from '../layouts/Base.astro';
+import ProductCard from '../components/ProductCard.astro';
+import { published, urlFor } from '../lib/site';
 
+const hubs = await published('best');
+const latest = (await published('reviews')).sort((a, b) => +b.data.updated - +a.data.updated).slice(0, 6);
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<Base title="Kitchen Watcher — tested kitchen gear and price drops" description="TODO(human): ≤155-char homepage description.">
+  <h1>Kitchen gear we actually tested, and when to buy it</h1>
+  <p>TODO(human): 2–3 sentences. Who runs this, what gets measured, how prices are watched.</p>
+  {hubs.length > 0 && (
+    <section>
+      <h2>Best-of guides</h2>
+      <ul>{hubs.map((h) => <li><a href={urlFor(h)}>{h.data.title}</a></li>)}</ul>
+    </section>
+  )}
+  {latest.length > 0 && (
+    <section>
+      <h2>Latest reviews</h2>
+      {latest.map((r) => <ProductCard product_id={r.data.product_id} />)}
+    </section>
+  )}
+  <p><a href="/how-we-test/">How we test</a> · <a href="/about/">About Kitchen Watcher</a></p>
+</Base>

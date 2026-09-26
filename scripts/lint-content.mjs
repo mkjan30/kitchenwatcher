@@ -69,6 +69,7 @@ if (!pages.length) {
   const outbound = new Map();
   for (const p of pages) {
     const html = readFileSync(p.file, 'utf8');
+    if (/\bTODO\b/.test(html)) fail(rel(p.file), 'placeholder TODO in built page');
     outbound.set(p.url, new Set([...html.matchAll(/href="([^"]+)"/g)].map((m) => norm(m[1])).filter(Boolean)));
     for (const img of html.match(/<img\b[^>]*>/g) ?? []) {
       if (!/\balt="[^"]+"/.test(img)) fail(rel(p.file), `built <img> without alt: ${img.slice(0, 80)}`);
