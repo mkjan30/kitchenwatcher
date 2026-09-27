@@ -77,6 +77,13 @@ const here = Astro.url.pathname;
     <link rel="preload" href={sansUrl} as="font" type="font/woff2" crossorigin />
     <style set:html={`@font-face{font-family:'Source Serif 4';font-style:normal;font-display:swap;font-weight:200 900;src:url(${serifUrl}) format('woff2-variations');}@font-face{font-family:'Libre Franklin';font-style:normal;font-display:swap;font-weight:100 900;src:url(${sansUrl}) format('woff2-variations');}`}></style>
     <script type="application/ld+json" set:html={json} />
+    <!-- Google Tag Manager -->
+    <script is:inline>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-MVXXJ2TD');</script>
+    <!-- End Google Tag Manager -->
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-3LK2ZJE7HN"></script>
     <script is:inline>
@@ -87,6 +94,10 @@ const here = Astro.url.pathname;
     </script>
   </head>
   <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MVXXJ2TD"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
     <a class="skip" href="#main">Skip to content</a>
     <header class="site">
       <div class="wrap masthead">
