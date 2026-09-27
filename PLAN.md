@@ -16,11 +16,22 @@ Gear reviews + price watch (core) · smart kitchen & kitchen safety (differentia
 | Recipes (paused) | Top of funnel → gear pages | Ads later, internal links | 0% until resumed |
 | Guides | Topical authority | Ads later | 5% |
 
+## Content scale plan (decided 2026-09-27)
+Target: **~1,000 published pages by 2027-03-27**, research-based (no hands-on testing; CLAUDE.md rules apply to every page).
+- **Ramp with gates, never skip a gate for a date:** month 1 ~60 pages → month 2 ~120 → then ~200/month **only if** GSC shows ≥60% of submitted pages indexed after 4 weeks, no manual action, no "Crawled – currently not indexed" spike (>30% of new pages). Miss → hold volume, improve/merge thin pages, re-check in 2 weeks.
+- **Stop immediately** on a manual action or a sitewide traffic drop >40% after a core/spam update; audit before resuming.
+- **Page-type mix** (research wins here): problems & error codes, recall checks, model-vs-model, how-to/cleaning/troubleshooting, spec explainers, buying guides by budget/household, safety explainers; research reviews ≤25%; `/watch/` price pages once price data exists (≥30 days).
+- **Anti-thin rules:** one search intent per page (no near-duplicates; merge instead), every page ≥3 cited primary/independent sources, a table with sourced numbers, FAQ from real search demand, linked from its hub.
+- **Production:** batch workflow (research → /seo-content-brief → sourced draft → adversarial source check → /seo-content → checks), ~25 pages/batch, drafts only; owner spot-checks ~10% before a batch is published. Build clusters deep one at a time.
+- **Cluster order:** air fryers + kitchen safety (deepen now) → coffee & espresso → small appliances (blenders, stand mixers, food processors, toasters, microwaves, pressure/rice cookers) → cookware & knives → smart kitchen & induction. Each new cluster starts with /research (products + topics) before any drafting.
+
 ## Launch clusters
 1. **Air fryers** — /best/air-fryers/, 6 reviews, 2 vs, 1 guide at launch.
 2. **Kitchen safety devices** — /best/kitchen-safety-devices/, 3 reviews, 2 guides at launch.
-3. Smart kitchen appliances — /best/smart-kitchen-appliances/ + 2 smart-oven reviews in October.
-4. Espresso — Q1 2027. 5. Induction/cooktops — Q3 2027.
+3. Coffee & espresso — /best/espresso-machines/, /best/coffee-makers/ (next after the two launch clusters).
+4. Small appliances — blenders, stand mixers, food processors, toasters, microwaves, pressure & rice cookers.
+5. Cookware & knives — nonstick, cast iron, stainless, knife sets, sharpeners.
+6. Smart kitchen & induction — smart ovens, induction cooktops, smart plugs/sensors.
 
 Keyword volumes are approximate (Ahrefs Keywords Explorer not available on this account). Verify in Ahrefs/GKP before each brief. Target long-tail: "{model} review", "{a} vs {b}", "best X under $N", "{model} price history", "air fryer {dish} {model}", "{model} error code".
 

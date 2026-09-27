@@ -12,6 +12,7 @@ import Toc from '../components/Toc.astro';
 import Faq from '../components/Faq.astro';
 import type { MarkdownHeading } from 'astro';
 import Sources from '../components/Sources.astro';
+import { published } from '../lib/site';
 import { abs, articleLd, authorOf, faqLd, getProduct, hubCrumb, iso, productLd, reviewFor, urlFor } from '../lib/site';
 
 type Entry = CollectionEntry<'guides' | 'smart-kitchen' | 'vs' | 'best'>;
@@ -28,6 +29,16 @@ const ranked =
         .filter((x) => x.review !== undefined)
     : [];
 
+// Hubs list every guide/comparison in their category automatically (keeps new pages linked from their hub).
+const catOf = (id?: string) => (id ? getProduct(id).category : undefined);
+const related =
+  entry.collection === 'best'
+    ? [
+        ...(await published('vs')).filter((v) => catOf(v.data.products[0]) === entry.data.category),
+        ...(await published('guides')).filter((g) => g.data.hub === entry.data.category || catOf(g.data.product_id) === entry.data.category),
+        ...(await published('smart-kitchen')).filter((g) => g.data.hub === entry.data.category || catOf(g.data.product_id) === entry.data.category),
+      ]
+    : [];
 const faq = d.faq;
 const ld: object[] =
   entry.collection === 'best'
@@ -62,6 +73,12 @@ const crumbs = [...(productRef && entry.collection !== 'best' ? [hubCrumb(produc
     )}
     <Toc headings={headings} extra={tocExtra} />
     <slot />
+    {related.length > 0 && (
+      <section class="related" aria-labelledby="related-h">
+        <h2 id="related-h">Guides and comparisons</h2>
+        <ul>{related.map((r) => <li><a href={urlFor(r)}>{r.data.title}</a></li>)}</ul>
+      </section>
+    )}
     <Faq faq={faq} />
     <Sources urls={d.sources} />
     <AuthorBox author={author} />

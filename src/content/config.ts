@@ -97,6 +97,8 @@ const vs = defineCollection({
 // Explainers use the Guide layout; a smart-kitchen page about one device may name it.
 const guideFields = {
   product_id: productId.optional(),
+  // Hub this page belongs to when it isn't about one product (e.g. "air-fryers"); the hub lists it automatically.
+  hub: slug.optional(),
 };
 
 const guides = defineCollection({
