@@ -13,7 +13,8 @@
     "new": "node scripts/new-post.mjs",
     "lint:content": "node scripts/lint-content.mjs",
     "check:schema": "node scripts/check-schema.mjs",
-    "ping:indexnow": "node scripts/ping-indexnow.mjs"
+    "ping:indexnow": "node scripts/ping-indexnow.mjs",
+    "report": "node scripts/publish-report.mjs"
   },
   "dependencies": {
     "@astrojs/mdx": "^4.3.14",
