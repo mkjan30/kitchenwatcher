@@ -23,7 +23,7 @@ Target: **~1,000 published pages by 2027-03-27**, research-based (no hands-on te
 - **Page-type mix** (research wins here): problems & error codes, recall checks, model-vs-model, how-to/cleaning/troubleshooting, spec explainers, buying guides by budget/household, safety explainers; research reviews ≤25%; `/watch/` price pages once price data exists (≥30 days).
 - **Anti-thin rules:** one search intent per page (no near-duplicates; merge instead), every page ≥3 cited primary/independent sources, a table with sourced numbers, FAQ from real search demand, linked from its hub.
 - **Production:** batch workflow (research → /seo-content-brief → sourced draft → adversarial source check → /seo-content → checks), ~25 pages/batch, drafts only; owner spot-checks ~10% before a batch is published. Build clusters deep one at a time.
-- **Cluster order:** air fryers + kitchen safety (deepen now) → coffee & espresso → small appliances (blenders, stand mixers, food processors, toasters, microwaves, pressure/rice cookers) → cookware & knives → smart kitchen & induction. Each new cluster starts with /research (products + topics) before any drafting.
+- **Cluster order:** air fryers + kitchen safety (deepen now) → coffee & espresso → small appliances (blenders, stand mixers, food processors, toasters, microwaves, pressure/rice cookers) → cookware & knives → smart kitchen & induction → clusters 7–11 below (owner approved "any other category that fits the domain", 2026-09-27; order by research score). Each new cluster starts with /research (products + topics) before any drafting.
 
 ## Launch clusters
 1. **Air fryers** — /best/air-fryers/, 6 reviews, 2 vs, 1 guide at launch.
@@ -32,6 +32,11 @@ Target: **~1,000 published pages by 2027-03-27**, research-based (no hands-on te
 4. Small appliances — blenders, stand mixers, food processors, toasters, microwaves, pressure & rice cookers.
 5. Cookware & knives — nonstick, cast iron, stainless, knife sets, sharpeners.
 6. Smart kitchen & induction — smart ovens, induction cooktops, smart plugs/sensors.
+7. Kitchen tools & measurement — meat thermometers, kitchen scales, vacuum sealers, mandolines.
+8. Drinks — electric kettles, juicers, soda makers, milk frothers (espresso-adjacent frothers stay in cluster 3).
+9. Specialty & outdoor cooking — pizza ovens, griddles, sous vide, bread machines, dehydrators, slow cookers.
+10. Major appliances — dishwashers, ranges, range hoods, refrigerators (recall- and error-code-heavy; research model fits).
+11. Water & storage — water filter pitchers and under-sink filters, food storage, countertop ice makers.
 
 Keyword volumes are approximate (Ahrefs Keywords Explorer not available on this account). Verify in Ahrefs/GKP before each brief. Target long-tail: "{model} review", "{a} vs {b}", "best X under $N", "{model} price history", "air fryer {dish} {model}", "{model} error code".
 
