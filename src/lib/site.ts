@@ -11,7 +11,7 @@ export const SITE = {
   amazonTag: null as string | null,
   // Pre-launch switch: false puts <meta name="robots" content="noindex"> on every page.
   // Flip to true once the placeholder copy is gone, then submit the sitemap and run ping:indexnow.
-  indexable: false,
+  indexable: true,
 };
 
 export const DISCLOSURE =
