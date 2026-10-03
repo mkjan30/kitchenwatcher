@@ -121,3 +121,42 @@ Research: content/research-log/2026-10-03-coffee-espresso.md. Reviews held to 7 
 | 60 | guide | /guides/what-is-sca-certified-coffee-maker/ | what does sca certified mean coffee maker | sca certified home brewer list; sca golden cup standard; sca brew temperature range | hub: coffee-makers | https://sca.coffee/certified-home-brewer | live 2026-10-04 |
 | 50 | guide | /guides/cuisinart-coffee-maker-clean-light/ | cuisinart coffee maker clean light | cuisinart clean light won't turn off; how to clean cuisinart dcc-3200; cuisinart self clean vinegar ratio | cuisinart-dcc-3200 | https://www.cuisinart.ca/on/demandware.static/-/Sites-master-ca/en_CA/v1726577654996//Instruction%20Booklet/DCC-3200C.pdf, https://www.ifixit.com/Wiki/Cuisinart_DDC-3200_Troubleshooting | live 2026-10-04 |
 | 60 | guide | /guides/thermal-vs-glass-carafe/ | thermal vs glass carafe coffee maker | does thermal carafe keep coffee hot; hot plate burnt coffee; glass carafe heat retention | hub: coffee-makers | https://www.americastestkitchen.com/equipment_reviews/2461-best-coffee-makers-automatic-drip, https://www.cnet.com/home/kitchen-and-household/best-coffee-maker/ | live 2026-10-04 |
+
+## Batch 3 (2026-10-04): finish coffee + blenders (25 pages)
+
+Research: content/research-log/2026-10-03-coffee-espresso.md, content/research-log/2026-10-04-blenders.md. Reviews site-wide after this batch: 22 of 90 (24.4%).
+
+### Coffee & espresso (completion)
+
+| priority | page type | target URL | primary keyword | secondary keywords | product_id(s) | source URLs | status |
+|---|---|---|---|---|---|---|---|
+| — | review | /reviews/breville-bambino/ | breville bambino review | breville bes450 review; bambino espresso machine problems; breville bambino worth it | breville-bambino | see research log | live 2026-10-04 |
+| — | review | /reviews/gaggia-classic-e24/ | gaggia classic e24 review | gaggia classic pro e24 review; gaggia e24 vs evo pro; gaggia classic e24 problems | gaggia-classic-e24 | see research log | live 2026-10-04 |
+| — | review | /reviews/cuisinart-dcc-3200/ | cuisinart dcc-3200 review | cuisinart perfectemp 14 cup review; cuisinart dcc-3200 leaking; cuisinart dcc-3200 brew temperature | cuisinart-dcc-3200 | see research log | live 2026-10-04 |
+| — | review | /reviews/moccamaster-kbt/ | moccamaster kbt review | technivorm kbt thermal carafe; moccamaster kbt brew temperature; is moccamaster worth it | moccamaster-kbt | see research log | live 2026-10-04 |
+| — | review | /reviews/fellow-aiden/ | fellow aiden review | fellow aiden problems; fellow aiden coffee temperature; fellow aiden reliability | fellow-aiden | see research log | live 2026-10-04 |
+| — | vs | /vs/breville-bambino-plus-vs-gaggia-classic-e24/ | bambino plus vs gaggia classic | gaggia classic e24 vs bambino plus; breville vs gaggia espresso machine; bambino plus or gaggia for beginners | breville-bambino-plus, gaggia-classic-e24 | see research log | live 2026-10-04 |
+| — | vs | /vs/oxo-brew-8-cup-vs-moccamaster-kbt/ | oxo brew 8 cup vs moccamaster | oxo vs moccamaster temperature; oxo 8 cup or moccamaster kbt; thermal carafe drip coffee maker comparison | oxo-brew-8-cup, moccamaster-kbt | see research log | live 2026-10-04 |
+| — | guide | /guides/why-is-my-coffee-maker-slow/ | why is my coffee maker so slow | coffee maker taking forever to brew; how long should a drip coffee maker take; coffee maker slow mineral buildup | hub: coffee-makers | see research log | live 2026-10-04 |
+| — | guide | /guides/coffee-to-water-ratio-drip/ | coffee to water ratio for drip coffee maker | grams of coffee per liter sca; how much coffee for 10 cups; coffee scoop vs scale | hub: coffee-makers | see research log | live 2026-10-04 |
+| — | guide | /guides/are-plastic-coffee-makers-safe/ | are plastic coffee makers safe | bpa free coffee maker; plastic-free brew path coffee maker; fda bpa food contact | hub: coffee-makers | see research log | live 2026-10-04 |
+
+### Blenders — /best/blenders/
+
+| priority | page type | target URL | primary keyword | secondary keywords | product_id(s) | source URLs | status |
+|---|---|---|---|---|---|---|---|
+| — | best | /best/blenders/ | best blender | best blender 2026; best blender for smoothies; best budget blender | hub for blenders; products: ninja-db351, nutribullet-nbf50500, ninja-bl610, breville-bbl620, ninja-bn701, vitamix-5200 | see research log | live 2026-10-04 |
+| — | review | /reviews/ninja-db351/ | ninja blendboss review | ninja blendboss db351; ninja blendboss loud; ninja blendboss vs nutribullet | ninja-db351 | see research log | live 2026-10-04 |
+| — | vs | /vs/vitamix-5200-vs-ninja-bn701/ | vitamix 5200 vs ninja professional plus | vitamix vs ninja blender; is vitamix worth it over ninja; ninja bn701 vs vitamix | vitamix-5200, ninja-bn701 | see research log | live 2026-10-04 |
+| — | vs | /vs/ninja-bl610-vs-ninja-bn701/ | ninja bl610 vs bn701 | ninja professional vs professional plus; ninja auto-iq worth it; ninja 1000w vs 1200w blender | ninja-bl610, ninja-bn701 | see research log | live 2026-10-04 |
+| — | vs | /vs/nutribullet-nbf50500-vs-ninja-bn701/ | nutribullet vs ninja blender | nutribullet combo vs ninja professional plus; nutribullet nbf50500 vs ninja; best blender under 100 | nutribullet-nbf50500, ninja-bn701 | see research log | live 2026-10-04 |
+| — | guide | /guides/can-you-put-hot-liquid-in-a-blender/ | can you put hot liquid in a blender | blending hot soup safely; can you blend hot liquid in a nutribullet; blender lid blew off hot soup | hub: blenders | see research log | live 2026-10-04 |
+| — | guide | /guides/blender-wont-turn-on/ | blender won't turn on | blender overload protection reset; vitamix stopped working mid blend; blender motor shuts off | hub: blenders | see research log | live 2026-10-04 |
+| — | guide | /guides/ninja-blender-blinking-lights/ | ninja blender blinking lights | ninja blender won't start; ninja blendboss flashing lights; ninja blender lid won't lock | ninja-bn701 | see research log | live 2026-10-04 |
+| — | guide | /guides/blender-smells-like-burning/ | blender smells like burning | new blender burning smell; vitamix motor smell; blender overheating smell | hub: blenders | see research log | live 2026-10-04 |
+| — | guide | /guides/how-to-clean-a-blender/ | how to clean a blender | clean under blender blades; blender self clean soap and water; clean blender gasket | hub: blenders | see research log | live 2026-10-04 |
+| — | guide | /guides/is-a-blender-jar-dishwasher-safe/ | is a blender jar dishwasher safe | vitamix container dishwasher; cloudy blender jar; nutribullet cups dishwasher top rack | hub: blenders | see research log | live 2026-10-04 |
+| — | guide | /guides/can-a-blender-crush-ice/ | can a blender crush ice | best blender for crushing ice; nutribullet crush ice; blender ice without water | hub: blenders | see research log | live 2026-10-04 |
+| — | guide | /guides/blender-wattage-explained/ | blender wattage explained | peak watts vs watts blender; how many watts for a good blender; 1200 watt vs 1500 watt blender | hub: blenders | see research log | live 2026-10-04 |
+| — | guide | /guides/personal-vs-full-size-blender/ | personal blender vs full size blender | single serve vs countertop blender; do i need a full size blender; personal blender for smoothies only | hub: blenders | see research log | live 2026-10-04 |
+| — | guide | /guides/blender-recall-check/ | blender recall | vitamix recall container; ninja blender recall bl660; how to check if my blender is recalled | hub: blenders | see research log | live 2026-10-04 |

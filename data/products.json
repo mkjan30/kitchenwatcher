@@ -575,5 +575,160 @@
     ],
     "last_price_cents": null,
     "tested_on": null
+  },
+  {
+    "id": "ninja-db351",
+    "name": "Ninja BlendBOSS Personal Blender, 26 oz Tumbler (DB351)",
+    "brand": "Ninja",
+    "category": "blenders",
+    "asin": "B0FSGDNFJY",
+    "merchants": [
+      {
+        "id": "amazon",
+        "url": "https://www.amazon.com/dp/B0FSGDNFJY"
+      }
+    ],
+    "price_seen_cents": 10994,
+    "sources": [
+      "https://www.tomsguide.com/best-picks/best-blenders",
+      "https://www.techradar.com/best/best-blenders",
+      "https://www.cnet.com/home/kitchen-and-household/best-blender/"
+    ],
+    "complaints": [
+      "Loud: 92 dB measured by Tom's Guide and CNET",
+      "Needs plenty of liquid; TechRadar had to stop and scrape with less",
+      "Single 26 oz vessel only (Tom's Guide)"
+    ],
+    "last_price_cents": null,
+    "tested_on": null
+  },
+  {
+    "id": "nutribullet-nbf50500",
+    "name": "nutribullet Full-Size Blender Combo 1200W (NBF50500)",
+    "brand": "nutribullet",
+    "category": "blenders",
+    "asin": "B0BRDJ28B7",
+    "merchants": [
+      {
+        "id": "amazon",
+        "url": "https://www.amazon.com/dp/B0BRDJ28B7"
+      }
+    ],
+    "price_seen_cents": 8995,
+    "sources": [
+      "https://www.thedailymeal.com/2242713/best-blender-brand-2026-consumer-reports/",
+      "https://www.techgearlab.com/topics/kitchen/best-blender",
+      "https://www.techgearlab.com/reviews/kitchen/blender/nutribullet-combo"
+    ],
+    "complaints": [
+      "User guide says it is not intended as an ice crusher; TechGearLab says it struggles to fully crush ice",
+      "Lower predicted reliability and owner satisfaction (Consumer Reports via The Daily Meal)",
+      "Blade base hard to remove; awkward to wash (TechGearLab)"
+    ],
+    "last_price_cents": null,
+    "tested_on": null
+  },
+  {
+    "id": "ninja-bl610",
+    "name": "Ninja Professional Blender 1000W, 72 oz (BL610)",
+    "brand": "Ninja",
+    "category": "blenders",
+    "asin": "B00NGV4506",
+    "merchants": [
+      {
+        "id": "amazon",
+        "url": "https://www.amazon.com/dp/B00NGV4506"
+      }
+    ],
+    "price_seen_cents": 9000,
+    "sources": [
+      "https://www.cnet.com/home/kitchen-and-household/best-blender/",
+      "https://www.techgearlab.com/topics/kitchen/best-blender"
+    ],
+    "complaints": [
+      "Lids breaking within months (Amazon review summary)",
+      "Short power cord; slower on smoothies and nut butter (TechGearLab)",
+      "No presets; sharp stacked blade to handle (CNET)"
+    ],
+    "last_price_cents": null,
+    "tested_on": null
+  },
+  {
+    "id": "breville-bbl620",
+    "name": "Breville the Fresh & Furious Blender (BBL620SIL)",
+    "brand": "Breville",
+    "category": "blenders",
+    "asin": "B07GPZPXQ3",
+    "merchants": [
+      {
+        "id": "amazon",
+        "url": "https://www.amazon.com/dp/B07GPZPXQ3"
+      }
+    ],
+    "price_seen_cents": 19995,
+    "sources": [
+      "https://www.americastestkitchen.com/equipment_reviews/2640-the-best-blenders",
+      "https://www.techradar.com/best/best-blenders",
+      "https://www.consumerreports.org/appliances/blenders/best-blenders-a9181845311/",
+      "https://www.techgearlab.com/topics/kitchen/best-blender"
+    ],
+    "complaints": [
+      "Slight leaking into the lid well at max fill (TechRadar)",
+      "Purée score 4.0/10 (TechGearLab)",
+      "Showed as currently unavailable on Amazon on Oct 4, 2026; few owner reviews"
+    ],
+    "last_price_cents": null,
+    "tested_on": null
+  },
+  {
+    "id": "ninja-bn701",
+    "name": "Ninja Professional Plus Blender with Auto-iQ, 72 oz (BN701)",
+    "brand": "Ninja",
+    "category": "blenders",
+    "asin": "B0855B5Z6F",
+    "merchants": [
+      {
+        "id": "amazon",
+        "url": "https://www.amazon.com/dp/B0855B5Z6F"
+      }
+    ],
+    "price_seen_cents": 7999,
+    "sources": [
+      "https://www.americastestkitchen.com/equipment_reviews/2640-the-best-blenders",
+      "https://www.techgearlab.com/reviews/kitchen/blender/ninja-professional-plus-bn701"
+    ],
+    "complaints": [
+      "Pitcher cracking within a year (Amazon review summary)",
+      "Residue in hard-to-reach spots; blade stack awkward to lift out (TechGearLab)",
+      "Grainy purées; struggles with nut butter (ATK, TechGearLab)"
+    ],
+    "last_price_cents": null,
+    "tested_on": null
+  },
+  {
+    "id": "vitamix-5200",
+    "name": "Vitamix 5200 Professional-Grade Blender, 64 oz",
+    "brand": "Vitamix",
+    "category": "blenders",
+    "asin": "B008H4SLV6",
+    "merchants": [
+      {
+        "id": "amazon",
+        "url": "https://www.amazon.com/dp/B008H4SLV6"
+      }
+    ],
+    "price_seen_cents": 47999,
+    "sources": [
+      "https://www.americastestkitchen.com/equipment_reviews/2640-the-best-blenders",
+      "https://www.techgearlab.com/reviews/kitchen/blender/vitamix-5200",
+      "https://www.vitamix.com/media/catalog/product/file/Vitamix-5200-Owners-Manual.pdf"
+    ],
+    "complaints": [
+      "Struggles with nut butter; motor runs warm (TechGearLab)",
+      "Container, lid and plug not dishwasher safe; overload reset can take up to 45 minutes (Vitamix manual)",
+      "Mixed durability reports (Amazon review summary)"
+    ],
+    "last_price_cents": null,
+    "tested_on": null
   }
 ]
