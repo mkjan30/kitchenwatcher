@@ -272,10 +272,6 @@
       {
         "id": "amazon",
         "url": "https://www.amazon.com/dp/B09X3WGJ3R"
-      },
-      {
-        "id": "casabrews",
-        "url": "https://www.casabrews.com/products/cm5418"
       }
     ],
     "price_seen_cents": 13299,
@@ -302,10 +298,6 @@
       {
         "id": "amazon",
         "url": "https://www.amazon.com/dp/B07JVD78TT"
-      },
-      {
-        "id": "breville",
-        "url": "https://www.breville.com/en-us/product/bes500"
       }
     ],
     "price_seen_cents": 37995,
@@ -335,10 +327,6 @@
       {
         "id": "amazon",
         "url": "https://www.amazon.com/dp/B08C96BG9H"
-      },
-      {
-        "id": "delonghi",
-        "url": "https://www.delonghi.com/en-us/p/stilosa-stilosa-espresso-machine/EC260BK.html?pid=0132104209"
       }
     ],
     "price_seen_cents": 9995,
@@ -365,10 +353,6 @@
       {
         "id": "amazon",
         "url": "https://www.amazon.com/dp/B0B1JPPG2L"
-      },
-      {
-        "id": "breville",
-        "url": "https://www.breville.com/en-us/product/bes450"
       }
     ],
     "price_seen_cents": 20496,
@@ -393,10 +377,6 @@
       {
         "id": "amazon",
         "url": "https://www.amazon.com/dp/B00CH9QWOU"
-      },
-      {
-        "id": "breville",
-        "url": "https://www.breville.com/en-us/product/bes870"
       }
     ],
     "price_seen_cents": 46877,
@@ -503,10 +483,6 @@
       {
         "id": "amazon",
         "url": "https://www.amazon.com/dp/B00MVWGQX0"
-      },
-      {
-        "id": "cuisinart",
-        "url": "https://www.cuisinart.com/14-cup-programmable-coffee-maker/DCC-3200NAS.html"
       }
     ],
     "price_seen_cents": 5304,
@@ -533,10 +509,6 @@
       {
         "id": "amazon",
         "url": "https://www.amazon.com/dp/B07DDRGVW7"
-      },
-      {
-        "id": "technivorm",
-        "url": "https://us.moccamaster.com/products/kbt"
       }
     ],
     "price_seen_cents": 34799,
@@ -562,10 +534,6 @@
       {
         "id": "amazon",
         "url": "https://www.amazon.com/dp/B093DYPBYR"
-      },
-      {
-        "id": "technivorm",
-        "url": "https://us.moccamaster.com/products/kbgv"
       }
     ],
     "price_seen_cents": 36900,
@@ -592,10 +560,6 @@
       {
         "id": "amazon",
         "url": "https://www.amazon.com/dp/B0DT5TD2D4"
-      },
-      {
-        "id": "fellow",
-        "url": "https://fellowproducts.com/products/aiden-precision-coffee-maker"
       }
     ],
     "price_seen_cents": 39995,
