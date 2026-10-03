@@ -45,8 +45,8 @@ workers/price-watch/         # scraper, D1 schema, alert sender
 - No display ads until PLAN.md says the ad-network gate is met.
 
 ## Schema
-- Review page → Article with `about` Product, author as Person with sameAs. No Review/Rating markup (we did not review first-hand). No fake aggregateRating.
-- /best/ → ItemList of Product.
+- Review page → Article with `about` Thing (the product's name), author as Person with sameAs. No Review/Rating markup (we did not review first-hand). No fake aggregateRating. Never emit a Product node without offers: Google flags it as an invalid product snippet (GSC error, 2026-10-04).
+- /best/ → ItemList of ListItem (position, url, name), no Product nodes.
 - Recipe → Recipe (instructions, nutrition if known, video if present).
 - Guide → Article (+ FAQPage only if an FAQ block exists).
 - /deals/ and /watch/ → ItemList + Offer with priceValidUntil.

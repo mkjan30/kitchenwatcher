@@ -24,7 +24,7 @@ const rules = {
   Product: (n, f, parent) => {
     need(n, f, 'name');
     if ('aggregateRating' in n) f('aggregateRating not allowed (no fake ratings)');
-    if (parent === undefined && !n.review && !n.offers) f('top-level Product needs review or offers');
+    if (!n.review && !n.offers) f('Product needs offers or review (Google validates every Product node; use Thing for "about")');
     if (n.image) localFile(n.image, f, 'image');
   },
   Review: (n, f) => {
@@ -102,10 +102,10 @@ for (const p of pages) {
   }
   // Page-level required types (CLAUDE.md "Schema").
   const want = ['Organization', 'WebSite', 'BreadcrumbList'];
-  if (p.url.startsWith('/reviews/')) want.push('Article', 'Product', 'Person');
+  if (p.url.startsWith('/reviews/')) want.push('Article', 'Person');
   // Research site: we never mark up a first-hand Review or our own Rating (CLAUDE.md).
   if (types.has('Review') || types.has('Rating')) errors.push(`${where}: Review/Rating markup not allowed (no hands-on testing)`);
-  if (p.url.startsWith('/best/')) want.push('ItemList', 'Product');
+  if (p.url.startsWith('/best/')) want.push('ItemList');
   if (p.url.startsWith('/recipes/')) want.push('Recipe');
   if (/^\/(guides|vs|smart-kitchen)\//.test(p.url)) want.push('Article');
   if (/^\/(deals|watch)\//.test(p.url)) want.push('ItemList', 'Offer');

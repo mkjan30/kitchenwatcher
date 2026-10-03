@@ -1,6 +1,6 @@
 ---
 // Guides, smart-kitchen, vs → Article (+ FAQPage only if frontmatter has faq).
-// /best/ hubs → ItemList of Product in the hub's editorial order (weight of evidence, never commission).
+// /best/ hubs → ItemList (summary list: position + url + name) in the hub's editorial order (weight of evidence, never commission).
 import type { CollectionEntry } from 'astro:content';
 import HeroFigure from '../components/HeroFigure.astro';
 import Base from './Base.astro';
@@ -13,7 +13,7 @@ import Faq from '../components/Faq.astro';
 import type { MarkdownHeading } from 'astro';
 import Sources from '../components/Sources.astro';
 import { published } from '../lib/site';
-import { abs, articleLd, authorOf, faqLd, getProduct, hubCrumb, iso, productLd, reviewFor, urlFor } from '../lib/site';
+import { abs, articleLd, authorOf, faqLd, getProduct, hubCrumb, iso, reviewFor, urlFor } from '../lib/site';
 
 type Entry = CollectionEntry<'guides' | 'smart-kitchen' | 'vs' | 'best'>;
 interface Props { entry: Entry; headings?: MarkdownHeading[] }
@@ -50,7 +50,7 @@ const ld: object[] =
           '@type': 'ListItem',
           position: i + 1,
           url: abs(urlFor(x.review!)),
-          item: productLd(x.product),
+          name: x.product.name,
         })),
       }]
     : [articleLd(entry, author, path)];

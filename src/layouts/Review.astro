@@ -14,7 +14,7 @@ import Sources from '../components/Sources.astro';
 import PriceWatch from '../components/PriceWatch.astro';
 import AuthorBox from '../components/AuthorBox.astro';
 import { iconSvg } from '../components/kitchen-icons';
-import { abs, articleLd, authorOf, faqLd, getProduct, hubCrumb, productLd, urlFor } from '../lib/site';
+import { abs, aboutLd, articleLd, authorOf, faqLd, getProduct, hubCrumb, urlFor } from '../lib/site';
 
 interface Props { entry: CollectionEntry<'reviews'>; headings?: MarkdownHeading[] }
 const { entry, headings } = Astro.props;
@@ -23,9 +23,9 @@ const product = getProduct(d.product_id);
 const author = await authorOf(d.author);
 const path = urlFor(entry);
 // Line-art stand-in until a licensed product image exists.
-const ICON_FOR: Record<string, string> = { 'air-fryers': 'airFryer', 'kitchen-safety-devices': 'fireExtinguisher', 'espresso-machines': 'coffee', 'coffee-makers': 'mug' };
+const ICON_FOR: Record<string, string> = { 'air-fryers': 'airFryer', 'kitchen-safety-devices': 'fireExtinguisher', 'espresso-machines': 'coffee', 'coffee-makers': 'mug', blenders: 'blender' };
 
-const ld = [{ ...articleLd(entry, author, path), about: { ...productLd(product), ...(d.hero && { image: abs(d.hero.src) }) } }, ...faqLd(d.faq)];
+const ld = [{ ...articleLd(entry, author, path), about: { ...aboutLd(product), ...(d.hero && { image: abs(d.hero.src) }) } }, ...faqLd(d.faq)];
 const tocExtra = d.faq?.length ? [{ slug: 'faq', text: 'Frequently asked questions' }] : [];
 ---
 

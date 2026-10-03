@@ -65,6 +65,10 @@ export const authorOf = async (ref: { id: string }) => {
   return a;
 };
 
+// The product a page is about, without Product type: Google validates every Product node for product snippets
+// (needs offers/review/rating), and we have no offer or first-hand review to give. Product stays for /deals/ offers.
+export const aboutLd = (p: Product) => ({ '@type': 'Thing', name: p.name });
+
 export const productLd = (p: Product) => ({
   '@type': 'Product',
   name: p.name,

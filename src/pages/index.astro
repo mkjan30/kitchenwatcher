@@ -8,7 +8,7 @@ const hubs = await published('best');
 const reviews = [...(await published('reviews'))].sort((a, b) => +b.data.updated - +a.data.updated);
 const [lead, ...otherHubs] = hubs;
 // Line-art stand-ins until real test photos exist; swap for <Picture> of the hero when there is one.
-const ICON_FOR: Record<string, string> = { 'air-fryers': 'airFryer', 'kitchen-safety-devices': 'fireExtinguisher', 'espresso-machines': 'coffee', 'coffee-makers': 'mug' };
+const ICON_FOR: Record<string, string> = { 'air-fryers': 'airFryer', 'kitchen-safety-devices': 'fireExtinguisher', 'espresso-machines': 'coffee', 'coffee-makers': 'mug', blenders: 'blender' };
 const iconFor = (category: string) => iconSvg(ICON_FOR[category] ?? 'thermometer', 1.1);
 // CC licences require attribution wherever a photo appears, including here.
 const credits = [...hubs, ...reviews.slice(0, 6)].filter((e) => e.data.hero && e.data.hero_credit).map((e) => e.data);
