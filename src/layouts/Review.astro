@@ -23,7 +23,7 @@ const product = getProduct(d.product_id);
 const author = await authorOf(d.author);
 const path = urlFor(entry);
 // Line-art stand-in until a licensed product image exists.
-const ICON_FOR: Record<string, string> = { 'air-fryers': 'airFryer', 'kitchen-safety-devices': 'fireExtinguisher' };
+const ICON_FOR: Record<string, string> = { 'air-fryers': 'airFryer', 'kitchen-safety-devices': 'fireExtinguisher', 'espresso-machines': 'coffee', 'coffee-makers': 'mug' };
 
 const ld = [{ ...articleLd(entry, author, path), about: { ...productLd(product), ...(d.hero && { image: abs(d.hero.src) }) } }, ...faqLd(d.faq)];
 const tocExtra = d.faq?.length ? [{ slug: 'faq', text: 'Frequently asked questions' }] : [];

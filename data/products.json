@@ -6,15 +6,24 @@
     "category": "air-fryers",
     "asin": "B07VHFMZHJ",
     "merchants": [
-      { "id": "amazon", "url": "https://www.amazon.com/dp/B07VHFMZHJ" },
-      { "id": "instant", "url": "https://instantpot.com/products/instant-vortex-plus-6qt-air-fryer" }
+      {
+        "id": "amazon",
+        "url": "https://www.amazon.com/dp/B07VHFMZHJ"
+      },
+      {
+        "id": "instant",
+        "url": "https://instantpot.com/products/instant-vortex-plus-6qt-air-fryer"
+      }
     ],
     "price_seen_cents": 9000,
     "sources": [
       "https://www.foodnetwork.com/how-to/packages/shopping/product-reviews/best-air-fryer",
       "https://www.techgearlab.com/topics/kitchen/best-air-fryer"
     ],
-    "complaints": ["E1/E2 temperature-sensor error codes", "Strong plastic smell for the first few uses"],
+    "complaints": [
+      "E1/E2 temperature-sensor error codes",
+      "Strong plastic smell for the first few uses"
+    ],
     "last_price_cents": null,
     "tested_on": null
   },
@@ -25,16 +34,28 @@
     "category": "air-fryers",
     "asin": "B089TQWJKK",
     "merchants": [
-      { "id": "amazon", "url": "https://www.amazon.com/dp/B089TQWJKK" },
-      { "id": "target", "url": "https://www.target.com/p/ninja-foodi-8qt-original-dualzone-2-basket-air-fryer-with-6-functions-dz201/-/A-79991380" },
-      { "id": "bestbuy", "url": "https://www.bestbuy.com/product/ninja-foodi-6-in-1-8-qt-2-basket-air-fryer-with-dualzone-technology-air-fry-roast-broil-bake-reheat-dehydrate-dark-gray/JXJVXGZ273" }
+      {
+        "id": "amazon",
+        "url": "https://www.amazon.com/dp/B089TQWJKK"
+      },
+      {
+        "id": "target",
+        "url": "https://www.target.com/p/ninja-foodi-8qt-original-dualzone-2-basket-air-fryer-with-6-functions-dz201/-/A-79991380"
+      },
+      {
+        "id": "bestbuy",
+        "url": "https://www.bestbuy.com/product/ninja-foodi-6-in-1-8-qt-2-basket-air-fryer-with-dualzone-technology-air-fry-roast-broil-bake-reheat-dehydrate-dark-gray/JXJVXGZ273"
+      }
     ],
     "price_seen_cents": 19999,
     "sources": [
       "https://www.foodnetwork.com/how-to/packages/shopping/product-reviews/best-air-fryer",
       "https://www.techgearlab.com/topics/kitchen/best-air-fryer"
     ],
-    "complaints": ["Uneven cooking between the two baskets on identical settings", "E error on display; basket coating peeling"],
+    "complaints": [
+      "Uneven cooking between the two baskets on identical settings",
+      "E error on display; basket coating peeling"
+    ],
     "last_price_cents": null,
     "tested_on": null
   },
@@ -44,13 +65,21 @@
     "brand": "Ninja",
     "category": "air-fryers",
     "asin": "B07FDJMC9Q",
-    "merchants": [{ "id": "amazon", "url": "https://www.amazon.com/dp/B07FDJMC9Q" }],
+    "merchants": [
+      {
+        "id": "amazon",
+        "url": "https://www.amazon.com/dp/B07FDJMC9Q"
+      }
+    ],
     "price_seen_cents": 12000,
     "sources": [
       "https://www.techgearlab.com/topics/kitchen/best-air-fryer",
       "https://www.foodnetwork.com/how-to/packages/shopping/product-reviews/best-air-fryer"
     ],
-    "complaints": ["Basket coating peels at the edges, especially after dishwasher use", "Grease buildup on the heating element that is hard to clean"],
+    "complaints": [
+      "Basket coating peels at the edges, especially after dishwasher use",
+      "Grease buildup on the heating element that is hard to clean"
+    ],
     "last_price_cents": null,
     "tested_on": null
   },
@@ -61,9 +90,18 @@
     "category": "air-fryers",
     "asin": "B0C33CHG99",
     "merchants": [
-      { "id": "amazon", "url": "https://www.amazon.com/dp/B0C33CHG99" },
-      { "id": "cosori", "url": "https://cosori.com/products/turboblaze-air-fryer" },
-      { "id": "walmart", "url": "https://www.walmart.com/ip/5814409329" }
+      {
+        "id": "amazon",
+        "url": "https://www.amazon.com/dp/B0C33CHG99"
+      },
+      {
+        "id": "cosori",
+        "url": "https://cosori.com/products/turboblaze-air-fryer"
+      },
+      {
+        "id": "walmart",
+        "url": "https://www.walmart.com/ip/5814409329"
+      }
     ],
     "price_seen_cents": 8999,
     "sources": [
@@ -72,7 +110,10 @@
       "https://www.tomsguide.com/home/home-appliances/cosori-turboblaze-air-fryer-review",
       "https://www.prnewswire.com/news-releases/cosori-unveils-the-next-generation-6-quart-turboblaze-air-fryer-301961219.html"
     ],
-    "complaints": ["Inconsistent results on fries and veg; manual timings sometimes off", "E1/E2/E3 sensor and overheat error codes"],
+    "complaints": [
+      "Inconsistent results on fries and veg; manual timings sometimes off",
+      "E1/E2/E3 sensor and overheat error codes"
+    ],
     "last_price_cents": null,
     "tested_on": null
   },
@@ -83,15 +124,24 @@
     "category": "air-fryers",
     "asin": "B0CSZ7WBYW",
     "merchants": [
-      { "id": "amazon", "url": "https://www.amazon.com/dp/B0CSZ7WBYW" },
-      { "id": "sharkninja", "url": "https://www.sharkninja.com/ninja-air-fryer-pro-4-in-1/AF141.html" }
+      {
+        "id": "amazon",
+        "url": "https://www.amazon.com/dp/B0CSZ7WBYW"
+      },
+      {
+        "id": "sharkninja",
+        "url": "https://www.sharkninja.com/ninja-air-fryer-pro-4-in-1/AF141.html"
+      }
     ],
     "price_seen_cents": 12999,
     "sources": [
       "https://www.tomsguide.com/best-picks/best-air-fryers",
       "https://www.rtings.com/air-fryer/reviews/best/air-fryers"
     ],
-    "complaints": ["Timer malfunctions; heating stays on with the basket removed", "Crisper plate hard to separate from a hot basket"],
+    "complaints": [
+      "Timer malfunctions; heating stays on with the basket removed",
+      "Crisper plate hard to separate from a hot basket"
+    ],
     "last_price_cents": null,
     "tested_on": null
   },
@@ -102,9 +152,18 @@
     "category": "air-fryers",
     "asin": "B0DDDD8WD6",
     "merchants": [
-      { "id": "amazon", "url": "https://www.amazon.com/dp/B0DDDD8WD6" },
-      { "id": "sharkninja", "url": "https://www.sharkninja.com/ninja-crispi-4-in-1-portable-glass-air-fryer-cooking-system/FN101GY.html" },
-      { "id": "target", "url": "https://www.target.com/p/ninja-4qt-crispi-portable-cooking-system-air-fryer-gray-fn101gy/-/A-91722296" }
+      {
+        "id": "amazon",
+        "url": "https://www.amazon.com/dp/B0DDDD8WD6"
+      },
+      {
+        "id": "sharkninja",
+        "url": "https://www.sharkninja.com/ninja-crispi-4-in-1-portable-glass-air-fryer-cooking-system/FN101GY.html"
+      },
+      {
+        "id": "target",
+        "url": "https://www.target.com/p/ninja-4qt-crispi-portable-cooking-system-air-fryer-gray-fn101gy/-/A-91722296"
+      }
     ],
     "price_seen_cents": 17999,
     "sources": [
@@ -113,7 +172,10 @@
       "https://www.techgearlab.com/reviews/kitchen/air-fryer/ninja-crispi",
       "https://newsroom.sharkninja.com/new-ninja-crispi-revolutionizes-air-fryer-cooking/"
     ],
-    "complaints": ["Glass exterior measured at 280°F by TechGearLab; runs about 18°F low", "Glass cracking from thermal shock"],
+    "complaints": [
+      "Glass exterior measured at 280°F by TechGearLab; runs about 18°F low",
+      "Glass cracking from thermal shock"
+    ],
     "last_price_cents": null,
     "tested_on": null
   },
@@ -123,14 +185,22 @@
     "brand": "Kidde",
     "category": "kitchen-safety-devices",
     "asin": "B00002ND64",
-    "merchants": [{ "id": "amazon", "url": "https://www.amazon.com/dp/B00002ND64" }],
+    "merchants": [
+      {
+        "id": "amazon",
+        "url": "https://www.amazon.com/dp/B00002ND64"
+      }
+    ],
     "price_seen_cents": null,
     "sources": [
       "https://www.thekitchn.com/best-fire-extinguisher-23756317",
       "https://www.amazon.com/Kidde-FA110-Purpose-Extinguisher-1A10BC/dp/B00002ND64",
       "https://www.cpsc.gov/Recalls/2018/Kidde-Recalls-Fire-Extinguishers-with-Plastic-Handles-Due-to-Failure-to-Discharge-and-Nozzle-Detachment-One-Death-Reported"
     ],
-    "complaints": ["FA110G is on the 2017 Kidde plastic-handle recall (units made 2012 to Aug 2017)", "Mounting-bracket complaints in Amazon reviews"],
+    "complaints": [
+      "FA110G is on the 2017 Kidde plastic-handle recall (units made 2012 to Aug 2017)",
+      "Mounting-bracket complaints in Amazon reviews"
+    ],
     "last_price_cents": null,
     "tested_on": null
   },
@@ -141,9 +211,18 @@
     "category": "kitchen-safety-devices",
     "asin": "B0863BFNWB",
     "merchants": [
-      { "id": "amazon", "url": "https://www.amazon.com/dp/B0863BFNWB" },
-      { "id": "stovetopfirestop", "url": "https://stovetopfirestop.com/product/rangehood/" },
-      { "id": "walmart", "url": "https://www.walmart.com/ip/Stovetop-Firestop-Rangehood-Cooktop-Fire-Extinguisher/242274587" }
+      {
+        "id": "amazon",
+        "url": "https://www.amazon.com/dp/B0863BFNWB"
+      },
+      {
+        "id": "stovetopfirestop",
+        "url": "https://stovetopfirestop.com/product/rangehood/"
+      },
+      {
+        "id": "walmart",
+        "url": "https://www.walmart.com/ip/Stovetop-Firestop-Rangehood-Cooktop-Fire-Extinguisher/242274587"
+      }
     ],
     "price_seen_cents": 5695,
     "sources": [
@@ -151,7 +230,10 @@
       "https://www.wfmynews2.com/article/news/local/2-wants-to-know/whoa-family-escapes-cooking-fire-thanks-to-stovetop-firestop-canister-puts-out-cooking-fires-winston-salem-fire-department-family-escapes-unharmed/83-24f24619-f8fb-460c-a24c-a0f91c3b382e",
       "https://www.cpsc.gov/Recalls/2020/WilliamsRDM-Recalls-Cooktop-Fire-Suppressors-Due-to-Risk-of-Failure-to-Activate-and-Suppress-Fires"
     ],
-    "complaints": ["Dec 2019 recall: units made Nov 7-13, 2016 could fail to release powder", "Not UL-listed; magnets won't hold on stainless hoods without the adhesive kit"],
+    "complaints": [
+      "Dec 2019 recall: units made Nov 7-13, 2016 could fail to release powder",
+      "Not UL-listed; magnets won't hold on stainless hoods without the adhesive kit"
+    ],
     "last_price_cents": null,
     "tested_on": null
   },
@@ -161,14 +243,372 @@
     "brand": "iGuard",
     "category": "kitchen-safety-devices",
     "asin": null,
-    "merchants": [{ "id": "iguard", "url": "https://iguardfire.com/product/new-iguard-for-electric-stoves-plugin-model/" }],
+    "merchants": [
+      {
+        "id": "iguard",
+        "url": "https://iguardfire.com/product/new-iguard-for-electric-stoves-plugin-model/"
+      }
+    ],
     "price_seen_cents": 54900,
     "sources": [
       "https://www.popsci.com/gear/home-of-the-future-awards-2026/",
       "https://www.smithsonianmag.com/innovation/seven-fascinating-inventions-unveiled-at-the-2026-consumer-electronics-show-180987980/",
       "https://iguardfire.com/product/new-iguard-for-electric-stoves-plugin-model/"
     ],
-    "complaints": ["$549 plus shipping", "Electric stoves only; 3-prong version pre-order only"],
+    "complaints": [
+      "$549 plus shipping",
+      "Electric stoves only; 3-prong version pre-order only"
+    ],
+    "last_price_cents": null,
+    "tested_on": null
+  },
+  {
+    "id": "casabrews-cm5418",
+    "name": "CASABREWS CM5418 Compact Espresso Machine with Steam Wand",
+    "brand": "CASABREWS",
+    "category": "espresso-machines",
+    "asin": "B09X3WGJ3R",
+    "merchants": [
+      {
+        "id": "amazon",
+        "url": "https://www.amazon.com/dp/B09X3WGJ3R"
+      },
+      {
+        "id": "casabrews",
+        "url": "https://www.casabrews.com/products/cm5418"
+      }
+    ],
+    "price_seen_cents": 13299,
+    "sources": [
+      "https://www.techgearlab.com/topics/kitchen/best-espresso-machine",
+      "https://www.cnet.com/home/kitchen-and-household/best-espresso-machine/",
+      "https://www.techradar.com/home/coffee-machines/casabrews-cm5418-review"
+    ],
+    "complaints": [
+      "Strong vibration during extraction and a cool-down needed between drinks (TechGearLab)",
+      "Plastic scoop and tamper; awkward switch between steam and brew (CNET)",
+      "No non-pressurized baskets included; brew temperature not adjustable (TechRadar)"
+    ],
+    "last_price_cents": null,
+    "tested_on": null
+  },
+  {
+    "id": "breville-bambino-plus",
+    "name": "Breville Bambino Plus Espresso Machine (BES500BSS)",
+    "brand": "Breville",
+    "category": "espresso-machines",
+    "asin": "B07JVD78TT",
+    "merchants": [
+      {
+        "id": "amazon",
+        "url": "https://www.amazon.com/dp/B07JVD78TT"
+      },
+      {
+        "id": "breville",
+        "url": "https://www.breville.com/en-us/product/bes500"
+      }
+    ],
+    "price_seen_cents": 37995,
+    "sources": [
+      "https://www.techgearlab.com/topics/kitchen/best-espresso-machine",
+      "https://www.cnet.com/home/kitchen-and-household/best-espresso-machine/",
+      "https://www.techradar.com/home/coffee-machines/best-espresso-machine",
+      "https://coffeechronicler.com/gear/espresso-machines/",
+      "https://www.tomsguide.com/reviews/breville-sage-bambino-plus",
+      "https://www.techradar.com/reviews/breville-bambino-plus"
+    ],
+    "complaints": [
+      "Light and a little tippy, loud vibration pump (CNET)",
+      "Steam wand has little adjustment; no grinder (TechGearLab)",
+      "Sources disagree on which baskets ship in the box (Coffee Chronicler vs Tom's Guide)"
+    ],
+    "last_price_cents": null,
+    "tested_on": null
+  },
+  {
+    "id": "delonghi-stilosa",
+    "name": "De'Longhi Stilosa Manual Espresso Machine (EC260BK)",
+    "brand": "De'Longhi",
+    "category": "espresso-machines",
+    "asin": "B08C96BG9H",
+    "merchants": [
+      {
+        "id": "amazon",
+        "url": "https://www.amazon.com/dp/B08C96BG9H"
+      },
+      {
+        "id": "delonghi",
+        "url": "https://www.delonghi.com/en-us/p/stilosa-stilosa-espresso-machine/EC260BK.html?pid=0132104209"
+      }
+    ],
+    "price_seen_cents": 9995,
+    "sources": [
+      "https://www.tomsguide.com/best-picks/best-espresso-machines",
+      "https://coffeechronicler.com/gear/espresso-machines/",
+      "https://www.techgearlab.com/topics/kitchen/best-espresso-machine"
+    ],
+    "complaints": [
+      "Very poor plastic tamper, no milk jug (Tom's Guide)",
+      "Lowest extraction yield of the machines TechGearLab measured (12%)",
+      "No solenoid valve; pressurized basket and panarello wand on the US version (Coffee Chronicler)"
+    ],
+    "last_price_cents": null,
+    "tested_on": null
+  },
+  {
+    "id": "breville-bambino",
+    "name": "Breville Bambino Espresso Machine (BES450BSS)",
+    "brand": "Breville",
+    "category": "espresso-machines",
+    "asin": "B0B1JPPG2L",
+    "merchants": [
+      {
+        "id": "amazon",
+        "url": "https://www.amazon.com/dp/B0B1JPPG2L"
+      },
+      {
+        "id": "breville",
+        "url": "https://www.breville.com/en-us/product/bes450"
+      }
+    ],
+    "price_seen_cents": 20496,
+    "sources": [
+      "https://www.techgearlab.com/topics/kitchen/best-espresso-machine",
+      "https://www.tomsguide.com/best-picks/best-espresso-machines"
+    ],
+    "complaints": [
+      "No built-in grinder; weak tamper (TechGearLab)",
+      "Manual milk steaming only; the Bambino Plus adds auto steaming (Tom's Guide)"
+    ],
+    "last_price_cents": null,
+    "tested_on": null
+  },
+  {
+    "id": "breville-barista-express",
+    "name": "Breville Barista Express Espresso Machine with Grinder (BES870XL)",
+    "brand": "Breville",
+    "category": "espresso-machines",
+    "asin": "B00CH9QWOU",
+    "merchants": [
+      {
+        "id": "amazon",
+        "url": "https://www.amazon.com/dp/B00CH9QWOU"
+      },
+      {
+        "id": "breville",
+        "url": "https://www.breville.com/en-us/product/bes870"
+      }
+    ],
+    "price_seen_cents": 46877,
+    "sources": [
+      "https://www.techgearlab.com/topics/kitchen/best-espresso-machine",
+      "https://www.cnet.com/home/kitchen-and-household/best-espresso-machine/",
+      "https://www.popularmechanics.com/home/g37235347/best-espresso-machines/",
+      "https://www.breville.com/content/dam/breville/us/assets/miscellaneous/instruction-manual/espresso/BES870-instruction-manual.pdf"
+    ],
+    "complaints": [
+      "Slow grinder and a learning curve (TechGearLab)",
+      "Bulky (CNET)",
+      "CLEAN/DESCALE light means a backflush cycle, separate from descaling (BES870 manual)"
+    ],
+    "last_price_cents": null,
+    "tested_on": null
+  },
+  {
+    "id": "gaggia-classic-e24",
+    "name": "Gaggia Classic E24 Espresso Machine (RI9380/46)",
+    "brand": "Gaggia",
+    "category": "espresso-machines",
+    "asin": "B07RQ3NL76",
+    "merchants": [
+      {
+        "id": "amazon",
+        "url": "https://www.amazon.com/dp/B07RQ3NL76"
+      }
+    ],
+    "price_seen_cents": 45083,
+    "sources": [
+      "https://www.tomsguide.com/best-picks/best-espresso-machines",
+      "https://www.tomsguide.com/home/coffee-makers/gaggia-classic-e24-evo-pro-review",
+      "https://coffeechronicler.com/gear/espresso-machines/",
+      "https://coffeeblog.co.uk/boilergate-gaggia-classic-pro-evo-boiler-problems/"
+    ],
+    "complaints": [
+      "No PID temperature control at this price; few accessories (Tom's Guide)",
+      "Owners change the OPV spring for 9 bar (Coffee Chronicler)",
+      "The 2023 Evo Pro's coated boiler flaked; the E24 uses brass, so check which version you buy (CoffeeBlog)"
+    ],
+    "last_price_cents": null,
+    "tested_on": null
+  },
+  {
+    "id": "oxo-brew-8-cup",
+    "name": "OXO Brew 8-Cup Coffee Maker (8718800)",
+    "brand": "OXO",
+    "category": "coffee-makers",
+    "asin": "B07H9G93WK",
+    "merchants": [
+      {
+        "id": "amazon",
+        "url": "https://www.amazon.com/dp/B07H9G93WK"
+      }
+    ],
+    "price_seen_cents": 21995,
+    "sources": [
+      "https://www.tomsguide.com/home/coffee-makers/best-coffee-makers",
+      "https://www.cnet.com/home/kitchen-and-household/best-coffee-maker/",
+      "https://www.americastestkitchen.com/equipment_reviews/2461-best-coffee-makers-automatic-drip",
+      "https://sca.coffee/certified-home-brewer"
+    ],
+    "complaints": [
+      "Owners split on carafe heat retention; some units stop working (Amazon 'Customers say')",
+      "Water tank not removable, no programming (Tom's Guide, CNET)",
+      "ATK measured only 54% of the brew cycle in the SCA temperature range"
+    ],
+    "last_price_cents": null,
+    "tested_on": null
+  },
+  {
+    "id": "ninja-ce251",
+    "name": "Ninja 12-Cup Programmable Coffee Brewer (CE251)",
+    "brand": "Ninja",
+    "category": "coffee-makers",
+    "asin": "B07S98411N",
+    "merchants": [
+      {
+        "id": "amazon",
+        "url": "https://www.amazon.com/dp/B07S98411N"
+      }
+    ],
+    "price_seen_cents": 6571,
+    "sources": [
+      "https://www.cnet.com/home/kitchen-and-household/best-coffee-maker/",
+      "https://www.cnn.com/cnn-underscored/reviews/best-drip-coffee-makers"
+    ],
+    "complaints": [
+      "Glass carafe breaking and units that stop brewing (Amazon 'Customers say')",
+      "Flimsier plastic and thinner glass than pricier picks (CNET)",
+      "Slow full pot: CNET timed 10 min 30 s"
+    ],
+    "last_price_cents": null,
+    "tested_on": null
+  },
+  {
+    "id": "cuisinart-dcc-3200",
+    "name": "Cuisinart PerfecTemp 14-Cup Programmable Coffeemaker (DCC-3200)",
+    "brand": "Cuisinart",
+    "category": "coffee-makers",
+    "asin": "B00MVWGQX0",
+    "merchants": [
+      {
+        "id": "amazon",
+        "url": "https://www.amazon.com/dp/B00MVWGQX0"
+      },
+      {
+        "id": "cuisinart",
+        "url": "https://www.cuisinart.com/14-cup-programmable-coffee-maker/DCC-3200NAS.html"
+      }
+    ],
+    "price_seen_cents": 5304,
+    "sources": [
+      "https://www.cnet.com/home/kitchen-and-household/best-coffee-maker/",
+      "https://www.cnn.com/cnn-underscored/reviews/best-drip-coffee-makers",
+      "https://www.ifixit.com/Wiki/Cuisinart_DDC-3200_Troubleshooting"
+    ],
+    "complaints": [
+      "Leaks and units failing after about 3 years (Amazon 'Customers say'; iFixit worn hose)",
+      "CLEAN light and slow brewing from mineral buildup (iFixit, Cuisinart manual)",
+      "Slow: CNN 11 min, CNET 12 min for a full pot"
+    ],
+    "last_price_cents": null,
+    "tested_on": null
+  },
+  {
+    "id": "moccamaster-kbt",
+    "name": "Technivorm Moccamaster KBT 10-Cup Coffee Brewer (thermal carafe)",
+    "brand": "Technivorm Moccamaster",
+    "category": "coffee-makers",
+    "asin": "B07DDRGVW7",
+    "merchants": [
+      {
+        "id": "amazon",
+        "url": "https://www.amazon.com/dp/B07DDRGVW7"
+      },
+      {
+        "id": "technivorm",
+        "url": "https://us.moccamaster.com/products/kbt"
+      }
+    ],
+    "price_seen_cents": 34799,
+    "sources": [
+      "https://www.americastestkitchen.com/equipment_reviews/2461-best-coffee-makers-automatic-drip",
+      "https://www.cnet.com/home/kitchen-and-household/best-coffee-maker/"
+    ],
+    "complaints": [
+      "Not programmable, large footprint, pricey (CNET)",
+      "Build quality mixed; value disputed (Amazon 'Customers say')",
+      "Carafe redesigned in 2025 (ATK)"
+    ],
+    "last_price_cents": null,
+    "tested_on": null
+  },
+  {
+    "id": "moccamaster-kbgv-select",
+    "name": "Technivorm Moccamaster KBGV Select 10-Cup Coffee Maker (glass carafe, 53941)",
+    "brand": "Technivorm Moccamaster",
+    "category": "coffee-makers",
+    "asin": "B093DYPBYR",
+    "merchants": [
+      {
+        "id": "amazon",
+        "url": "https://www.amazon.com/dp/B093DYPBYR"
+      },
+      {
+        "id": "technivorm",
+        "url": "https://us.moccamaster.com/products/kbgv"
+      }
+    ],
+    "price_seen_cents": 36900,
+    "sources": [
+      "https://www.tomsguide.com/home/coffee-makers/best-coffee-makers",
+      "https://www.cnn.com/cnn-underscored/reviews/best-drip-coffee-makers",
+      "https://www.cnn.com/cnn-underscored/reviews/best-coffee-makers"
+    ],
+    "complaints": [
+      "No delay brew or programming (Tom's Guide)",
+      "Loose parts and lids fiddly at first (CNN)",
+      "Build quality mixed; value disputed (Amazon 'Customers say')"
+    ],
+    "last_price_cents": null,
+    "tested_on": null
+  },
+  {
+    "id": "fellow-aiden",
+    "name": "Fellow Aiden Precision Coffee Maker",
+    "brand": "Fellow",
+    "category": "coffee-makers",
+    "asin": "B0DT5TD2D4",
+    "merchants": [
+      {
+        "id": "amazon",
+        "url": "https://www.amazon.com/dp/B0DT5TD2D4"
+      },
+      {
+        "id": "fellow",
+        "url": "https://fellowproducts.com/products/aiden-precision-coffee-maker"
+      }
+    ],
+    "price_seen_cents": 39995,
+    "sources": [
+      "https://www.americastestkitchen.com/equipment_reviews/2461-best-coffee-makers-automatic-drip",
+      "https://www.cnn.com/cnn-underscored/reviews/best-drip-coffee-makers",
+      "https://sca.coffee/certified-home-brewer"
+    ],
+    "complaints": [
+      "Units failing after about 7 months; 3.7 stars on Amazon",
+      "Cooler coffee: CNN measured about 167°F, 145°F in the carafe after 1.5 h",
+      "Sticky carafe lid; awkward tank opening (ATK)"
+    ],
     "last_price_cents": null,
     "tested_on": null
   }

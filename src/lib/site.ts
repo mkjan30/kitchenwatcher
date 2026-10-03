@@ -114,5 +114,11 @@ const MERCHANTS: Record<string, string> = {
   sharkninja: 'SharkNinja',
   stovetopfirestop: 'StoveTop FireStop',
   iguard: 'iGuard',
+  casabrews: 'CASABREWS',
+  breville: 'Breville',
+  delonghi: "De'Longhi",
+  cuisinart: 'Cuisinart',
+  technivorm: 'Moccamaster',
+  fellow: 'Fellow',
 };
 export const merchantName = (id: string) => MERCHANTS[id] ?? humanize(id);
