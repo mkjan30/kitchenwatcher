@@ -160,3 +160,29 @@ Research: content/research-log/2026-10-03-coffee-espresso.md, content/research-l
 | — | guide | /guides/blender-wattage-explained/ | blender wattage explained | peak watts vs watts blender; how many watts for a good blender; 1200 watt vs 1500 watt blender | hub: blenders | see research log | live 2026-10-04 |
 | — | guide | /guides/personal-vs-full-size-blender/ | personal blender vs full size blender | single serve vs countertop blender; do i need a full size blender; personal blender for smoothies only | hub: blenders | see research log | live 2026-10-04 |
 | — | guide | /guides/blender-recall-check/ | blender recall | vitamix recall container; ninja blender recall bl660; how to check if my blender is recalled | hub: blenders | see research log | live 2026-10-04 |
+
+## Batch 4 (drafted 2026-10-04, held until the Oct 29 indexing check): stand mixers (19 pages)
+
+Research: content/research-log/2026-10-04-stand-mixers.md. Dropped: kitchenaid-mixer-making-noise (no official source readable).
+
+| priority | page type | target URL | primary keyword | secondary keywords | product_id(s) | source URLs | status |
+|---|---|---|---|---|---|---|---|
+| — | best | /best/stand-mixers/ | best stand mixer | best stand mixer 2026; best stand mixer for bread; best budget stand mixer | hub for stand-mixers; products: kitchenaid-ksm150ps, cuisinart-sm-50, kitchenaid-k45ss, hamilton-beach-63393, kitchenaid-ksm70skxx, kitchenaid-ksm3316x | see research log | batch-4 |
+| — | review | /reviews/kitchenaid-ksm150ps/ | kitchenaid artisan review | kitchenaid artisan ksm150ps review; kitchenaid artisan 5 quart problems; is the kitchenaid artisan worth it | kitchenaid-ksm150ps | see research log | batch-4 |
+| — | review | /reviews/cuisinart-sm-50/ | cuisinart sm-50 review | cuisinart precision master stand mixer review; cuisinart 5.5 quart stand mixer problems; cuisinart stand mixer vs kitchenaid | cuisinart-sm-50 | see research log | batch-4 |
+| — | vs | /vs/kitchenaid-k45ss-vs-kitchenaid-ksm150ps/ | kitchenaid classic vs artisan | k45ss vs ksm150ps; kitchenaid 4.5 vs 5 quart; is the kitchenaid artisan worth it over classic | kitchenaid-k45ss, kitchenaid-ksm150ps | see research log | batch-4 |
+| — | vs | /vs/kitchenaid-ksm150ps-vs-kitchenaid-ksm70skxx/ | kitchenaid artisan vs 7 quart bowl lift | kitchenaid 5 quart vs 7 quart; ksm150 vs ksm70; is the 7 quart kitchenaid worth it | kitchenaid-ksm150ps, kitchenaid-ksm70skxx | see research log | batch-4 |
+| — | vs | /vs/cuisinart-sm-50-vs-kitchenaid-ksm150ps/ | cuisinart precision master vs kitchenaid artisan | cuisinart sm-50 vs kitchenaid; cuisinart vs kitchenaid stand mixer; cheaper alternative to kitchenaid artisan | cuisinart-sm-50, kitchenaid-ksm150ps | see research log | batch-4 |
+| — | guide | /guides/tilt-head-vs-bowl-lift-mixer/ | tilt head vs bowl lift mixer | bowl lift vs tilt head kitchenaid; which kitchenaid mixer style is better; bowl lift mixer cabinet height | hub: stand-mixers | see research log | batch-4 |
+| — | guide | /guides/kitchenaid-dime-test/ | kitchenaid dime test | kitchenaid beater height adjustment; kitchenaid beater hitting bowl; kitchenaid beater to bowl clearance | kitchenaid-ksm150ps | see research log | batch-4 |
+| — | guide | /guides/stand-mixer-wattage-explained/ | stand mixer wattage | how many watts stand mixer; does wattage matter stand mixer; stand mixer peak power vs rated watts | hub: stand-mixers | see research log | batch-4 |
+| — | guide | /guides/kitchenaid-mixer-leaking-oil/ | kitchenaid mixer leaking oil | kitchenaid mixer grease in bowl; oil dripping from kitchenaid beater shaft; is kitchenaid mixer grease food safe | kitchenaid-ksm150ps | see research log | batch-4 |
+| — | guide | /guides/kitchenaid-mixer-speed-guide/ | kitchenaid mixer speed guide | what speed to knead dough kitchenaid; kitchenaid speed 2 dough hook; stand mixer speed settings chart | kitchenaid-ksm150ps | see research log | batch-4 |
+| — | guide | /guides/what-size-stand-mixer-do-i-need/ | what size stand mixer do i need | stand mixer bowl size guide; 4.5 vs 5 vs 7 quart mixer; how much flour can a stand mixer handle | hub: stand-mixers | see research log | batch-4 |
+| — | guide | /guides/dough-hook-vs-paddle/ | dough hook vs paddle | when to use whisk vs paddle stand mixer; flat beater vs dough hook bread; stand mixer attachments explained | hub: stand-mixers | see research log | batch-4 |
+| — | guide | /guides/kitchenaid-attachments-compatibility/ | kitchenaid attachments compatibility | do kitchenaid attachments fit all models; kitchenaid tilt head vs bowl lift beaters; artisan mini attachments | hub: stand-mixers | see research log | batch-4 |
+| — | guide | /guides/stand-mixer-overheating/ | stand mixer overheating | kitchenaid mixer shuts off while mixing; stand mixer burning smell; kitchenaid thermal overload reset | hub: stand-mixers | see research log | batch-4 |
+| — | guide | /guides/kitchenaid-mixer-wont-turn-on/ | kitchenaid mixer won't turn on | kitchenaid mixer not working; kitchenaid mixer dead no power; kitchenaid mixer stopped working | kitchenaid-ksm150ps | see research log | batch-4 |
+| — | guide | /guides/how-to-clean-a-stand-mixer/ | how to clean a stand mixer | how to clean kitchenaid mixer; clean stand mixer head; stand mixer cleaning without damage | hub: stand-mixers | see research log | batch-4 |
+| — | guide | /guides/are-stand-mixer-parts-dishwasher-safe/ | are kitchenaid mixer attachments dishwasher safe | burnished vs coated beater; kitchenaid beater turned gray; stand mixer bowl dishwasher safe | hub: stand-mixers | see research log | batch-4 |
+| — | guide | /guides/stand-mixer-recall-check/ | kitchenaid mixer recall | stand mixer recall 2026; kitchenaid lead recall rumor; cuisinart stand mixer recall | hub: stand-mixers | see research log | batch-4 |

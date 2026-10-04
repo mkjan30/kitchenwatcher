@@ -730,5 +730,161 @@
     ],
     "last_price_cents": null,
     "tested_on": null
+  },
+  {
+    "id": "cuisinart-sm-50",
+    "name": "Cuisinart Precision Master 5.5-Quart Stand Mixer (SM-50)",
+    "brand": "Cuisinart",
+    "category": "stand-mixers",
+    "asin": "B01LXC4JPJ",
+    "merchants": [
+      {
+        "id": "amazon",
+        "url": "https://www.amazon.com/dp/B01LXC4JPJ"
+      }
+    ],
+    "price_seen_cents": 21700,
+    "sources": [
+      "https://www.americastestkitchen.com/equipment_reviews/2593-the-best-stand-mixers",
+      "https://www.cnet.com/home/kitchen-and-household/best-stand-mixer/",
+      "https://www.techgearlab.com/topics/kitchen/best-stand-mixer",
+      "https://www.reviewed.com/cooking/best-right-now/best-stand-mixers"
+    ],
+    "complaints": [
+      "Mixing doesn't always reach the bottom of the bowl (Amazon review summary)",
+      "Struggled to whip egg whites; frequent scraping (ATK)",
+      "Kneading score 4.0/10 (TechGearLab)"
+    ],
+    "last_price_cents": null,
+    "tested_on": null
+  },
+  {
+    "id": "hamilton-beach-63393",
+    "name": "Hamilton Beach 7-Speed 4-Quart Stand Mixer (63393)",
+    "brand": "Hamilton Beach",
+    "category": "stand-mixers",
+    "asin": "B07FSZCMXC",
+    "merchants": [
+      {
+        "id": "amazon",
+        "url": "https://www.amazon.com/dp/B07FSZCMXC"
+      }
+    ],
+    "price_seen_cents": 14169,
+    "sources": [
+      "https://www.americastestkitchen.com/equipment_reviews/2593-the-best-stand-mixers",
+      "https://www.techgearlab.com/topics/kitchen/best-stand-mixer",
+      "https://www.reviewed.com/cooking/best-right-now/best-stand-mixers"
+    ],
+    "complaints": [
+      "Beaters and attachments breaking (Amazon review summary)",
+      "Tilt-head button stopped working well; thin plastic parts (ATK)",
+      "Light and unstable; imprecise speed control (TechGearLab)"
+    ],
+    "last_price_cents": null,
+    "tested_on": null
+  },
+  {
+    "id": "kitchenaid-ksm150ps",
+    "name": "KitchenAid Artisan Series 5-Quart Tilt-Head Stand Mixer (KSM150PS)",
+    "brand": "KitchenAid",
+    "category": "stand-mixers",
+    "asin": "B00005UP2P",
+    "merchants": [
+      {
+        "id": "amazon",
+        "url": "https://www.amazon.com/dp/B00005UP2P"
+      }
+    ],
+    "price_seen_cents": 38000,
+    "sources": [
+      "https://www.techgearlab.com/topics/kitchen/best-stand-mixer",
+      "https://www.americastestkitchen.com/equipment_reviews/2593-the-best-stand-mixers",
+      "https://www.foodnetwork.com/how-to/packages/shopping/product-reviews/best-stand-mixer",
+      "https://www.reviewed.com/cooking/best-right-now/best-stand-mixers"
+    ],
+    "complaints": [
+      "Some units stopped working (Amazon review summary)",
+      "Bowl can stick on the base after heavy work (ATK); walks on heavy dough at high speed (Food Network)",
+      "Head blocks bowl access; 21.3 lb (TechGearLab)"
+    ],
+    "last_price_cents": null,
+    "tested_on": null
+  },
+  {
+    "id": "kitchenaid-k45ss",
+    "name": "KitchenAid Classic Series 4.5-Quart Tilt-Head Stand Mixer (K45SS)",
+    "brand": "KitchenAid",
+    "category": "stand-mixers",
+    "asin": "B00004SGFW",
+    "merchants": [
+      {
+        "id": "amazon",
+        "url": "https://www.amazon.com/dp/B00004SGFW"
+      }
+    ],
+    "price_seen_cents": 30000,
+    "sources": [
+      "https://www.americastestkitchen.com/equipment_reviews/2593-the-best-stand-mixers",
+      "https://www.techgearlab.com/reviews/kitchen/stand-mixer/kitchenaid-classic-series"
+    ],
+    "complaints": [
+      "Motor heats up in extended use (TechGearLab)",
+      "No bowl handle or pouring shield (TechGearLab)",
+      "Tilt head broke in ATK abuse testing"
+    ],
+    "last_price_cents": null,
+    "tested_on": null
+  },
+  {
+    "id": "kitchenaid-ksm3316x",
+    "name": "KitchenAid Artisan Mini 3.5-Quart Tilt-Head Stand Mixer (KSM3316X)",
+    "brand": "KitchenAid",
+    "category": "stand-mixers",
+    "asin": "B01HKAUIFO",
+    "merchants": [
+      {
+        "id": "amazon",
+        "url": "https://www.amazon.com/dp/B01HKAUIFO"
+      }
+    ],
+    "price_seen_cents": 35000,
+    "sources": [
+      "https://www.americastestkitchen.com/equipment_reviews/2593-the-best-stand-mixers",
+      "https://www.foodnetwork.com/how-to/packages/shopping/product-reviews/best-stand-mixer",
+      "https://www.reviewed.com/cooking/best-right-now/best-stand-mixers"
+    ],
+    "complaints": [
+      "Dough hook attachment and coating complaints (Amazon review summary)",
+      "No double batches; lacks torque for sticky dough (ATK)",
+      "Rocks with tacky brioche dough (Food Network)"
+    ],
+    "last_price_cents": null,
+    "tested_on": null
+  },
+  {
+    "id": "kitchenaid-ksm70skxx",
+    "name": "KitchenAid 7-Quart Bowl-Lift Stand Mixer (KSM70SKXX)",
+    "brand": "KitchenAid",
+    "category": "stand-mixers",
+    "asin": "B0BRNX5X8N",
+    "merchants": [
+      {
+        "id": "amazon",
+        "url": "https://www.amazon.com/dp/B0BRNX5X8N"
+      }
+    ],
+    "price_seen_cents": 53000,
+    "sources": [
+      "https://www.cnet.com/home/kitchen-and-household/best-stand-mixer/",
+      "https://www.americastestkitchen.com/equipment_reviews/2593-the-best-stand-mixers"
+    ],
+    "complaints": [
+      "Durability complaints, 4.0 stars (Amazon review summary)",
+      "Bowl hard to move on and off; 31 lb (Amazon summary, CNET spec)",
+      "Speed restrictions limit kneading (ATK)"
+    ],
+    "last_price_cents": null,
+    "tested_on": null
   }
 ]
