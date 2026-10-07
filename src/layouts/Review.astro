@@ -27,6 +27,7 @@ const ICON_FOR: Record<string, string> = { 'air-fryers': 'airFryer', 'kitchen-sa
 
 const ld = [{ ...articleLd(entry, author, path), about: { ...aboutLd(product), ...(d.hero && { image: abs(d.hero.src) }) } }, ...faqLd(d.faq)];
 const tocExtra = d.faq?.length ? [{ slug: 'faq', text: 'Frequently asked questions' }] : [];
+import Newsletter from '../components/Newsletter.astro';
 ---
 
 <Base title={d.title} description={d.description} crumbs={[hubCrumb(d.product_id), { name: d.title, path }]} ld={ld} disclose ogImage={d.hero?.src}>
@@ -46,6 +47,7 @@ const tocExtra = d.faq?.length ? [{ slug: 'faq', text: 'Frequently asked questio
     <Faq faq={d.faq} />
     <PriceWatch product_id={d.product_id} />
     <Sources urls={d.sources} />
+    <Newsletter id="nl-article" />
     <AuthorBox author={author} />
   </article>
 </Base>

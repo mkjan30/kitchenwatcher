@@ -11,8 +11,12 @@ for (const dir of existsSync(dist) ? readdirSync(dist, { withFileTypes: true }) 
     if (existsSync(`${p}/index.html`)) return p;
     for (const d of readdirSync(p, { withFileTypes: true })) if (d.isDirectory()) { const hit = walk(`${p}/${d.name}`); if (hit) return hit; }
   };
-  const hit = walk(`${dist}/${dir.name}`);
-  if (hit) urls.push(`http://localhost${hit.slice(dist.length)}/`);
+  // Section index (e.g. /guides/) and the first article inside it, so both templates stay under budget.
+  const base = `${dist}/${dir.name}`;
+  if (existsSync(`${base}/index.html`)) urls.push(`http://localhost/${dir.name}/`);
+  const child = readdirSync(base, { withFileTypes: true }).find((d) => d.isDirectory() && existsSync(`${base}/${d.name}/index.html`));
+  const hit = child ? `${base}/${child.name}` : walk(base);
+  if (hit && hit !== base) urls.push(`http://localhost${hit.slice(dist.length)}/`);
 }
 
 module.exports = {

@@ -54,6 +54,7 @@ const json = JSON.stringify({ '@context': 'https://schema.org', '@graph': graph 
 // Short nav labels from the hub slug; page titles are too long for a one-line nav.
 const hubs = (await published('best')).map((b) => ({ name: humanize(b.data.category), path: `/best/${b.data.category}/` }));
 const here = Astro.url.pathname;
+import Newsletter from '../components/Newsletter.astro';
 ---
 <!doctype html>
 <html lang="en">
@@ -127,6 +128,7 @@ const here = Astro.url.pathname;
         <div>
           <p class="wordmark foot-mark">{SITE.name}</p>
           <p class="foot-tag">Kitchen gear research with every source named.</p>
+          <Newsletter id="nl-foot" compact />
         </div>
         <nav aria-label="Footer">
           <a href="/reviews/">All reviews</a>

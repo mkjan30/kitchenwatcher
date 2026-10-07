@@ -18,7 +18,7 @@ const credits = [...hubs, ...reviews.slice(0, 6)].filter((e) => e.data.hero && e
   {lead && (
     <section class="lead">
       {lead.data.hero && lead.data.hero_alt
-        ? <a class="lead-art photo" href={urlFor(lead)} tabindex="-1"><Picture src={lead.data.hero} alt={lead.data.hero_alt} widths={[360, 640, 960]} sizes="(max-width: 640px) 92vw, 600px" formats={['avif', 'webp']} loading="eager" fetchpriority="high" /></a>
+        ? <a class="lead-art photo" href={urlFor(lead)} tabindex="-1"><Picture src={lead.data.hero} alt={lead.data.hero_alt} widths={[360, 720, 960]} sizes="(max-width: 640px) 92vw, 600px" formats={['avif', 'webp']} loading="eager" fetchpriority="high" /></a>
         : <a class="lead-art" href={urlFor(lead)} aria-hidden="true" tabindex="-1" set:html={iconFor(lead.data.category)} />}
       <div class="lead-copy">
         <p class="eyebrow">{humanize(lead.data.category)}</p>

@@ -59,6 +59,7 @@ const tocExtra = faq?.length ? [{ slug: 'faq', text: 'Frequently asked questions
 
 const productRef = 'product_id' in d ? d.product_id : entry.collection === 'vs' ? entry.data.products[0] : undefined;
 const crumbs = [...(productRef && entry.collection !== 'best' ? [hubCrumb(productRef)] : []), { name: d.title, path }];
+import Newsletter from '../components/Newsletter.astro';
 ---
 
 <Base title={d.title} description={d.description} crumbs={crumbs} ld={ld} disclose ogImage={d.hero?.src}>
@@ -81,6 +82,7 @@ const crumbs = [...(productRef && entry.collection !== 'best' ? [hubCrumb(produc
     )}
     <Faq faq={faq} />
     <Sources urls={d.sources} />
+    <Newsletter id="nl-article" />
     <AuthorBox author={author} />
   </article>
 </Base>
