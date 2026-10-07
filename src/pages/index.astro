@@ -14,7 +14,7 @@ const iconFor = (category: string) => iconSvg(ICON_FOR[category] ?? 'thermometer
 const credits = [...hubs, ...reviews.slice(0, 6)].filter((e) => e.data.hero && e.data.hero_credit).map((e) => e.data);
 ---
 
-<Base title="Kitchen Watcher: kitchen gear research and prices" description="Air fryers and kitchen safety gear compared on the evidence: independent lab data, specs, owner reports and recalls, with every source named.">
+<Base title="Kitchen Watcher: kitchen gear research and prices" description="Air fryers, coffee and espresso machines, blenders and kitchen safety gear compared on the evidence: lab data, specs, owner reports and recalls.">
   {lead && (
     <section class="lead">
       {lead.data.hero && lead.data.hero_alt

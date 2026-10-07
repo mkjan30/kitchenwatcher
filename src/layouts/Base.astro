@@ -78,6 +78,8 @@ import Newsletter from '../components/Newsletter.astro';
     <link rel="preload" href={sansUrl} as="font" type="font/woff2" crossorigin />
     <style set:html={`@font-face{font-family:'Source Serif 4';font-style:normal;font-display:swap;font-weight:200 900;src:url(${serifUrl}) format('woff2-variations');}@font-face{font-family:'Libre Franklin';font-style:normal;font-display:swap;font-weight:100 900;src:url(${sansUrl}) format('woff2-variations');}`}></style>
     <script type="application/ld+json" set:html={json} />
+    <!-- Strip email addresses from the URL (Buttondown appends ?email_address=) before analytics reads it. -->
+    <script is:inline>if (/[?&](email|email_address)=/i.test(location.search)) history.replaceState(null, '', location.pathname + location.hash);</script>
     <!-- Google Tag Manager -->
     <script is:inline>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
     new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
