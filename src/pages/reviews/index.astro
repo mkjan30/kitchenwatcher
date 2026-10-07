@@ -1,0 +1,11 @@
+---
+import SectionIndex from '../../components/SectionIndex.astro';
+import { getProduct, published, urlFor } from '../../lib/site';
+
+const items = (await published('reviews')).map((r) => ({
+  url: urlFor(r), title: r.data.title, description: r.data.description, category: getProduct(r.data.product_id).category,
+}));
+---
+
+<SectionIndex title="All research reviews by appliance" heading="Reviews" path="/reviews/" items={items}
+  dek="Every Kitchen Watcher review, grouped by appliance. Each review compiles independent lab measurements, manufacturer specs, owner reports and recalls, with every source named." />

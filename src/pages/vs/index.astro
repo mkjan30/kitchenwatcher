@@ -1,0 +1,11 @@
+---
+import SectionIndex from '../../components/SectionIndex.astro';
+import { getProduct, published, urlFor } from '../../lib/site';
+
+const items = (await published('vs')).map((v) => ({
+  url: urlFor(v), title: v.data.title, description: v.data.description, category: getProduct(v.data.products[0]).category,
+}));
+---
+
+<SectionIndex title="All head-to-head comparisons by appliance" heading="Comparisons" path="/vs/" items={items}
+  dek="Every Kitchen Watcher model-vs-model comparison, grouped by appliance, with the measured differences side by side and a clear pick for each kind of buyer." />

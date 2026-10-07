@@ -1,0 +1,44 @@
+---
+// Browsable index of one section (/guides/, /reviews/, /vs/), grouped by hub category in hub order.
+// Gives every page a short crawl path besides its hub.
+import Base from '../layouts/Base.astro';
+import { humanize, published } from '../lib/site';
+
+interface Item { url: string; title: string; description: string; category: string }
+interface Props { title: string; heading: string; dek: string; path: string; items: Item[] }
+const { title, heading, dek, path, items } = Astro.props;
+
+const hubs = await published('best');
+const order = hubs.map((h) => h.data.category);
+const hubUrl = Object.fromEntries(hubs.map((h) => [h.data.category, `/best/${h.data.category}/`]));
+const groups = [...new Set(items.map((i) => i.category))]
+  .sort((a, b) => (order.indexOf(a) + 1 || 99) - (order.indexOf(b) + 1 || 99))
+  .map((c) => ({ category: c, items: items.filter((i) => i.category === c).sort((a, b) => a.title.localeCompare(b.title)) }));
+---
+
+<Base title={title} description={dek} crumbs={[{ name: heading, path }]}>
+  <article class="section-index">
+    <h1>{heading}</h1>
+    <p class="dek">{dek}</p>
+    <p class="count">{items.length} pages in {groups.length} categories.</p>
+    {groups.map((g) => (
+      <section aria-labelledby={`g-${g.category}`}>
+        <h2 id={`g-${g.category}`}>{humanize(g.category)}</h2>
+        {hubUrl[g.category] && <p class="hub-link">See the ranked picks: <a href={hubUrl[g.category]}>best {humanize(g.category).toLowerCase()}</a></p>}
+        <ul>
+          {g.items.map((i) => (
+            <li><a href={i.url}>{i.title}</a><span>{i.description}</span></li>
+          ))}
+        </ul>
+      </section>
+    ))}
+  </article>
+</Base>
+
+<style>
+  .count, .hub-link { color: var(--muted); font-size: 0.9rem; }
+  .section-index ul { list-style: none; padding: 0; margin: 0 0 2rem; }
+  .section-index li { padding: 0.75rem 0; border-top: 1px solid var(--rule, #e5e5e5); }
+  .section-index li a { font-weight: 600; }
+  .section-index li span { display: block; color: var(--ink-2); font-size: 0.92rem; margin-top: 0.2rem; }
+</style>

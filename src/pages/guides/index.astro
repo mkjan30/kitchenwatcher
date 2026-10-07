@@ -1,0 +1,12 @@
+---
+import SectionIndex from '../../components/SectionIndex.astro';
+import { getProduct, published, urlFor } from '../../lib/site';
+
+const items = (await published('guides')).map((g) => ({
+  url: urlFor(g), title: g.data.title, description: g.data.description,
+  category: g.data.hub ?? (g.data.product_id ? getProduct(g.data.product_id).category : 'other'),
+}));
+---
+
+<SectionIndex title="All kitchen guides: how-tos, fixes and safety" heading="Guides" path="/guides/" items={items}
+  dek="Every Kitchen Watcher guide, grouped by appliance: cleaning and descaling, error codes and fixes, buying questions and safety. Each one names its sources." />
