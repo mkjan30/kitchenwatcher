@@ -89,6 +89,8 @@ if (!pages.length) {
 
   for (const p of pages) {
     if (['/', '/404/'].includes(p.url)) continue;
+    // noindex pages (e.g. Buttondown redirect targets) are reached by redirect, not links; orphans only matter for indexable pages.
+    if (/<meta name="robots" content="noindex/.test(readFileSync(p.file, 'utf8'))) continue;
     if (!linkedFrom(p.url)) fail(p.url, 'orphan — no page links here');
   }
   for (const e of live.filter((x) => ['reviews', 'vs', 'recipes', 'guides', 'smart-kitchen'].includes(x.collection))) {

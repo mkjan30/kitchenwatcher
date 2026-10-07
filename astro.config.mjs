@@ -8,5 +8,5 @@ export default defineConfig({
   site: 'https://kitchenwatcher.com',
   trailingSlash: 'always',
   output: 'static',
-  integrations: [mdx(), sitemap({ filter: (page) => !page.endsWith('/search/') })],
+  integrations: [mdx(), sitemap({ filter: (page) => !page.endsWith('/search/') && !page.includes('/subscribe/') })],
 });

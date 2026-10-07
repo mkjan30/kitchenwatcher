@@ -1,0 +1,18 @@
+---
+// Buttondown "After confirming" redirect. noindex + out of the sitemap.
+import Base from '../../../layouts/Base.astro';
+import { humanize, published, urlFor } from '../../../lib/site';
+const hubs = await published('best');
+---
+
+<Base title="You're subscribed" description="Your Kitchen Watcher newsletter subscription is confirmed." noindex>
+  <article>
+    <h1>You're subscribed</h1>
+    <p class="dek">Thanks for confirming. You'll get new guides and recall alerts from Kitchen Watcher about once a month, and every email has a one-click unsubscribe link.</p>
+    <h2>Start with our best-of guides</h2>
+    <ul>
+      {hubs.map((h) => <li><a href={urlFor(h)}>Best {humanize(h.data.category).toLowerCase()}</a></li>)}
+    </ul>
+    <p>Or browse <a href="/guides/">all guides</a>, <a href="/reviews/">all reviews</a> and <a href="/vs/">head-to-head comparisons</a>.</p>
+  </article>
+</Base>
