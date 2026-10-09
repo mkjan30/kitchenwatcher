@@ -886,5 +886,319 @@
     ],
     "last_price_cents": null,
     "tested_on": null
+  },
+  {
+    "id": "cuisinart-dfp-14bcny",
+    "name": "Cuisinart Custom 14-Cup Food Processor (DFP-14BCNY)",
+    "brand": "Cuisinart",
+    "category": "food-processors",
+    "asin": "B01AXM4WV2",
+    "merchants": [
+      {
+        "id": "amazon",
+        "url": "https://www.amazon.com/dp/B01AXM4WV2"
+      }
+    ],
+    "price_seen_cents": 20000,
+    "sources": [
+      "https://www.americastestkitchen.com/guides/how-to-use-a-food-processor/the-best-food-processors/",
+      "https://www.techgearlab.com/topics/kitchen/best-food-processor",
+      "https://www.cnet.com/home/kitchen-and-household/best-food-processor/",
+      "https://www.reviewed.com/cooking/best-right-now/the-best-food-processors",
+      "https://www.cpsc.gov/Recalls/2017/Cuisinart-Food-Processors-Recalled-by-Conair"
+    ],
+    "complaints": [
+      "Redesigned chopping blade leaves bigger gaps; no mini bowl (ATK)",
+      "Nut butter took 19 min; no slicing/shredding adjustment without extra discs (TechGearLab)",
+      "Heavy, no dough blade; bowl and lid fussy to align (CNET)"
+    ],
+    "last_price_cents": null,
+    "tested_on": null
+  },
+  {
+    "id": "ninja-bn601",
+    "name": "Ninja Professional Plus Food Processor with Auto-iQ (BN601)",
+    "brand": "Ninja",
+    "category": "food-processors",
+    "asin": "B089TP3K77",
+    "merchants": [
+      {
+        "id": "amazon",
+        "url": "https://www.amazon.com/dp/B089TP3K77"
+      }
+    ],
+    "price_seen_cents": 11000,
+    "sources": [
+      "https://www.foodnetwork.com/how-to/packages/shopping/product-reviews/best-food-processors",
+      "https://www.cnet.com/home/kitchen-and-household/best-food-processor/",
+      "https://www.techgearlab.com/topics/kitchen/best-food-processor"
+    ],
+    "complaints": [
+      "Loudest model in CNET's test; 80 dB at 3 ft (TechGearLab)",
+      "Harder to clean by hand (TechGearLab)",
+      "Doesn't puree as finely as the top pick (Food Network)"
+    ],
+    "last_price_cents": null,
+    "tested_on": null
+  },
+  {
+    "id": "kitchenaid-kfp1318",
+    "name": "KitchenAid 13-Cup Food Processor with Dicing Kit (KFP1318)",
+    "brand": "KitchenAid",
+    "category": "food-processors",
+    "asin": "B0912L55WG",
+    "merchants": [
+      {
+        "id": "amazon",
+        "url": "https://www.amazon.com/dp/B0912L55WG"
+      }
+    ],
+    "price_seen_cents": 18000,
+    "sources": [
+      "https://www.cnet.com/home/kitchen-and-household/best-food-processor/",
+      "https://www.reviewed.com/cooking/best-right-now/the-best-food-processors",
+      "https://www.americastestkitchen.com/guides/how-to-use-a-food-processor/the-best-food-processors/"
+    ],
+    "complaints": [
+      "Lightweight base moves while kneading (ATK, Reviewed)",
+      "Pulse runs over 3 seconds; dough glues the blade (ATK)",
+      "Parts hard to fit in the storage caddy (ATK)"
+    ],
+    "last_price_cents": null,
+    "tested_on": null
+  },
+  {
+    "id": "hamilton-beach-70730",
+    "name": "Hamilton Beach 10-Cup Food Processor with Bowl Scraper (70730)",
+    "brand": "Hamilton Beach",
+    "category": "food-processors",
+    "asin": "B008J8MJIQ",
+    "merchants": [
+      {
+        "id": "amazon",
+        "url": "https://www.amazon.com/dp/B008J8MJIQ"
+      }
+    ],
+    "price_seen_cents": 5000,
+    "sources": [
+      "https://www.techgearlab.com/topics/kitchen/best-food-processor",
+      "https://www.cnet.com/home/kitchen-and-household/best-food-processor/",
+      "https://hamiltonbeach.com/bowl-scraper-food-processor-70730"
+    ],
+    "complaints": [
+      "Loud: 96 dB at 3 ft (TechGearLab)",
+      "Leaks with liquids; mediocre mixing (TechGearLab)",
+      "Manual says not for kneading dough (Hamilton Beach use and care guide)"
+    ],
+    "last_price_cents": null,
+    "tested_on": null
+  },
+  {
+    "id": "kitchenaid-kfc3516",
+    "name": "KitchenAid 3.5-Cup Food Chopper (KFC3516)",
+    "brand": "KitchenAid",
+    "category": "food-processors",
+    "asin": "B01LZIHVTC",
+    "merchants": [
+      {
+        "id": "amazon",
+        "url": "https://www.amazon.com/dp/B01LZIHVTC"
+      }
+    ],
+    "price_seen_cents": 5500,
+    "sources": [
+      "https://www.americastestkitchen.com/equipment_reviews/1643-small-food-processors",
+      "https://www.cnet.com/home/kitchen-and-household/best-food-processor/"
+    ],
+    "complaints": [
+      "Oil gets trapped in the drizzle basin, making mayo runnier (ATK)",
+      "Chops hard almonds less evenly than some models (ATK)",
+      "No discs or dough blade; lowest power in CNET's test (CNET)"
+    ],
+    "last_price_cents": null,
+    "tested_on": null
+  },
+  {
+    "id": "breville-bfp810",
+    "name": "Breville Sous Chef 16 Food Processor (BFP810)",
+    "brand": "Breville",
+    "category": "food-processors",
+    "asin": "B0CDM1FZBX",
+    "merchants": [
+      {
+        "id": "amazon",
+        "url": "https://www.amazon.com/dp/B0CDM1FZBX"
+      }
+    ],
+    "price_seen_cents": 50000,
+    "sources": [
+      "https://www.americastestkitchen.com/guides/how-to-use-a-food-processor/the-best-food-processors/",
+      "https://www.foodnetwork.com/how-to/packages/shopping/product-reviews/best-food-processors",
+      "https://www.techgearlab.com/topics/kitchen/best-food-processor",
+      "https://www.breville.com/en-us/product/bfp810"
+    ],
+    "complaints": [
+      "Lid has nooks that need detailed cleaning; multi-part blades annoying to assemble (ATK)",
+      "Expensive and takes up a lot of space (Food Network)",
+      "Manual advises only occasional dishwasher use for bowl and lid (Breville instruction book)"
+    ],
+    "last_price_cents": null,
+    "tested_on": null
+  },
+  {
+    "id": "breville-bta720xl",
+    "name": "Breville the Bit More 2-Slice Toaster (BTA720XL)",
+    "brand": "Breville",
+    "category": "toasters",
+    "asin": "B00COMHC12",
+    "merchants": [
+      {
+        "id": "amazon",
+        "url": "https://www.amazon.com/dp/B00COMHC12"
+      }
+    ],
+    "price_seen_cents": 11000,
+    "sources": [
+      "https://www.americastestkitchen.com/equipment_reviews/1949-long-slot-toasters",
+      "https://www.techgearlab.com/topics/kitchen/best-toaster",
+      "https://assets.breville.com/Instruction-Booklets/ANZ/BTA730_IB_A13_WEB.pdf"
+    ],
+    "complaints": [
+      "One corner of each slice stays lighter (TechGearLab)",
+      "Slowest ATK-recommended toaster, 2 min 32 s to medium; barely toasts on lowest setting (ATK)",
+      "One side or center of the elements heats less (Amazon owner reviews)"
+    ],
+    "last_price_cents": null,
+    "tested_on": null
+  },
+  {
+    "id": "breville-bta820xl",
+    "name": "Breville Die-Cast 2-Slice Smart Toaster (BTA820XL)",
+    "brand": "Breville",
+    "category": "toasters",
+    "asin": "B00140SC64",
+    "merchants": [
+      {
+        "id": "amazon",
+        "url": "https://www.amazon.com/dp/B00140SC64"
+      }
+    ],
+    "price_seen_cents": 18700,
+    "sources": [
+      "https://www.reviewed.com/cooking/best-right-now/the-best-toasters",
+      "https://www.americastestkitchen.com/equipment_reviews/1949-long-slot-toasters",
+      "https://www.techgearlab.com/topics/kitchen/best-toaster"
+    ],
+    "complaints": [
+      "Consistently made toast with pale spots (ATK)",
+      "Burns bread on highest settings; average toasting for the price (TechGearLab)",
+      "Split owner reports on durability, some units failing within a year (Amazon Q&A)"
+    ],
+    "last_price_cents": null,
+    "tested_on": null
+  },
+  {
+    "id": "cuisinart-cpt-180",
+    "name": "Cuisinart Metal Classic 4-Slice Toaster (CPT-180)",
+    "brand": "Cuisinart",
+    "category": "toasters",
+    "asin": "B0000A1ZN1",
+    "merchants": [
+      {
+        "id": "amazon",
+        "url": "https://www.amazon.com/dp/B0000A1ZN1"
+      }
+    ],
+    "price_seen_cents": 6995,
+    "sources": [
+      "https://www.popsci.com/reviews/best-toaster/",
+      "https://www.techgearlab.com/topics/kitchen/best-toaster",
+      "https://www.reviewed.com/cooking/best-right-now/best-4-slice-toasters"
+    ],
+    "complaints": [
+      "One or two slots much darker than the rest; levers needed multiple pushes (Reviewed, 2023)",
+      "Large footprint, uneven toasting (TechGearLab)",
+      "Browning dial runs hot or feels loose; flimsy lever (Amazon owner reviews)"
+    ],
+    "last_price_cents": null,
+    "tested_on": null
+  },
+  {
+    "id": "black-decker-t2569b",
+    "name": "BLACK+DECKER 2-Slice Toaster (T2569B)",
+    "brand": "BLACK+DECKER",
+    "category": "toasters",
+    "asin": "B002CVTT4S",
+    "merchants": [
+      {
+        "id": "amazon",
+        "url": "https://www.amazon.com/dp/B002CVTT4S"
+      }
+    ],
+    "price_seen_cents": 3200,
+    "sources": [
+      "https://www.techgearlab.com/topics/kitchen/best-toaster",
+      "https://www.americastestkitchen.com/equipment_reviews/1949-long-slot-toasters",
+      "https://www.reviewed.com/cooking/best-right-now/the-best-toasters"
+    ],
+    "complaints": [
+      "Didn't toast evenly at any setting; bagels partly untoasted (ATK; TechGearLab and Reviewed found it even)",
+      "Short front-mounted cord; crumb tray awkward to remove (TechGearLab)",
+      "Lever or unit failing within months (Amazon owner reviews)"
+    ],
+    "last_price_cents": null,
+    "tested_on": null
+  },
+  {
+    "id": "cuisinart-cpt-122",
+    "name": "Cuisinart 2-Slice Compact Toaster (CPT-122)",
+    "brand": "Cuisinart",
+    "category": "toasters",
+    "asin": "B009GQ034C",
+    "merchants": [
+      {
+        "id": "amazon",
+        "url": "https://www.amazon.com/dp/B009GQ034C"
+      }
+    ],
+    "price_seen_cents": 2999,
+    "sources": [
+      "https://www.reviewed.com/cooking/best-right-now/the-best-toasters",
+      "https://www.techgearlab.com/topics/kitchen/best-toaster"
+    ],
+    "complaints": [
+      "Subpar bagels (TechGearLab bagel 4.5/10); fat bagels a tight fit (Reviewed)",
+      "Weak or uneven browning, toast twice and flip (Amazon owner reviews)",
+      "Lightweight and narrow (Reviewed)"
+    ],
+    "last_price_cents": null,
+    "tested_on": null
+  },
+  {
+    "id": "ge-g9tma2sspss",
+    "name": "GE 2-Slice Toaster (G9TMA2SSPSS)",
+    "brand": "GE",
+    "category": "toasters",
+    "asin": "B08NWGNQPS",
+    "merchants": [
+      {
+        "id": "amazon",
+        "url": "https://www.amazon.com/dp/B08NWGNQPS"
+      }
+    ],
+    "price_seen_cents": 4900,
+    "sources": [
+      "https://www.americastestkitchen.com/equipment_reviews/1949-long-slot-toasters",
+      "https://www.reviewed.com/cooking/best-right-now/the-best-toasters",
+      "https://www.techgearlab.com/topics/kitchen/best-toaster",
+      "https://pdf.lowes.com/productdocuments/e17a288a-af8b-4410-ade3-d6dfb6cb7764/65455388.pdf"
+    ],
+    "complaints": [
+      "Sides and top get hot during use (ATK)",
+      "Uneven toasting coverage (TechGearLab)",
+      "English muffins need the lift lever; shallow slots (Reviewed; Amazon owner reviews)"
+    ],
+    "last_price_cents": null,
+    "tested_on": null
   }
 ]
