@@ -69,8 +69,8 @@ Keyword volumes are approximate (Ahrefs Keywords Explorer not available on this 
 - V2 (Q1 2027, only if 500+ users): Stripe Pro tier, category watches, CSV export.
 - Every review embeds `<PriceWatch>`; drops auto-feed /deals/ and the newsletter.
 
-## Newsletter — "The Watch List", Thursdays
-5 price drops, 1 review, 1 guide, 1 "don't buy". <400 words. `scripts/send-newsletter` drafts from D1 events + new content; human approves; Buttondown API sends. Targets: 500 subs by Dec, 2,000 by Jun 2027.
+## Newsletter — monthly, first week of the month (changed from weekly 2026-10-09; the signup forms promise "about once a month")
+Pages published that month, new CPSC recalls for covered products, one sourced tip; price drops once price-watch has data. <400 words. Claude drafts from `content/newsletter/template.md` into `content/newsletter/YYYY-MM.md`; owner reviews and sends from Buttondown. Never auto-sent. Targets: 500 subs by Dec, 2,000 by Jun 2027.
 
 ## SEO foundation (before first content page)
 Cloudflare DNS/HTTPS, single canonical host, sitemap, robots allowing AI crawlers, GSC + Bing verified, IndexNow, CWV budgets in CI, self-hosted fonts, no third-party scripts, JSON-LD per layout, /how-we-research/, named author with photo + sameAs, disclosure above first affiliate link, orphan-page build check. Off-site: Pinterest/YouTube/Reddit/Instagram profiles; one data study per quarter for links.
