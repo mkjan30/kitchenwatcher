@@ -1,5 +1,5 @@
 // Outline icons, 24×24, stroke-based. From Tabler Icons v3.48.0 (MIT, https://tabler.io/icons),
-// except `airFryer`: Tabler has none, so it is drawn on the same grid and stroke rules.
+// except `airFryer` and `mixer`: Tabler has none, so they are drawn on the same grid and stroke rules.
 export const ICONS: Record<string, string[]> = {
   airFryer: [
     'M7 3h10a2 2 0 0 1 2 2v14a2 2 0 0 1 -2 2h-10a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2',
@@ -7,6 +7,13 @@ export const ICONS: Record<string, string[]> = {
     'M10 6h4',
     'M8 12h8v5a1 1 0 0 1 -1 1h-6a1 1 0 0 1 -1 -1l0 -5',
     'M10 15h4',
+  ],
+  mixer: [
+    'M7 5h8a3 3 0 0 1 3 3v1a2 2 0 0 1 -2 2h-9a2 2 0 0 1 -2 -2v-2a2 2 0 0 1 2 -2',
+    'M16 11v9',
+    'M4 20h16',
+    'M10 11v3',
+    'M6 14h8v1a4 4 0 0 1 -8 0l0 -1',
   ],
   mug: [
     'M4.083 5h10.834a1.08 1.08 0 0 1 1.083 1.077v8.615c0 2.38 -1.94 4.308 -4.333 4.308h-4.334c-2.393 0 -4.333 -1.929 -4.333 -4.308v-8.615a1.08 1.08 0 0 1 1.083 -1.077',
