@@ -214,28 +214,28 @@ Research: content/research-log/2026-10-09-food-processors.md. Dropped: Cuisinart
 | — | guide | /guides/what-size-food-processor-do-i-need/ | what size food processor do i need | 9 cup vs 14 cup food processor; food processor capacity guide; liquid capacity vs bowl size | hub: food-processors | see research log | live 2026-11-06 |
 | — | guide | /guides/food-processor-recall-check/ | cuisinart food processor recall | food processor recall 2026; cuisinart riveted blade recall; kitchenaid food processor recall | hub: food-processors | see research log | live 2026-11-06 |
 
-## Batch 6 (drafted 2026-11-06): toasters (19 pages)
+## Batch 6 (drafted 2026-11-06, live 2026-11-09): toasters (19 pages)
 
 Research: content/research-log/2026-10-09-toasters.md. Dropped: toaster vs toaster oven (future cluster), quartz vs wire elements (no official source).
 
 | priority | page type | target URL | primary keyword | secondary keywords | product_id(s) | source URLs | status |
 |---|---|---|---|---|---|---|---|
-| — | best | /best/toasters/ | best toaster | best 2 slice toaster; best 4 slice toaster; best budget toaster | hub; products: breville-bta720xl, breville-bta820xl, cuisinart-cpt-180, black-decker-t2569b, cuisinart-cpt-122, ge-g9tma2sspss | see research log | batch-6 |
-| — | review | /reviews/breville-bta720xl/ | breville bit more toaster review | breville bta720xl; breville bit more 2 slice; breville bit more problems | breville-bta720xl | see research log | batch-6 |
-| — | review | /reviews/cuisinart-cpt-180/ | cuisinart cpt-180 review | cuisinart 4 slice toaster; cuisinart metal classic toaster; cuisinart cpt-180 uneven | cuisinart-cpt-180 | see research log | batch-6 |
-| — | vs | /vs/breville-bta720xl-vs-breville-bta820xl/ | breville bit more vs die cast | bta720xl vs bta820xl; breville die-cast smart toaster; breville toaster comparison | breville-bta720xl, breville-bta820xl | see research log | batch-6 |
-| — | vs | /vs/ge-g9tma2sspss-vs-black-decker-t2569b/ | ge toaster vs black and decker toaster | ge 2 slice toaster; black+decker t2569b; best cheap toaster | ge-g9tma2sspss, black-decker-t2569b | see research log | batch-6 |
-| — | vs | /vs/cuisinart-cpt-122-vs-ge-g9tma2sspss/ | cuisinart cpt-122 vs ge toaster | cuisinart compact toaster; ge g9tma2sspss; budget 2 slice toaster | cuisinart-cpt-122, ge-g9tma2sspss | see research log | batch-6 |
-| — | guide | /guides/how-to-clean-a-toaster/ | how to clean a toaster | toaster crumb tray; how to clean inside a toaster; clean toaster with vinegar | hub: toasters | see research log | batch-6 |
-| — | guide | /guides/toaster-wont-stay-down/ | toaster won't stay down | toaster lever won't stay down; toaster pops up immediately; toaster not working | hub: toasters | see research log | batch-6 |
-| — | guide | /guides/why-is-my-toaster-toasting-unevenly/ | toaster toasting unevenly | toaster only toasts one side; uneven toast; toaster one side darker | hub: toasters | see research log | batch-6 |
-| — | guide | /guides/toaster-settings-explained/ | toaster settings explained | what toaster setting for toast; toaster numbers meaning; frozen setting toaster | hub: toasters | see research log | batch-6 |
-| — | guide | /guides/toaster-bagel-setting/ | toaster bagel setting | which way to put bagel in toaster; bagel button toaster; how to toast a bagel | hub: toasters | see research log | batch-6 |
-| — | guide | /guides/is-it-safe-to-leave-a-toaster-plugged-in/ | is it safe to leave a toaster plugged in | should you unplug your toaster; toaster turns on by itself; toaster fire hazard | hub: toasters | see research log | batch-6 |
-| — | guide | /guides/toaster-fire-what-to-do/ | toaster fire what to do | toaster caught fire; how to put out a toaster fire; toaster flames | hub: toasters | see research log | batch-6 |
-| — | guide | /guides/why-is-my-toaster-smoking/ | why is my toaster smoking | new toaster smell; toaster smoke first use; burning smell toaster | hub: toasters | see research log | batch-6 |
-| — | guide | /guides/how-to-get-toast-out-of-toaster/ | toast stuck in toaster | how to get bagel out of toaster; can you put a fork in a toaster; toaster jammed | hub: toasters | see research log | batch-6 |
-| — | guide | /guides/what-not-to-put-in-a-toaster/ | what not to put in a toaster | can you put foil in a toaster; pop tarts in toaster fire; toaster pastries safe | hub: toasters | see research log | batch-6 |
-| — | guide | /guides/2-slice-vs-4-slice-toaster/ | 2 slice vs 4 slice toaster | long slot vs 4 slice toaster; do I need a 4 slice toaster; long slot toaster | hub: toasters | see research log | batch-6 |
-| — | guide | /guides/toaster-wattage-explained/ | toaster wattage | how many watts does a toaster use; toaster electricity cost; toaster energy use | hub: toasters | see research log | batch-6 |
-| — | guide | /guides/toaster-recall-check/ | toaster recall | hamilton beach toaster recall; kitchenaid toaster recall; black and decker toaster recall | hub: toasters | see research log | batch-6 |
+| — | best | /best/toasters/ | best toaster | best 2 slice toaster; best 4 slice toaster; best budget toaster | hub; products: breville-bta720xl, breville-bta820xl, cuisinart-cpt-180, black-decker-t2569b, cuisinart-cpt-122, ge-g9tma2sspss | see research log | live 2026-11-09 |
+| — | review | /reviews/breville-bta720xl/ | breville bit more toaster review | breville bta720xl; breville bit more 2 slice; breville bit more problems | breville-bta720xl | see research log | live 2026-11-09 |
+| — | review | /reviews/cuisinart-cpt-180/ | cuisinart cpt-180 review | cuisinart 4 slice toaster; cuisinart metal classic toaster; cuisinart cpt-180 uneven | cuisinart-cpt-180 | see research log | live 2026-11-09 |
+| — | vs | /vs/breville-bta720xl-vs-breville-bta820xl/ | breville bit more vs die cast | bta720xl vs bta820xl; breville die-cast smart toaster; breville toaster comparison | breville-bta720xl, breville-bta820xl | see research log | live 2026-11-09 |
+| — | vs | /vs/ge-g9tma2sspss-vs-black-decker-t2569b/ | ge toaster vs black and decker toaster | ge 2 slice toaster; black+decker t2569b; best cheap toaster | ge-g9tma2sspss, black-decker-t2569b | see research log | live 2026-11-09 |
+| — | vs | /vs/cuisinart-cpt-122-vs-ge-g9tma2sspss/ | cuisinart cpt-122 vs ge toaster | cuisinart compact toaster; ge g9tma2sspss; budget 2 slice toaster | cuisinart-cpt-122, ge-g9tma2sspss | see research log | live 2026-11-09 |
+| — | guide | /guides/how-to-clean-a-toaster/ | how to clean a toaster | toaster crumb tray; how to clean inside a toaster; clean toaster with vinegar | hub: toasters | see research log | live 2026-11-09 |
+| — | guide | /guides/toaster-wont-stay-down/ | toaster won't stay down | toaster lever won't stay down; toaster pops up immediately; toaster not working | hub: toasters | see research log | live 2026-11-09 |
+| — | guide | /guides/why-is-my-toaster-toasting-unevenly/ | toaster toasting unevenly | toaster only toasts one side; uneven toast; toaster one side darker | hub: toasters | see research log | live 2026-11-09 |
+| — | guide | /guides/toaster-settings-explained/ | toaster settings explained | what toaster setting for toast; toaster numbers meaning; frozen setting toaster | hub: toasters | see research log | live 2026-11-09 |
+| — | guide | /guides/toaster-bagel-setting/ | toaster bagel setting | which way to put bagel in toaster; bagel button toaster; how to toast a bagel | hub: toasters | see research log | live 2026-11-09 |
+| — | guide | /guides/is-it-safe-to-leave-a-toaster-plugged-in/ | is it safe to leave a toaster plugged in | should you unplug your toaster; toaster turns on by itself; toaster fire hazard | hub: toasters | see research log | live 2026-11-09 |
+| — | guide | /guides/toaster-fire-what-to-do/ | toaster fire what to do | toaster caught fire; how to put out a toaster fire; toaster flames | hub: toasters | see research log | live 2026-11-09 |
+| — | guide | /guides/why-is-my-toaster-smoking/ | why is my toaster smoking | new toaster smell; toaster smoke first use; burning smell toaster | hub: toasters | see research log | live 2026-11-09 |
+| — | guide | /guides/how-to-get-toast-out-of-toaster/ | toast stuck in toaster | how to get bagel out of toaster; can you put a fork in a toaster; toaster jammed | hub: toasters | see research log | live 2026-11-09 |
+| — | guide | /guides/what-not-to-put-in-a-toaster/ | what not to put in a toaster | can you put foil in a toaster; pop tarts in toaster fire; toaster pastries safe | hub: toasters | see research log | live 2026-11-09 |
+| — | guide | /guides/2-slice-vs-4-slice-toaster/ | 2 slice vs 4 slice toaster | long slot vs 4 slice toaster; do I need a 4 slice toaster; long slot toaster | hub: toasters | see research log | live 2026-11-09 |
+| — | guide | /guides/toaster-wattage-explained/ | toaster wattage | how many watts does a toaster use; toaster electricity cost; toaster energy use | hub: toasters | see research log | live 2026-11-09 |
+| — | guide | /guides/toaster-recall-check/ | toaster recall | hamilton beach toaster recall; kitchenaid toaster recall; black and decker toaster recall | hub: toasters | see research log | live 2026-11-09 |
