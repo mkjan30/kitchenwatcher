@@ -42,6 +42,12 @@ export const published = async <C extends CollectionKey>(c: C) =>
   (await getCollection(c, ({ data }) => import.meta.env.DEV || !(data as { draft: boolean }).draft)).sort((a, b) => a.id.localeCompare(b.id));
 
 export const abs = (path: string) => new URL(path, SITE.url).href;
+// Main-nav groups, in display order. A hub category not listed here lands in the first group.
+export const NAV_GROUPS: { name: string; categories: string[] }[] = [
+  { name: 'Small Appliances', categories: ['air-fryers', 'blenders', 'food-processors', 'stand-mixers', 'toasters'] },
+  { name: 'Coffee', categories: ['espresso-machines', 'coffee-makers'] },
+  { name: 'Kitchen Safety', categories: ['kitchen-safety-devices'] },
+];
 export const humanize = (slug: string) => slug.charAt(0).toUpperCase() + slug.slice(1).replace(/-/g, ' ');
 export const iso = (d: Date) => d.toISOString().slice(0, 10);
 export const human = (d: Date) => d.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric', timeZone: 'UTC' });

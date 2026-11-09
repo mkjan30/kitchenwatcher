@@ -2,7 +2,7 @@
 // Site shell. Emits Organization, WebSite+SearchAction, BreadcrumbList, plus any page nodes in `ld`.
 import serifUrl from '@fontsource-variable/source-serif-4/files/source-serif-4-latin-wght-normal.woff2?url';
 import sansUrl from '@fontsource-variable/libre-franklin/files/libre-franklin-latin-wght-normal.woff2?url';
-import { SITE, DISCLOSURE, abs, humanize, published } from '../lib/site';
+import { SITE, DISCLOSURE, NAV_GROUPS, abs, humanize, published } from '../lib/site';
 
 interface Props {
   title: string;
@@ -52,8 +52,13 @@ const graph = [
 const json = JSON.stringify({ '@context': 'https://schema.org', '@graph': graph }).replace(/</g, '\\u003c');
 
 // Short nav labels from the hub slug; page titles are too long for a one-line nav.
-const hubs = (await published('best')).map((b) => ({ name: humanize(b.data.category), path: `/best/${b.data.category}/` }));
+const hubs = (await published('best')).map((b) => ({ category: b.data.category, name: humanize(b.data.category), path: `/best/${b.data.category}/` }));
 const here = Astro.url.pathname;
+const groupOf = (c: string) => Math.max(0, NAV_GROUPS.findIndex((g) => g.categories.includes(c)));
+const navGroups = NAV_GROUPS.map((g, i) => ({
+  name: g.name,
+  hubs: hubs.filter((h) => groupOf(h.category) === i).sort((a, b) => g.categories.indexOf(a.category) - g.categories.indexOf(b.category)),
+})).filter((g) => g.hubs.length);
 import Newsletter from '../components/Newsletter.astro';
 ---
 <!doctype html>
@@ -111,10 +116,28 @@ import Newsletter from '../components/Newsletter.astro';
         <a class="search-link" href="/search/" aria-current={here === '/search/' ? 'page' : undefined}>Search</a>
       </div>
       <nav class="wrap sections" aria-label="Main">
-        {hubs.map((h) => <a href={h.path} aria-current={here.startsWith(h.path) ? 'page' : undefined}>{h.name}</a>)}
+        {navGroups.map((g) =>
+          g.hubs.length === 1 ? (
+            <a href={g.hubs[0].path} aria-current={here.startsWith(g.hubs[0].path) ? 'page' : undefined}>{g.name}</a>
+          ) : (
+            <details class="menu" name="nav">
+              <summary class:list={{ current: g.hubs.some((h) => here.startsWith(h.path)) }}>{g.name}</summary>
+              <ul>
+                {g.hubs.map((h) => <li><a href={h.path} aria-current={here.startsWith(h.path) ? 'page' : undefined}>Best {h.name.toLowerCase()}</a></li>)}
+                <li class="more"><a href="/guides/">Guides</a> · <a href="/vs/">Comparisons</a></li>
+              </ul>
+            </details>
+          )
+        )}
         <a href="/how-we-research/" aria-current={here === '/how-we-research/' ? 'page' : undefined}>How we research</a>
         <a href="/about/" aria-current={here === '/about/' ? 'page' : undefined}>About</a>
       </nav>
+      {/* <details> menus work without JS; this only closes an open one on outside click or Escape. */}
+      <script is:inline>
+        const closeMenus = (keep) => document.querySelectorAll('.menu[open]').forEach((m) => m !== keep && m.removeAttribute('open'));
+        document.addEventListener('click', (e) => closeMenus(e.target.closest('.menu')));
+        document.addEventListener('keydown', (e) => { if (e.key === 'Escape') { const m = document.querySelector('.menu[open]'); if (m) { m.removeAttribute('open'); m.querySelector('summary').focus(); } } });
+      </script>
     </header>
     {
       crumbs.length > 0 && (
@@ -226,12 +249,25 @@ import Newsletter from '../components/Newsletter.astro';
   .wordmark { font: 800 clamp(1.5rem, 1.2rem + 1vw, 2rem)/1 var(--serif); letter-spacing: -0.03em; color: var(--ink); text-decoration: none; }
   .wordmark:hover { color: var(--ink); }
   .search-link { position: absolute; right: 20px; font-size: 0.85rem; font-weight: 600; color: var(--ink); text-decoration: none; min-height: 44px; display: inline-flex; align-items: center; }
-  .sections { display: flex; justify-content: center; gap: 0.25rem 1.75rem; overflow-x: auto; scrollbar-width: none; }
-  .sections a { font-size: 0.875rem; font-weight: 600; color: var(--ink); text-decoration: none; white-space: nowrap; min-height: 44px; display: inline-flex; align-items: center; border-bottom: 2px solid transparent; }
-  .sections a:hover, .sections a[aria-current='page'] { border-bottom-color: var(--ink); color: var(--ink); }
+  .sections { position: relative; display: flex; flex-wrap: wrap; justify-content: center; gap: 0 1.75rem; }
+  .sections > a, .menu > summary { font-size: 0.875rem; font-weight: 600; color: var(--ink); text-decoration: none; white-space: nowrap; min-height: 44px; display: inline-flex; align-items: center; border-bottom: 2px solid transparent; cursor: pointer; }
+  .sections > a:hover, .sections > a[aria-current='page'], .menu > summary:hover, .menu > summary.current, .menu[open] > summary { border-bottom-color: var(--ink); color: var(--ink); }
+  .menu { position: relative; }
+  .menu > summary { list-style: none; gap: 0.35rem; }
+  .menu > summary::-webkit-details-marker { display: none; }
+  .menu > summary::after { content: ''; width: 0.4em; height: 0.4em; border: solid currentColor; border-width: 0 1.5px 1.5px 0; transform: translateY(-0.15em) rotate(45deg); }
+  .menu[open] > summary::after { transform: translateY(0.1em) rotate(-135deg); }
+  .menu > summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+  .menu ul { position: absolute; z-index: 20; top: 100%; left: 50%; transform: translateX(-50%); min-width: 15rem; margin: 0; padding: 0.5rem 0; list-style: none; background: var(--bg); border: 1px solid var(--line); box-shadow: 0 8px 24px rgb(0 0 0 / 0.08); }
+  .menu li a { display: flex; align-items: center; min-height: 44px; padding: 0 1rem; font-size: 0.9rem; color: var(--ink); text-decoration: none; }
+  .menu li a:hover, .menu li a[aria-current='page'] { background: var(--accent-soft); }
+  .menu li.more { display: flex; align-items: center; border-top: 1px solid var(--line); margin-top: 0.4rem; padding-top: 0.25rem; font-size: 0.85rem; color: var(--muted); }
+  .menu li.more a { padding: 0 0.5rem 0 1rem; font-size: 0.85rem; }
   @media (max-width: 640px) {
     .masthead { justify-content: flex-start; }
-    .sections { justify-content: flex-start; gap: 1.25rem; }
+    .sections { justify-content: flex-start; gap: 0 1.25rem; }
+    .menu { position: static; }
+    .menu ul { left: 0; right: 0; transform: none; min-width: 0; }
   }
 
   nav.crumbs { font-size: 0.8rem; font-weight: 600; letter-spacing: 0.02em; color: var(--muted); padding-top: 1.5rem; display: flex; flex-wrap: wrap; gap: 0.3rem; max-width: calc(var(--measure) + 40px); }
