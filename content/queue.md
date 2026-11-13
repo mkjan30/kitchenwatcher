@@ -239,3 +239,9 @@ Research: content/research-log/2026-10-09-toasters.md. Dropped: toaster vs toast
 | — | guide | /guides/2-slice-vs-4-slice-toaster/ | 2 slice vs 4 slice toaster | long slot vs 4 slice toaster; do I need a 4 slice toaster; long slot toaster | hub: toasters | see research log | live 2026-11-09 |
 | — | guide | /guides/toaster-wattage-explained/ | toaster wattage | how many watts does a toaster use; toaster electricity cost; toaster energy use | hub: toasters | see research log | live 2026-11-09 |
 | — | guide | /guides/toaster-recall-check/ | toaster recall | hamilton beach toaster recall; kitchenaid toaster recall; black and decker toaster recall | hub: toasters | see research log | live 2026-11-09 |
+
+## Single (2026-11-13): Bodum French press recall (CPSC 27-055, Oct 29, 2026)
+
+| priority | page type | target URL | primary keyword | secondary keywords | product_id(s) | source URLs | status |
+|---|---|---|---|---|---|---|---|
+| — | guide | /guides/bodum-french-press-recall/ | bodum french press recall | bodum recall 2026; is my bodum french press recalled; bodum chambord recall | hub: coffee-makers | https://www.cpsc.gov/Recalls/2027/Bodum-USA-Recalls-5-9-Million-French-Press-Coffee-Makers-with-Replaceable-Glass-Carafes-Due-to-Risk-of-Serious-Burn-Injury | live 2026-11-13 |
