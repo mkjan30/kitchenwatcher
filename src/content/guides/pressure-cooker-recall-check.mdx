@@ -9,7 +9,7 @@ secondary_keywords:
   - "ninja foodi recall"
   - "instant pot recall"
   - "crock pot pressure cooker recall"
-draft: true
+draft: false
 hub: pressure-cookers
 sources:
   - "https://www.cpsc.gov/Recalls/2025/SharkNinja-Recalls-1-8-Million-Foodi-Multi-Function-Pressure-Cookers-Due-to-Burn-Hazard-Serious-Burn-Injuries-Reported"
@@ -25,6 +25,7 @@ sources:
   - "https://www.saferproducts.gov/RestWebServices/Recall?format=json&RecallNumber=16-066"
   - "https://www.saferproducts.gov/RestWebServices/Recall?format=json&RecallDateStart=2025-11-01&ProductName=pressure"
   - "https://www.saferproducts.gov/RestWebServices/Recall?format=json&ProductName=pressure%20cooker"
+  - "https://www.saferproducts.gov/RestWebServices/Recall?format=json&RecallDateStart=2026-11-01"
   - "https://www.saferproducts.gov/RestWebServices/Recall?format=json&RecallNumber=25-247"
   - "https://www.saferproducts.gov/RestWebServices/Recall?format=json&RecallNumber=21-035"
   - "https://www.saferproducts.gov/RestWebServices/Recall?format=json&RecallNumber=18-110"
@@ -40,7 +41,7 @@ brief:
     - "Method: saferproducts.gov Recall API plus CPSC Warnings pages, 2026-11-13. Warnings are not in the Recall API; the research log missed both 27-030 and 26-280 and needs updating, as do /guides/are-pressure-cookers-safe/ and /guides/instant-pot-vs-ninja-foodi/."
     - "Image ideas: line-art diagram of where each brand's model label sits (Ninja side per CPSC vs back per SharkNinja; Crock-Pot date code on a plug prong and base bottom; Power Quick Pot back). Alt text should include 'pressure cooker recall'. No product photos until licensed."
   verify:
-    - "Recheck CPSC Recalls and Warnings monthly; this page is dated 2026-11-13."
+    - "Recheck CPSC Recalls and Warnings monthly (next by 2026-12-13) and update the date line; this page is dated 2026-11-13. Recheck 2026-11-13: Recall API RecallDateStart=2026-11-01 returned 19 recalls (Nov 5 and Nov 12 batches), none a pressure cooker or multicooker; a web search found no CPSC pressure-cooker warning after 27-030. The cpsc.gov Warnings index itself could not be read (404/403)."
     - "Source check 2026-11-13: cpsc.gov pages return 403 to curl; recall facts confirmed via the SaferProducts.gov Recall API, warnings 27-030 and 26-280 read via fetch. RQA page confirmed (OP300C, OP301C, OP305CCO; label on the back near the power cord)."
     - "Phone numbers for Best Buy (24-013), Breville (16-066) and Double Insight (15-741, 18-110) were not carried into the table; add from the CPSC pages if wanted."
 faq:
@@ -58,7 +59,7 @@ faq:
 
 As of Nov 13, 2026, CPSC pressure cooker recall records cover the Ninja Foodi OP300 series and the Crock-Pot 6-qt Express (some date codes). They also cover Insignia, Bella/Crux/Cooks, Ambiano and older Breville and Instant Pot models. Two more cookers carry CPSC stop-use warnings with no remedy: the Power Quick Pot Y6D-36 and the Gourmia GPC625. Find your model number and match it in the table below.
 
-Checked against CPSC records on 2026-11-13. {/* VERIFY: recheck cpsc.gov Recalls and Warnings monthly (next by 2026-12-13) and update the date line. */}
+Checked against CPSC records on 2026-11-13.
 
 ## Recalled and warned pressure cookers at a glance
 
@@ -153,7 +154,7 @@ Six of these actions (Ninja, Power Quick Pot, Gourmia, Ambiano, Bella/Crux/Cooks
 
 ## How this pressure cooker recall check was done
 
-We queried the SaferProducts.gov Recall API on 2026-11-13 by product name ("pressure cooker", "pressure") and by recall number, and read each CPSC record linked above. CPSC Warnings do not appear in the Recall API: a search for Power Quick Pot or Y6D-36 there returns nothing, so we checked CPSC's Warnings pages separately. A query for recalls since Nov 1, 2025 found no new pressure-cooker recall after 26-007. More on our method at [how we research](/how-we-research/).
+We queried the SaferProducts.gov Recall API on 2026-11-13 by product name ("pressure cooker", "pressure") and by recall number, and read each CPSC record linked above. CPSC Warnings do not appear in the Recall API: a search for Power Quick Pot or Y6D-36 there returns nothing, so we checked CPSC's Warnings pages separately. A query for recalls since Nov 1, 2025 found no new pressure-cooker recall after 26-007, and the 19 recalls the API lists for Nov 1 to Nov 12, 2026 include no pressure cooker or multicooker. More on our method at [how we research](/how-we-research/).
 
 ## More on pressure cookers
 

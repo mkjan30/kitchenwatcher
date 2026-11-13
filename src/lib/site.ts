@@ -44,7 +44,7 @@ export const published = async <C extends CollectionKey>(c: C) =>
 export const abs = (path: string) => new URL(path, SITE.url).href;
 // Main-nav groups, in display order. A hub category not listed here lands in the first group.
 export const NAV_GROUPS: { name: string; categories: string[] }[] = [
-  { name: 'Small Appliances', categories: ['air-fryers', 'blenders', 'food-processors', 'stand-mixers', 'toasters'] },
+  { name: 'Small Appliances', categories: ['air-fryers', 'blenders', 'food-processors', 'stand-mixers', 'toasters', 'pressure-cookers'] },
   { name: 'Coffee', categories: ['espresso-machines', 'coffee-makers'] },
   { name: 'Kitchen Safety', categories: ['kitchen-safety-devices'] },
 ];
