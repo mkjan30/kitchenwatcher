@@ -245,3 +245,31 @@ Research: content/research-log/2026-10-09-toasters.md. Dropped: toaster vs toast
 | priority | page type | target URL | primary keyword | secondary keywords | product_id(s) | source URLs | status |
 |---|---|---|---|---|---|---|---|
 | — | guide | /guides/bodum-french-press-recall/ | bodum french press recall | bodum recall 2026; is my bodum french press recalled; bodum chambord recall | hub: coffee-makers | https://www.cpsc.gov/Recalls/2027/Bodum-USA-Recalls-5-9-Million-French-Press-Coffee-Makers-with-Replaceable-Glass-Carafes-Due-to-Risk-of-Serious-Burn-Injury | live 2026-11-13 |
+
+## Batch 7 (drafted 2026-11-13, held as drafts): electric pressure cookers
+
+Research: content/research-log/2026-11-13-pressure-cookers.md.
+
+| priority | page type | target URL | primary keyword | secondary keywords | product_id(s) | source URLs | status |
+|---|---|---|---|---|---|---|---|
+| — | best | /best/pressure-cookers/ | best electric pressure cooker | best instant pot; best multicooker; best pressure cooker under $100 | hub; products: instant-pot-duo-plus-6qt, instant-pot-pro-8qt, chef-iq-smart-cooker-6qt, instant-pot-rio-6qt, cosori-cmc-co601, breville-bpr700 | see research log | batch-7 |
+| — | review | /reviews/instant-pot-duo-plus-6qt/ | instant pot duo plus review | instant pot duo plus 6 quart; instant pot duo plus v4; instant pot duo plus problems | instant-pot-duo-plus-6qt | see research log | batch-7 |
+| — | review | /reviews/instant-pot-pro-8qt/ | instant pot pro review | instant pot pro 8 quart; instant pot pro 10-in-1; instant pot pro problems | instant-pot-pro-8qt | see research log | batch-7 |
+| — | vs | /vs/instant-pot-rio-6qt-vs-instant-pot-duo-plus-6qt/ | instant pot rio vs duo plus | instant pot rio vs duo; which instant pot to buy; instant pot rio review | instant-pot-rio-6qt, instant-pot-duo-plus-6qt | see research log | batch-7 |
+| — | vs | /vs/instant-pot-pro-8qt-vs-breville-bpr700/ | instant pot pro vs breville fast slow pro | breville fast slow pro review; breville fast slow pro vs instant pot; premium pressure cooker | instant-pot-pro-8qt, breville-bpr700 | see research log | batch-7 |
+| — | vs | /vs/cosori-cmc-co601-vs-instant-pot-rio-6qt/ | cosori pressure cooker vs instant pot | cosori 6 quart pressure cooker review; best budget pressure cooker; cosori vs instant pot rio | cosori-cmc-co601, instant-pot-rio-6qt | see research log | batch-7 |
+| — | guide | /guides/instant-pot-burn-message/ | instant pot burn message | instant pot says burn; food burn instant pot; how to fix burn on instant pot | hub: pressure-cookers | see research log | batch-7 |
+| — | guide | /guides/instant-pot-not-sealing/ | instant pot not sealing | instant pot steam leaking; instant pot won't pressurize; steam coming out of instant pot lid | hub: pressure-cookers | see research log | batch-7 |
+| — | guide | /guides/instant-pot-float-valve/ | instant pot float valve | float valve not rising; instant pot float valve stuck; instant pot lid won't open | hub: pressure-cookers | see research log | batch-7 |
+| — | guide | /guides/natural-release-vs-quick-release/ | natural release vs quick release | instant pot natural release time; quick release instant pot; when to use natural release | hub: pressure-cookers | see research log | batch-7 |
+| — | guide | /guides/how-to-clean-an-instant-pot/ | how to clean an instant pot | how to clean instant pot lid; is instant pot dishwasher safe; instant pot rainbow stain | hub: pressure-cookers | see research log | batch-7 |
+| — | guide | /guides/instant-pot-sealing-ring-smell/ | instant pot sealing ring smell | how to get smell out of instant pot ring; when to replace instant pot sealing ring; instant pot ring sweet and savory | hub: pressure-cookers | see research log | batch-7 |
+| — | guide | /guides/instant-pot-water-test/ | instant pot water test | instant pot test run; first time using instant pot; instant pot initial test | hub: pressure-cookers | see research log | batch-7 |
+| — | guide | /guides/how-much-water-in-pressure-cooker/ | how much water in pressure cooker | minimum liquid instant pot; instant pot max fill line; pressure cooker 2/3 full | hub: pressure-cookers | see research log | batch-7 |
+| — | guide | /guides/instant-pot-error-codes/ | instant pot error codes | instant pot c7 error; instant pot lid error; instant pot noPr | hub: pressure-cookers | see research log | batch-7 |
+| — | guide | /guides/are-pressure-cookers-safe/ | are electric pressure cookers safe | can an instant pot explode; pressure cooker explosion; pressure cooker lid opened | hub: pressure-cookers | see research log | batch-7 |
+| — | guide | /guides/pressure-cooker-recall-check/ | pressure cooker recall | ninja foodi recall; instant pot recall; crock pot pressure cooker recall | hub: pressure-cookers | see research log | batch-7 |
+| — | guide | /guides/instant-pot-vs-ninja-foodi/ | instant pot vs ninja foodi | ninja foodi vs instant pot duo crisp; pressure cooker air fryer combo; is ninja foodi worth it | hub: pressure-cookers | see research log | batch-7 |
+| — | guide | /guides/what-size-instant-pot/ | what size instant pot do i need | 6 quart vs 8 quart instant pot; 3 quart instant pot; instant pot size for family | hub: pressure-cookers | see research log | batch-7 |
+| — | guide | /guides/can-you-can-in-an-instant-pot/ | can you can in an instant pot | pressure canning instant pot; instant pot canning setting; multicooker canning safe | hub: pressure-cookers | see research log | batch-7 |
+| — | guide | /guides/how-to-cook-rice-in-a-pressure-cooker/ | how to cook rice in instant pot | instant pot rice time; brown rice instant pot; pressure cooker vs rice cooker | hub: pressure-cookers | see research log | batch-7 |

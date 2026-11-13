@@ -1200,5 +1200,161 @@
     ],
     "last_price_cents": null,
     "tested_on": null
+  },
+  {
+    "id": "instant-pot-duo-plus-6qt",
+    "name": "Instant Pot Duo Plus 6-Quart Multi-Use Pressure Cooker",
+    "brand": "Instant Pot",
+    "category": "pressure-cookers",
+    "asin": "B09MZTP44L",
+    "merchants": [
+      {
+        "id": "amazon",
+        "url": "https://www.amazon.com/dp/B09MZTP44L"
+      }
+    ],
+    "price_seen_cents": 15000,
+    "sources": [
+      "https://www.techgearlab.com/topics/kitchen/best-pressure-cooker",
+      "https://reviewed.com/cooking/best-right-now/the-best-electric-multi-cookers-and-instant-pots",
+      "https://www.cnn.com/cnn-underscored/reviews/best-pressure-cookers",
+      "https://www.tomsguide.com/us/best-instant-pot,review-5887.html",
+      "https://www.nytimes.com/wirecutter/reviews/best-electric-pressure-cooker/"
+    ],
+    "complaints": [
+      "Steel pot hard to scrub after sautéing; sauté can be finicky (TechGearLab)",
+      "Too large for some shelves (TechGearLab)",
+      "Slowest of four Instant Pots to reach pressure, 16 min 8 s; worth it only on sale (Wirecutter)"
+    ],
+    "last_price_cents": null,
+    "tested_on": null
+  },
+  {
+    "id": "instant-pot-pro-8qt",
+    "name": "Instant Pot Pro 8-Quart 10-in-1 Pressure Cooker",
+    "brand": "Instant Pot",
+    "category": "pressure-cookers",
+    "asin": "B08PPZWNCV",
+    "merchants": [
+      {
+        "id": "amazon",
+        "url": "https://www.amazon.com/dp/B08PPZWNCV"
+      }
+    ],
+    "price_seen_cents": 14999,
+    "sources": [
+      "https://www.americastestkitchen.com/equipment_reviews/1737-multicookers",
+      "https://www.nytimes.com/wirecutter/reviews/best-electric-pressure-cooker/",
+      "https://www.techradar.com/news/best-instant-pot-pressure-cookers-slow-cookers",
+      "https://www.cnet.com/home/kitchen-and-household/best-instant-pot/"
+    ],
+    "complaints": [
+      "Can't slow-cook well (ATK)",
+      "Bake setting left cake uncooked; no faster to preheat despite claim (Wirecutter, Pro 6-qt)",
+      "Trouble with natural release (Good Housekeeping, 2022)"
+    ],
+    "last_price_cents": null,
+    "tested_on": null
+  },
+  {
+    "id": "chef-iq-smart-cooker-6qt",
+    "name": "CHEF iQ Smart Cooker 6-Quart",
+    "brand": "CHEF iQ",
+    "category": "pressure-cookers",
+    "asin": "B0863JB424",
+    "merchants": [
+      {
+        "id": "amazon",
+        "url": "https://www.amazon.com/dp/B0863JB424"
+      }
+    ],
+    "price_seen_cents": 15000,
+    "sources": [
+      "https://reviewed.com/cooking/best-right-now/the-best-electric-multi-cookers-and-instant-pots",
+      "https://www.consumerreports.org/multi-cookers/best-multi-cookers-of-the-year-a7136971834",
+      "https://www.americastestkitchen.com/equipment_reviews/1737-multicookers",
+      "https://www.popsci.com/gear/best-pressure-cookers/"
+    ],
+    "complaints": [
+      "Setup took almost 30 minutes: app, account, Wi-Fi, firmware update (ATK)",
+      "Nonstick inner pot (ATK)"
+    ],
+    "last_price_cents": null,
+    "tested_on": null
+  },
+  {
+    "id": "instant-pot-rio-6qt",
+    "name": "Instant Pot Rio 6-Quart Multi-Cooker",
+    "brand": "Instant Pot",
+    "category": "pressure-cookers",
+    "asin": "B0B4PQDFCL",
+    "merchants": [
+      {
+        "id": "amazon",
+        "url": "https://www.amazon.com/dp/B0B4PQDFCL"
+      }
+    ],
+    "price_seen_cents": 11000,
+    "sources": [
+      "https://www.nytimes.com/wirecutter/reviews/best-electric-pressure-cooker/",
+      "https://www.tomsguide.com/us/best-instant-pot,review-5887.html",
+      "https://www.americastestkitchen.com/equipment_reviews/1737-multicookers"
+    ],
+    "complaints": [
+      "Didn't slow-cook well; sauté underpowered; pot has no handles (ATK)",
+      "High pressure only; heavy lid with a metal top that gets hot (Wirecutter)"
+    ],
+    "last_price_cents": null,
+    "tested_on": null
+  },
+  {
+    "id": "cosori-cmc-co601",
+    "name": "COSORI 6.0-Quart Pressure Cooker (CMC-CO601-SUS)",
+    "brand": "COSORI",
+    "category": "pressure-cookers",
+    "asin": "B0BFX95J5P",
+    "merchants": [
+      {
+        "id": "amazon",
+        "url": "https://www.amazon.com/dp/B0BFX95J5P"
+      }
+    ],
+    "price_seen_cents": 9000,
+    "sources": [
+      "https://www.americastestkitchen.com/equipment_reviews/1737-multicookers"
+    ],
+    "complaints": [
+      "Dark nonstick pot makes browning hard to monitor (ATK)",
+      "Small display; no automatic quick-release button (ATK)"
+    ],
+    "last_price_cents": null,
+    "tested_on": null
+  },
+  {
+    "id": "breville-bpr700",
+    "name": "Breville the Fast Slow Pro (BPR700BSS)",
+    "brand": "Breville",
+    "category": "pressure-cookers",
+    "asin": "B013I40R8E",
+    "merchants": [
+      {
+        "id": "amazon",
+        "url": "https://www.amazon.com/dp/B013I40R8E"
+      }
+    ],
+    "price_seen_cents": 33000,
+    "sources": [
+      "https://www.techgearlab.com/topics/kitchen/best-pressure-cooker",
+      "https://www.consumerreports.org/multi-cookers/best-multi-cookers-of-the-year-a7136971834",
+      "https://www.americastestkitchen.com/equipment_reviews/1737-multicookers",
+      "https://www.nytimes.com/wirecutter/reviews/best-electric-pressure-cooker/"
+    ],
+    "complaints": [
+      "Hinged lid gets in the way; bumping it triggered a safety shutoff while sautéing (ATK)",
+      "Lid hard to clean; must be unscrewed to remove (ATK, TechGearLab)",
+      "About twice the Instant Pot Pro's price; nonstick pot without handles (Wirecutter)"
+    ],
+    "last_price_cents": null,
+    "tested_on": null
   }
 ]
