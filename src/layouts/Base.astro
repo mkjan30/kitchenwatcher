@@ -95,14 +95,7 @@ import Newsletter from '../components/Newsletter.astro';
     'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
     })(window,document,'script','dataLayer','GTM-MVXXJ2TD');</script>
     <!-- End Google Tag Manager -->
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-3LK2ZJE7HN"></script>
-    <script is:inline>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-3LK2ZJE7HN');
-    </script>
+    <!-- GA4 (G-3LK2ZJE7HN) loads through GTM's Google tag only; a second hard-coded gtag config doubled every page_view. -->
   </head>
   <body>
     <!-- Google Tag Manager (noscript) -->
@@ -173,11 +166,13 @@ import Newsletter from '../components/Newsletter.astro';
     </footer>
     {
       disclose && (
-        // The one allowed script: affiliate click beacon. Endpoint ships with workers/price-watch; until then it 404s silently.
+        // Affiliate click → dataLayer event for GTM (GA4 event "affiliate_click"). No personal data: product id, merchant, page only.
         <script is:inline>
           document.addEventListener('click', (e) => {
             const a = e.target.closest && e.target.closest('a[data-aff]');
-            if (a && navigator.sendBeacon) navigator.sendBeacon('/api/click', JSON.stringify({ aff: a.dataset.aff, page: location.pathname }));
+            if (!a) return;
+            const [product_id, merchant] = a.dataset.aff.split(':');
+            (window.dataLayer = window.dataLayer || []).push({ event: 'affiliate_click', product_id, merchant, link_url: a.href });
           });
         </script>
       )
