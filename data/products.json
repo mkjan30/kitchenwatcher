@@ -1356,5 +1356,171 @@
     ],
     "last_price_cents": null,
     "tested_on": null
+  },
+  {
+    "id": "zojirushi-ns-zcc10",
+    "name": "Zojirushi 5.5-Cup Neuro Fuzzy Rice Cooker & Warmer (NS-ZCC10)",
+    "brand": "Zojirushi",
+    "category": "rice-cookers",
+    "asin": "B00007J5U7",
+    "merchants": [
+      {
+        "id": "amazon",
+        "url": "https://www.amazon.com/dp/B00007J5U7"
+      }
+    ],
+    "price_seen_cents": 24200,
+    "sources": [
+      "https://www.americastestkitchen.com/cooksillustrated/equipment_reviews/1596-rice-cookers",
+      "https://www.reviewed.com/cooking/best-right-now/the-best-rice-cookers",
+      "https://www.cnn.com/cnn-underscored/reviews/best-rice-cooker",
+      "https://www.seriouseats.com/the-best-rice-cookers",
+      "https://www.engadget.com/home/kitchen-tech/best-rice-cooker-120015478.html",
+      "https://www.cnet.com/home/kitchen-and-household/best-rice-cooker/",
+      "https://store.zojirushi.com/cdn/shop/files/ns-zcc_en.pdf"
+    ],
+    "complaints": [
+      "Slow: white rice 48 min and brown rice just under 2 hours (Engadget); brown rice took a long time (Serious Eats)",
+      "Control panel not intuitive; had to press hard for it to respond (Reviewed)",
+      "Long-grain white rice cooks best on the Mixed setting, not White, which isn't obvious (ATK)"
+    ],
+    "last_price_cents": null,
+    "tested_on": null
+  },
+  {
+    "id": "cuckoo-cr-0655f",
+    "name": "CUCKOO 6-Cup Micom Rice Cooker & Warmer (CR-0655F)",
+    "brand": "Cuckoo",
+    "category": "rice-cookers",
+    "asin": "B01MQWFGKG",
+    "merchants": [
+      {
+        "id": "amazon",
+        "url": "https://www.amazon.com/dp/B01MQWFGKG"
+      }
+    ],
+    "price_seen_cents": 14000,
+    "sources": [
+      "https://www.cnn.com/cnn-underscored/reviews/best-rice-cooker",
+      "https://www.engadget.com/home/kitchen-tech/best-rice-cooker-120015478.html",
+      "https://www.seriouseats.com/the-best-rice-cookers",
+      "https://www.americastestkitchen.com/cooksillustrated/equipment_reviews/1596-rice-cookers",
+      "https://cuckooamerica.com/cdn/shop/files/CR-0655F_User_Manual.pdf"
+    ],
+    "complaints": [
+      "Short-grain white and brown rice a little wet at Cuckoo's recommended water ratios (ATK)",
+      "Water lines stamped into the metal pot are hard to read and trap starch; buttons labeled above and below are confusing (ATK, Engadget)",
+      "Lid springs open hard enough to rock the unit; no carrying handle (Engadget, CNN)"
+    ],
+    "last_price_cents": null,
+    "tested_on": null
+  },
+  {
+    "id": "zojirushi-nhs-06",
+    "name": "Zojirushi 3-Cup Rice Cooker/Steamer (NHS-06)",
+    "brand": "Zojirushi",
+    "category": "rice-cookers",
+    "asin": "B00004S575",
+    "merchants": [
+      {
+        "id": "amazon",
+        "url": "https://www.amazon.com/dp/B00004S575"
+      }
+    ],
+    "price_seen_cents": 6000,
+    "sources": [
+      "https://www.seriouseats.com/the-best-rice-cookers",
+      "https://news.yahoo.com/best-rice-cookers-consumer-reports-135809338.html",
+      "https://www.cnet.com/home/kitchen-and-household/best-rice-cooker/",
+      "https://store.zojirushi.com/cdn/shop/files/nhs.pdf"
+    ],
+    "complaints": [
+      "No keep-warm function; it switches off when done (Serious Eats, Consumer Reports, Zojirushi manual)",
+      "CNET found its rice too wet and slightly broken down, against Serious Eats' and CR's results (CNET)",
+      "One-switch design: no programs, timer or done alert (Consumer Reports)"
+    ],
+    "last_price_cents": null,
+    "tested_on": null
+  },
+  {
+    "id": "hamilton-beach-37548",
+    "name": "Hamilton Beach Digital Programmable Rice & Hot Cereal Cooker, 14 Cups Cooked (37548)",
+    "brand": "Hamilton Beach",
+    "category": "rice-cookers",
+    "asin": "B01CYB6SPI",
+    "merchants": [
+      {
+        "id": "amazon",
+        "url": "https://www.amazon.com/dp/B01CYB6SPI"
+      }
+    ],
+    "price_seen_cents": 6700,
+    "sources": [
+      "https://www.seriouseats.com/the-best-rice-cookers",
+      "https://www.seriouseats.com/hamilton-beach-rice-cooker-review-12184289",
+      "https://www.cnn.com/cnn-underscored/reviews/best-rice-cooker",
+      "https://www.reviewed.com/cooking/best-right-now/the-best-rice-cookers",
+      "https://useandcares.hamiltonbeach.com/files/840264200.pdf"
+    ],
+    "complaints": [
+      "Large batches prone to drying out or browning on the bottom (Serious Eats); overcooked the bottom of a 1-cup batch and rice stuck to the pot (Reviewed)",
+      "Hinged lid can fall shut when lifted (Serious Eats editor)",
+      "Bulky; rice quality a step below the Cuckoo CR-0655F (Reviewed, CNN)"
+    ],
+    "last_price_cents": null,
+    "tested_on": null
+  },
+  {
+    "id": "kitchenaid-kgc3155bm",
+    "name": "KitchenAid Grain and Rice Cooker (KGC3155BM)",
+    "brand": "KitchenAid",
+    "category": "rice-cookers",
+    "asin": "B0CS6WVLJ7",
+    "merchants": [
+      {
+        "id": "amazon",
+        "url": "https://www.amazon.com/dp/B0CS6WVLJ7"
+      }
+    ],
+    "price_seen_cents": 30000,
+    "sources": [
+      "https://www.americastestkitchen.com/cooksillustrated/equipment_reviews/1596-rice-cookers",
+      "https://www.reviewed.com/cooking/best-right-now/the-best-rice-cookers",
+      "https://www.seriouseats.com/the-best-rice-cookers",
+      "https://www.cnn.com/cnn-underscored/reviews/best-rice-cooker"
+    ],
+    "complaints": [
+      "Expensive and large (about the size of a mini toaster oven) yet tops out at 8 cups cooked vs 11 for the Zojirushi NS-ZCC10 (ATK, Reviewed)",
+      "Water reservoir is an extra part to clean (ATK)",
+      "Countdown only shows remaining time in the last 10 minutes (CNN); Keep Warm maxes out at 6 hours (Serious Eats)"
+    ],
+    "last_price_cents": null,
+    "tested_on": null
+  },
+  {
+    "id": "zojirushi-nl-bac05",
+    "name": "Zojirushi 3-Cup Micom Rice Cooker & Warmer (NL-BAC05)",
+    "brand": "Zojirushi",
+    "category": "rice-cookers",
+    "asin": "B0711FMN8M",
+    "merchants": [
+      {
+        "id": "amazon",
+        "url": "https://www.amazon.com/dp/B0711FMN8M"
+      }
+    ],
+    "price_seen_cents": 17400,
+    "sources": [
+      "https://www.americastestkitchen.com/cooksillustrated/equipment_reviews/1596-rice-cookers",
+      "https://www.reviewed.com/cooking/best-right-now/the-best-rice-cookers",
+      "https://store.zojirushi.com/cdn/shop/files/nl-bac_en.pdf"
+    ],
+    "complaints": [
+      "Small capacity: 3 cups uncooked, won't feed a crowd (Reviewed)",
+      "Brown rice came out better with less water than the directions call for (ATK)",
+      "Manual warns the nonstick coating can peel if damaged (Zojirushi manual)"
+    ],
+    "last_price_cents": null,
+    "tested_on": null
   }
 ]
