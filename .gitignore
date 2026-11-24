@@ -24,3 +24,7 @@ pnpm-debug.log*
 .idea/
 .lighthouseci/
 .wrangler/
+
+# service-account keys (Indexing API) never go in the repo
+*-sa.json
+*serviceaccount*.json
