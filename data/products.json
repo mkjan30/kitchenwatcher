@@ -1522,5 +1522,173 @@
     ],
     "last_price_cents": null,
     "tested_on": null
+  },
+  {
+    "id": "toshiba-em131a5c-bs",
+    "name": "Toshiba 1.2 Cu. Ft. Countertop Microwave with Smart Sensor (EM131A5C-BS)",
+    "brand": "Toshiba",
+    "category": "microwaves",
+    "asin": "B071WCB1T6",
+    "merchants": [
+      {
+        "id": "amazon",
+        "url": "https://www.amazon.com/dp/B071WCB1T6"
+      }
+    ],
+    "price_seen_cents": 14899,
+    "sources": [
+      "https://www.tomsguide.com/us/best-microwaves,review-6316.html",
+      "https://www.rtings.com/microwave/reviews/best/countertop",
+      "https://www.rtings.com/microwave/reviews/best/microwaves",
+      "https://www.rtings.com/microwave/reviews/best/small",
+      "https://images.homedepot-static.com/catalog/pdfImages/fb/fb6df202-147c-4227-8107-017db04f8ed2.pdf",
+      "https://www.consumerreports.org/product-safety/some-toshiba-microwaves-are-starting-on-their-own-a4659854545/"
+    ],
+    "complaints": [
+      "Membrane touch panel gives little feedback; changing power level takes many presses (RTINGS)",
+      "Model EM131A5C named in one SaferProducts.gov report of a Toshiba microwave starting on its own (Consumer Reports safety alert, 2026-06-25)",
+      "Wattage stated three ways: 1,550 W (Tom's spec box, the manual's input rating), 1,000 W (Tom's text), 1,100 W output (manual and RTINGS)"
+    ],
+    "last_price_cents": null,
+    "tested_on": null
+  },
+  {
+    "id": "black-decker-em925ab9",
+    "name": "BLACK+DECKER 0.9 Cu. Ft. 900W Digital Microwave (EM925AB9)",
+    "brand": "BLACK+DECKER",
+    "category": "microwaves",
+    "asin": "B07HG9YGZY",
+    "merchants": [
+      {
+        "id": "amazon",
+        "url": "https://www.amazon.com/dp/B07HG9YGZY"
+      }
+    ],
+    "price_seen_cents": 8497,
+    "sources": [
+      "https://www.tomsguide.com/us/best-microwaves,review-6316.html",
+      "https://www.reviewed.com/small-appliances/best-right-now/best-countertop-microwaves"
+    ],
+    "complaints": [
+      "Consumer reviews raise questions about long-term durability (Reviewed)",
+      "Not very quick at heating; slightly small (Reviewed)",
+      "Quiet end-of-cycle alarm (Tom's Guide)"
+    ],
+    "last_price_cents": null,
+    "tested_on": null
+  },
+  {
+    "id": "toshiba-ml-em45p-bs",
+    "name": "Toshiba 1.6 Cu. Ft. Microwave with Smart Humidity Sensor (ML-EM45P(BS))",
+    "brand": "Toshiba",
+    "category": "microwaves",
+    "asin": "B081T6GZZF",
+    "merchants": [
+      {
+        "id": "amazon",
+        "url": "https://www.amazon.com/dp/B081T6GZZF"
+      },
+      {
+        "id": "toshiba",
+        "url": "https://www.toshiba-lifestyle.com/us/all-cooking-appliances/microwave-ovens/1-6-cu--ft--microwave-oven-with-smart-humidity-sensor"
+      }
+    ],
+    "price_seen_cents": 15458,
+    "sources": [
+      "https://www.reviewed.com/small-appliances/best-right-now/best-countertop-microwaves",
+      "https://www.toshiba-lifestyle.com/us/all-cooking-appliances/microwave-ovens/1-6-cu--ft--microwave-oven-with-smart-humidity-sensor"
+    ],
+    "complaints": [
+      "Too large for small kitchens (Reviewed)",
+      "Not the most even heating (Reviewed)",
+      "Control panel hard to see in the dark (Reviewed)"
+    ],
+    "last_price_cents": null,
+    "tested_on": null
+  },
+  {
+    "id": "breville-bmo650",
+    "name": "Breville the Compact Wave Soft Close Microwave (BMO650SIL)",
+    "brand": "Breville",
+    "category": "microwaves",
+    "asin": "B084T9RVSB",
+    "merchants": [
+      {
+        "id": "amazon",
+        "url": "https://www.amazon.com/dp/B084T9RVSB"
+      },
+      {
+        "id": "breville",
+        "url": "https://www.breville.com/en-us/product/bmo650"
+      }
+    ],
+    "price_seen_cents": 24995,
+    "sources": [
+      "https://www.americastestkitchen.com/equipment-reviews/2537",
+      "https://www.breville.com/en-us/product/bmo650",
+      "https://assets.breville.com/BMO650/BMO650_USCM_IB_L24_LR.pdf"
+    ],
+    "complaints": [
+      "No separate kitchen timer (ATK)",
+      "900 W: needs more time than higher-wattage models (ATK wattage notes; manual output 900 W)",
+      "Owners on Best Buy report a loud end-of-cycle buzzer and some door-latch failures (search snippets only; not opened, not citable yet)"
+    ],
+    "last_price_cents": null,
+    "tested_on": null
+  },
+  {
+    "id": "ikea-gatebo",
+    "name": "IKEA GÅTEBO Microwave Oven with Air Fryer Function (IKEA 500, black)",
+    "brand": "IKEA",
+    "category": "microwaves",
+    "asin": null,
+    "merchants": [
+      {
+        "id": "ikea",
+        "url": "https://www.ikea.com/us/en/p/gatebo-microwave-oven-with-air-fryer-function-ikea-500-black-70603506/"
+      }
+    ],
+    "price_seen_cents": 19900,
+    "sources": [
+      "https://www.tomsguide.com/us/best-microwaves,review-6316.html",
+      "https://www.rtings.com/microwave/reviews/best/small",
+      "https://www.ikea.com/us/en/p/gatebo-microwave-oven-with-air-fryer-function-ikea-500-black-70603506/",
+      "https://www.ikea.com/us/en/manuals/gatebo-microwave-oven-with-air-fryer-function-ikea-500-black__AA-2588878-1-1.pdf"
+    ],
+    "complaints": [
+      "Slow: over three minutes to heat soup to the middle of the bowl; slower grill and air fry (Tom's Guide)",
+      "Small chamber; setting something like 1:30 at 30% power takes many presses (RTINGS)",
+      "Bulky (Tom's Guide); sources disagree on whether it has a cooking sensor (Tom's yes, RTINGS no, manual describes none)"
+    ],
+    "last_price_cents": null,
+    "tested_on": null
+  },
+  {
+    "id": "sharp-smc2266ks",
+    "name": "Sharp 2.2 Cu. Ft. 1200W Countertop Microwave with Inverter (SMC2266KS)",
+    "brand": "Sharp",
+    "category": "microwaves",
+    "asin": null,
+    "merchants": [
+      {
+        "id": "sharp",
+        "url": "https://shop.sharpusa.com/sharp-2-2-cu-ft-1200w-stainless-steel-countertop-microwave-oven-with-inverter-technology-smc2266ks/"
+      }
+    ],
+    "price_seen_cents": 23999,
+    "sources": [
+      "https://www.rtings.com/microwave/reviews/best/countertop",
+      "https://www.rtings.com/microwave/reviews/best/microwaves",
+      "https://www.rtings.com/microwave/reviews/sharp/smc2266ks",
+      "https://shop.sharpusa.com/sharp-2-2-cu-ft-1200w-stainless-steel-countertop-microwave-oven-with-inverter-technology-smc2266ks/",
+      "https://static.pcrichard.com/docs/SMC2266KS_Specifications-Sheet_01.pdf"
+    ],
+    "complaints": [
+      "No dedicated mute button (hold 8 for three seconds instead) (RTINGS)",
+      "Membrane panel; reduced power or a custom time takes several presses (RTINGS)",
+      "Large footprint: 2.2 cu ft rated, 2.08 cu ft measured by RTINGS"
+    ],
+    "last_price_cents": null,
+    "tested_on": null
   }
 ]
