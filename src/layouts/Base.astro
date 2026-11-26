@@ -125,10 +125,19 @@ import Newsletter from '../components/Newsletter.astro';
         <a href="/how-we-research/" aria-current={here === '/how-we-research/' ? 'page' : undefined}>How we research</a>
         <a href="/about/" aria-current={here === '/about/' ? 'page' : undefined}>About</a>
       </nav>
-      {/* <details> menus work without JS; this only closes an open one on outside click or Escape. */}
+      {/* <details> menus work without JS (tap/Enter toggles); this adds hover-open on mouse devices and closes on outside click or Escape. */}
       <script is:inline>
         const closeMenus = (keep) => document.querySelectorAll('.menu[open]').forEach((m) => m !== keep && m.removeAttribute('open'));
         document.addEventListener('click', (e) => closeMenus(e.target.closest('.menu')));
+        if (matchMedia('(hover: hover) and (pointer: fine)').matches) {
+          document.querySelectorAll('.menu').forEach((m) => {
+            let t;
+            m.addEventListener('mouseenter', () => { clearTimeout(t); closeMenus(m); m.setAttribute('open', ''); });
+            m.addEventListener('mouseleave', () => { t = setTimeout(() => m.removeAttribute('open'), 150); });
+            // A mouse click on an already hover-opened summary would toggle it shut; keyboard clicks (detail 0) still toggle.
+            m.querySelector('summary').addEventListener('click', (e) => { if (e.detail && m.open) e.preventDefault(); });
+          });
+        }
         document.addEventListener('keydown', (e) => { if (e.key === 'Escape') { const m = document.querySelector('.menu[open]'); if (m) { m.removeAttribute('open'); m.querySelector('summary').focus(); } } });
       </script>
     </header>
