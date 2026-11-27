@@ -1616,10 +1616,6 @@
       {
         "id": "amazon",
         "url": "https://www.amazon.com/dp/B084T9RVSB"
-      },
-      {
-        "id": "breville",
-        "url": "https://www.breville.com/en-us/product/bmo650"
       }
     ],
     "price_seen_cents": 24995,
